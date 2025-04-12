@@ -159,7 +159,7 @@
 	{
 		local conditionBefore = _tag.Shield.getCondition();
 		_tag.Shield.applyShieldDamage(_tag.Damage);
-		local overflowDamage = this.Math.floor(damage - conditionBefore);
+		local overflowDamage = this.Math.floor(_tag.Damage - conditionBefore);
 		if (_tag.Shield != null && _tag.Shield.getCondition() == 0)
 		{
 			local logMessage = this.Const.UI.getColorizedEntityName(_tag.User) + " has destroyed " + this.Const.UI.getColorizedEntityName(_tag.TargetTile.getEntity()) + "\'s shield";
@@ -169,7 +169,7 @@
 				this.Tactical.EventLog.log(logMessage + " and recovered 4 Action Points");
 				if (overflowDamage > 1)
 				{
-					local p = this.getContainer().buildPropertiesForUse(this, target);
+					local p = this.getContainer().buildPropertiesForUse(this, _tag.TargetTile.getEntity());
 					local hitInfo = clone this.Const.Tactical.HitInfo;
 					local damageMult = p.MeleeDamageMult * p.DamageTotalMult;
 					local damageRegular = overflowDamage * p.DamageRegularMult;
@@ -181,7 +181,7 @@
 					hitInfo.BodyPart = this.Const.BodyPart.Body;
 					hitInfo.BodyDamageMult = 1.0;
 					hitInfo.FatalityChanceMult = 0.0;
-					target.onDamageReceived(this.getContainer().getActor(), this, hitInfo);
+					_tag.TargetTile.getEntity().onDamageReceived(this.getContainer().getActor(), this, hitInfo);
 				}
 			}
 			else
