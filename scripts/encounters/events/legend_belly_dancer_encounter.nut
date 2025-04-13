@@ -225,6 +225,9 @@ this.legend_belly_dancer_encounter <- this.inherit("scripts/encounters/encounter
 	    if (!_settlement.isSouthern())
 		    return false;
 
+	    if (::World.Assets.getBusinessReputation() < 1050)
+		    return false;
+
 		if (!::World.getTime().IsDaytime)
 			return false;
 
