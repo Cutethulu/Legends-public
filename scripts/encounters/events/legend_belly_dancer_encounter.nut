@@ -222,19 +222,17 @@ this.legend_belly_dancer_encounter <- this.inherit("scripts/encounters/encounter
     }
 
     function isValid(_settlement) {
-		if (!this.World.getTime().IsDaytime)
-		{
-			return false;
-		}
-        if (this.World.getPlayerRoster().getSize() >= this.World.Assets.getBrothersMax())
-		{
-			return false;
-		}
+	    if (!_settlement.isSouthern())
+		    return false;
 
-		if (this.World.Assets.getMoney() < 750)
-		{
+		if (!::World.getTime().IsDaytime)
 			return false;
-		}
+
+        if (::World.getPlayerRoster().getSize() >= ::World.Assets.getBrothersMax())
+			return false;
+
+		if (::World.Assets.getMoney() < 750)
+			return false;
 
 	    return !isOnCooldown();
     }
