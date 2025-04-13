@@ -231,7 +231,7 @@ this.legend_belly_dancer_encounter <- this.inherit("scripts/encounters/encounter
 			return false;
 		}
 
-        return true;
+	    return !isOnCooldown();
     }
 
 	function onClear() {
