@@ -125,7 +125,7 @@ this.legend_vampire_lord <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.WasInjured = true;
 		}
 
-		this.actor.onDamageReceived(_attacker, _skill, _hitInfo);
+		return this.actor.onDamageReceived(_attacker, _skill, _hitInfo);
 	}
 
 	function onUpdateInjuryLayer()

@@ -59,10 +59,10 @@ this.legend_demon_hound <- this.inherit("scripts/entity/tactical/actor", {
 
 	function onDamageReceived( _attacker, _skill, _hitInfo )
 	{
-		this.actor.onDamageReceived(_attacker, _skill, _hitInfo);
+		ret = this.actor.onDamageReceived(_attacker, _skill, _hitInfo);
 
-		if (!this.isAlive() || this.isDying())
-			return;
+		if (this.isNull() || !this.isAlive() || this.isDying())
+			return ret;
 
 		this.Sound.play(this.m.SoundOnTeleport[this.Math.rand(0, this.m.SoundOnTeleport.len() - 1)], this.Const.Sound.Volume.Skill);
 		this.Time.scheduleEvent(this.TimeUnit.Virtual, 30, this.teleport.bindenv(this), null);
