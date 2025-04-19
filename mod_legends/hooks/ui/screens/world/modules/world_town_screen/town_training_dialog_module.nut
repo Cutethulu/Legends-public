@@ -125,13 +125,8 @@
 					entity.m.PerkPoints += 1;
 					local traitConst = ::Legends.Training.addRandomTrainingTrait(entity);
 					trait.finishedTraining(traitConst);
-					local trait = ::Legends.Traits.get(entity, traitConst);
-					local name = " ";
-					if (trait != null && "getName" in trait) {
-						name = trait.getName() + " ";
-					}
 					::Time.scheduleEvent(::TimeUnit.Real, 200, this.showTraitPopup.bindenv(this),
-						::format("Trait [color=%s]%s[/color]gained. [color=%s]1[/color] perk point granted.", ::Const.UI.Color.PositiveEventValue, name, ::Const.UI.Color.PositiveEventValue)
+						::format("Trait [color=%s]%s[/color] gained. [color=%s]1[/color] perk point granted.", ::Const.UI.Color.PositiveEventValue, ::Legends.Traits.get(entity, traitConst).getName(), ::Const.UI.Color.PositiveEventValue)
 					);
 				}
 				break;
@@ -145,13 +140,8 @@
 					entity.m.PerkPoints += 1;
 					local traitConst = ::Legends.Training.addRandomTrainingTrait(entity);
 					trait.finishedTraining(traitConst);
-					local trait = ::Legends.Traits.get(entity, traitConst);
-					local name = " ";
-					if (trait != null && "getName" in trait) {
-						name = trait.getName() + " ";
-					}
 					::Time.scheduleEvent(::TimeUnit.Real, 200, this.showTraitPopup.bindenv(this),
-						::format("Trait [color=%s]%s[/color]gained. [color=%s]1[/color] perk point granted.", ::Const.UI.Color.PositiveEventValue, name, ::Const.UI.Color.PositiveEventValue)
+						::format("Trait [color=%s]%s[/color] gained. [color=%s]1[/color] perk point granted.", ::Const.UI.Color.PositiveEventValue, ::Legends.Traits.get(entity, traitConst).getName(), ::Const.UI.Color.PositiveEventValue)
 					);
 				}
 				break;
@@ -167,13 +157,8 @@
 				}
 				local traitConst = ::Legends.Training.addRandomTrainingTrait(entity);
 				trait.finishedTraining(traitConst);
-				local trait = ::Legends.Traits.get(entity, traitConst);
-				local name = "";
-				if (trait != null && "getName" in trait) {
-					name = trait.getName();
-				}
 				::Time.scheduleEvent(::TimeUnit.Real, 200, this.showTraitPopup.bindenv(this),
-					::format("Trained trait changed to [color=%s]%s[/color].", ::Const.UI.Color.PositiveEventValue, name)
+					::format("Trained trait changed to [color=%s]%s[/color].", ::Const.UI.Color.PositiveEventValue, ::Legends.Traits.get(entity, traitConst).getName())
 				);
 				break;
 		}
