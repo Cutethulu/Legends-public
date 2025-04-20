@@ -185,8 +185,8 @@
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-				[1, "hood"]
-				// [1, "hunters_hat"]
+				[1, ::Legends.Helmet.Standard.hood]
+				// [1, ::Legends.Helmet.Standard.hunters_hat]
 		]))
 	}
 

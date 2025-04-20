@@ -219,10 +219,10 @@ this.legend_youngblood_background <- this.inherit("scripts/skills/backgrounds/ch
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "full_aketon_cap"],
-			[1, "aketon_cap"],
-			[1, "open_leather_cap"],
-			[2, ""]
+			[1, ::Legends.Helmet.Standard.full_aketon_cap],
+			[1, ::Legends.Helmet.Standard.aketon_cap],
+			[1, ::Legends.Helmet.Standard.open_leather_cap],
+			[2, ::Legends.Helmet.None]
 		]))
 	}
 

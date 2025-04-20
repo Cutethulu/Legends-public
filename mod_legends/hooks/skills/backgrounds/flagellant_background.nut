@@ -201,8 +201,8 @@
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "hood"],
-			[4, ""]
+			[1, ::Legends.Helmet.Standard.hood],
+			[4, ::Legends.Helmet.None]
 		]));
 	}
 });

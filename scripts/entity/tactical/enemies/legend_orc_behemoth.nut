@@ -343,7 +343,7 @@ this.legend_orc_behemoth <- this.inherit("scripts/entity/tactical/actor", {
 			this.m.Items.equip(item);
 
 			local item = this.Const.World.Common.pickHelmet([
-				[1, "greenskins/legend_orc_behemoth_helmet"]
+				[1, ::Legends.Helmet.Greenskin.legend_orc_behemoth_helmet]
 			]);
 			if (item != null)
 			{

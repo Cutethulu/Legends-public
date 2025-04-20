@@ -42,10 +42,10 @@
 		];
 
 		local helmet = [
-			[2, "oriental/nomad_head_wrap"],
-			[3, "oriental/nomad_head_wrap"],
-			[1, "citrene_nomad_ranged_helmet_00"],
-			[3, "oriental/nomad_leather_cap"]
+			[2, ::Legends.Helmet.Southern.nomad_head_wrap],
+			[3, ::Legends.Helmet.Southern.nomad_head_wrap],
+			[1, ::Legends.Helmet.Standard.citrene_nomad_ranged_helmet_00],
+			[3, ::Legends.Helmet.Southern.nomad_leather_cap]
 		];
 
 		local outfits = [

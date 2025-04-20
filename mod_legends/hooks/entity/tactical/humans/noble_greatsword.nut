@@ -61,12 +61,12 @@
 
 
 		this.m.Items.equip(this.Const.World.Common.pickHelmet([
-			//[1, "greatsword_hat"],  Only 70 durability
-			[1, "rondel_helm"],
-			[1, "scale_helm"],
-			[1, "greatsword_faction_helm", banner],
-			[1, "wallace_sallet"],
-			[5, "heavy_noble_house_helmet_00"]
+			//[1, ::Legends.Helmet.Standard.greatsword_hat],  Only 70 durability
+			[1, ::Legends.Helmet.Standard.rondel_helm],
+			[1, ::Legends.Helmet.Standard.scale_helm],
+			[1, ::Legends.Helmet.Standard.greatsword_faction_helm, banner],
+			[1, ::Legends.Helmet.Standard.wallace_sallet],
+			[5, ::Legends.Helmet.Standard.heavy_noble_house_helmet_00]
 		]));
 	}
 });

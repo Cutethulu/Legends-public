@@ -36,12 +36,12 @@ this.legends_zombie_low_xbow <- this.inherit("scripts/entity/tactical/legend_zom
 		]));
 
 		local item = this.Const.World.Common.pickHelmet([
-			[67, ""],
-			[7, "hood"],
-			[7, "aketon_cap"],
-			[7, "full_aketon_cap"],
-			[7, "open_leather_cap"],
-			[7, "full_leather_cap"]
+			[67, ::Legends.Helmet.None],
+			[7, ::Legends.Helmet.Standard.hood],
+			[7, ::Legends.Helmet.Standard.aketon_cap],
+			[7, ::Legends.Helmet.Standard.full_aketon_cap],
+			[7, ::Legends.Helmet.Standard.open_leather_cap],
+			[7, ::Legends.Helmet.Standard.full_leather_cap]
 		]);
 
 		if (item != null)

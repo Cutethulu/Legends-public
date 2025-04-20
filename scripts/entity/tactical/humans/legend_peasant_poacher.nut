@@ -72,8 +72,8 @@ this.legend_peasant_poacher <- this.inherit("scripts/entity/tactical/human", {
 		if (this.Math.rand(1, 100) <= 66)
 		{
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
-				// [1, "hunters_hat"],
-				[3, "hood"]
+				// [1, ::Legends.Helmet.Standard.hunters_hat],
+				[3, ::Legends.Helmet.Standard.hood]
 			]))
 		}
 	}

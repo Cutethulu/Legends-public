@@ -33,7 +33,7 @@
 						text = "You gain " + this.Const.Strings.getArticle(item.getName()) + item.makeName()
 					});
 					item = this.Const.World.Common.pickHelmet([
-						[1, "adorned_full_helm"],
+						[1, ::Legends.Helmet.Standard.adorned_full_helm],
 					]);
 					item.setCondition(item.getRepair() / 3 - 1);
 					stash.add(item);
@@ -98,7 +98,7 @@
 					item.setCondition(item.getRepair() / 3 - 1);
 					dudeItems.equip(item);
 					item = this.Const.World.Common.pickHelmet([
-						[1, "adorned_full_helm"],
+						[1, ::Legends.Helmet.Standard.adorned_full_helm],
 					]);
 					item.setCondition(item.getRepair() / 3 - 1);
 					dudeItems.equip(item);

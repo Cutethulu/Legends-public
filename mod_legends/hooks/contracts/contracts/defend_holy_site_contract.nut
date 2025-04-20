@@ -77,7 +77,7 @@
 
 						case 12:
 							local helmet = [
-								[1, "oriental/spiked_skull_cap_with_mail"]
+								[1, ::Legends.Helmet.Southern.spiked_skull_cap_with_mail]
 							];
 							item = this.Const.World.Common.pickHelmet(helmet);
 							break;

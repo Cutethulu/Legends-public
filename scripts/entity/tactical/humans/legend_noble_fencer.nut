@@ -97,28 +97,28 @@ this.legend_noble_fencer <- this.inherit("scripts/entity/tactical/human", {
 			if (banner <= 4)
 			{
 				helmet = this.Const.World.Common.pickHelmet([
-					[1, "kettle_hat"],
-					[1, "padded_kettle_hat"],
-					[1, "kettle_hat_with_mail"],
-					[1, "mail_coif"]
+					[1, ::Legends.Helmet.Standard.kettle_hat],
+					[1, ::Legends.Helmet.Standard.padded_kettle_hat],
+					[1, ::Legends.Helmet.Standard.kettle_hat_with_mail],
+					[1, ::Legends.Helmet.Standard.mail_coif]
 				])
 			}
 			else if (banner <= 7)
 			{
 				helmet = this.Const.World.Common.pickHelmet([
-					[1, "flat_top_helmet"],
-					[1, "padded_flat_top_helmet"],
-					[1, "flat_top_with_mail"],
-					[1, "mail_coif"]
+					[1, ::Legends.Helmet.Standard.flat_top_helmet],
+					[1, ::Legends.Helmet.Standard.padded_flat_top_helmet],
+					[1, ::Legends.Helmet.Standard.flat_top_with_mail],
+					[1, ::Legends.Helmet.Standard.mail_coif]
 				])
 			}
 			else
 			{
 				helmet = this.Const.World.Common.pickHelmet([
-					[1, "nasal_helmet"],
-					[1, "padded_nasal_helmet"],
-					[1, "nasal_helmet_with_mail"],
-					[1, "mail_coif"]
+					[1, ::Legends.Helmet.Standard.nasal_helmet],
+					[1, ::Legends.Helmet.Standard.padded_nasal_helmet],
+					[1, ::Legends.Helmet.Standard.nasal_helmet_with_mail],
+					[1, ::Legends.Helmet.Standard.mail_coif]
 				])
 			}
 
@@ -131,10 +131,10 @@ this.legend_noble_fencer <- this.inherit("scripts/entity/tactical/human", {
 		else
 		{
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
-				[2, "aketon_cap"],
-				[1, "full_aketon_cap"],
-				[1, "headscarf"],
-				[1, ""]
+				[2, ::Legends.Helmet.Standard.aketon_cap],
+				[1, ::Legends.Helmet.Standard.full_aketon_cap],
+				[1, ::Legends.Helmet.Standard.headscarf],
+				[1, ::Legends.Helmet.None]
 			]))
 		}
 	}

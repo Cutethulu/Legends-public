@@ -85,9 +85,9 @@
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "oriental/southern_head_wrap"],
-			[1, "oriental/nomad_head_wrap"],
-			[1, "oriental/nomad_leather_cap"]
+			[1, ::Legends.Helmet.Southern.southern_head_wrap],
+			[1, ::Legends.Helmet.Southern.nomad_head_wrap],
+			[1, ::Legends.Helmet.Southern.nomad_leather_cap]
 		]))
 	}
 });

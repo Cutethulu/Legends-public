@@ -174,7 +174,7 @@
 		if (this.m.Items.getItemAtSlot(this.Const.ItemSlot.Head) == null)
 		{
 			local item = this.Const.World.Common.pickHelmet([
-				[1, "greenskins/orc_warlord_helmet"]
+				[1, ::Legends.Helmet.Greenskin.orc_warlord_helmet]
 			]);
 			if (item != null)
 			{

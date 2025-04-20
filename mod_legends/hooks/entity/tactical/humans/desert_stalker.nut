@@ -30,7 +30,7 @@
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Head) && this.Math.rand(1, 100) <= 75)
 		{
 			local helm =this.Const.World.Common.pickHelmet([
-				[1, "oriental/desert_stalker_head_wrap"]
+				[1, ::Legends.Helmet.Southern.desert_stalker_head_wrap]
 			]);
 			this.m.Items.equip(helm);
 		}

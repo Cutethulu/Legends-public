@@ -44,7 +44,7 @@
 		if (this.Math.rand(1, 100) <= 50)
 		{
 			local item = this.Const.World.Common.pickHelmet([
-				[1, "greenskins/goblin_light_helmet"]
+				[1, ::Legends.Helmet.Greenskin.goblin_light_helmet]
 			]);
 			if (item != null)
 			{

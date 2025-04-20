@@ -264,7 +264,7 @@ this.legend_assassin_background <- this.inherit("scripts/skills/backgrounds/char
 			[1, "thick_dark_tunic"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "hood"]
+			[1, ::Legends.Helmet.Standard.hood]
 		]));
 	}
 

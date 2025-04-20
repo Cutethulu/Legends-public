@@ -260,11 +260,11 @@ function onAddEquipment()
 		]));
 
 		local item = this.Const.World.Common.pickHelmet([
-			[1, "nasal_helmet"],
-			[1, "nasal_helmet_with_mail"],
-			[1, "mail_coif"],
-			[1, "bascinet_with_mail"],
-			[1, "closed_flat_top_helmet"]
+			[1, ::Legends.Helmet.Standard.nasal_helmet],
+			[1, ::Legends.Helmet.Standard.nasal_helmet_with_mail],
+			[1, ::Legends.Helmet.Standard.mail_coif],
+			[1, ::Legends.Helmet.Standard.bascinet_with_mail],
+			[1, ::Legends.Helmet.Standard.closed_flat_top_helmet]
 		]);
 		if (item != null)
 		{

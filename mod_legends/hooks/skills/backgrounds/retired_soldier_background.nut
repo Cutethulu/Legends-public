@@ -171,13 +171,13 @@
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[2, ""],
-			[1, "nasal_helmet"],
-			[1, "padded_nasal_helmet"],
-			[1, "mail_coif"],
-			[1, "rusty_mail_coif"],
-			[1, "aketon_cap"],
-			[1, "full_aketon_cap"]
+			[2, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.nasal_helmet],
+			[1, ::Legends.Helmet.Standard.padded_nasal_helmet],
+			[1, ::Legends.Helmet.Standard.mail_coif],
+			[1, ::Legends.Helmet.Standard.rusty_mail_coif],
+			[1, ::Legends.Helmet.Standard.aketon_cap],
+			[1, ::Legends.Helmet.Standard.full_aketon_cap]
 		]));
 	}
 

@@ -306,7 +306,7 @@ this.legend_druid_commander_background <- this.inherit("scripts/skills/backgroun
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "barbarians/bear_headpiece"]
+			[1, ::Legends.Helmet.Barbarian.bear_headpiece]
 		]));
 
 	}

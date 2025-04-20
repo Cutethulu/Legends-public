@@ -250,9 +250,9 @@ this.legend_husk_background <- this.inherit("scripts/skills/backgrounds/characte
 			[1, "decayed_coat_of_plates"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "cultist_hood"],
-			[1, "hood"],
-			[1, "cultist_leather_hood"]
+			[1, ::Legends.Helmet.Standard.cultist_hood],
+			[1, ::Legends.Helmet.Standard.hood],
+			[1, ::Legends.Helmet.Standard.cultist_leather_hood]
 		]));
 	}
 

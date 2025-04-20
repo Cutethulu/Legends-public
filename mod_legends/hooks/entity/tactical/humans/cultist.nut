@@ -76,8 +76,8 @@
 		]));
 
 		local item = this.Const.World.Common.pickHelmet([
-			[2, "cultist_hood"],
-			[1, "cultist_leather_hood"]
+			[2, ::Legends.Helmet.Standard.cultist_hood],
+			[1, ::Legends.Helmet.Standard.cultist_leather_hood]
 		]);
 
 		if (item != null)

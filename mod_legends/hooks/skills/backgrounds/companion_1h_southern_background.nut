@@ -64,9 +64,9 @@
 		items.equip(item);
 
 		local helm = this.Const.World.Common.pickHelmet([
-			[1, "oriental/leather_head_wrap"],
-			[1, "oriental/leather_head_wrap"],
-			[1, "oriental/southern_head_wrap", this.Math.rand(0, 1) == 1 ? 12 : 8]
+			[1, ::Legends.Helmet.Southern.leather_head_wrap],
+			[1, ::Legends.Helmet.Southern.leather_head_wrap],
+			[1, ::Legends.Helmet.Southern.southern_head_wrap, this.Math.rand(0, 1) == 1 ? 12 : 8]
 		]);
 		items.equip(helm);
 	}

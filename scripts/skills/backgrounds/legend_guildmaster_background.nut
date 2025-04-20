@@ -250,10 +250,10 @@ this.legend_guildmaster_background <- this.inherit("scripts/skills/backgrounds/c
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "hood"],
-			[1, "feathered_hat"],
-			[1, "dark_cowl"],
-			[1, ""]
+			[1, ::Legends.Helmet.Standard.hood],
+			[1, ::Legends.Helmet.Standard.feathered_hat],
+			[1, ::Legends.Helmet.Standard.dark_cowl],
+			[1, ::Legends.Helmet.None]
 		]));
 	}
 });

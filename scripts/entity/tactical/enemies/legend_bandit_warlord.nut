@@ -224,16 +224,16 @@ this.legend_bandit_warlord <- this.inherit("scripts/entity/tactical/human", {
 		if (this.m.Items.getItemAtSlot(this.Const.ItemSlot.Head) == null)
 		{
 			local helmet = [
-				[1, "closed_mail_coif"],
-				[1, "legend_enclave_vanilla_kettle_sallet_01"],
-				[1, "padded_kettle_hat"],
-				[1, "kettle_hat_with_closed_mail"],
-				[1, "kettle_hat_with_mail"],
-				[1, "padded_flat_top_helmet"],
-				[1, "nasal_helmet_with_mail"],
-				[1, "flat_top_with_mail"],
-				[1, "padded_nasal_helmet"],
-				[1, "bascinet_with_mail"]
+				[1, ::Legends.Helmet.Standard.closed_mail_coif],
+				[1, ::Legends.Helmet.Standard.legend_enclave_vanilla_kettle_sallet_01],
+				[1, ::Legends.Helmet.Standard.padded_kettle_hat],
+				[1, ::Legends.Helmet.Standard.kettle_hat_with_closed_mail],
+				[1, ::Legends.Helmet.Standard.kettle_hat_with_mail],
+				[1, ::Legends.Helmet.Standard.padded_flat_top_helmet],
+				[1, ::Legends.Helmet.Standard.nasal_helmet_with_mail],
+				[1, ::Legends.Helmet.Standard.flat_top_with_mail],
+				[1, ::Legends.Helmet.Standard.padded_nasal_helmet],
+				[1, ::Legends.Helmet.Standard.bascinet_with_mail]
 			];
 			local item = this.Const.World.Common.pickHelmet(helmet);
 			this.m.Items.equip(item);

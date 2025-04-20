@@ -94,7 +94,7 @@ this.legend_enchanter_background <- this.inherit("scripts/skills/backgrounds/cha
 
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "barbarians/bear_headpiece"]
+			[1, ::Legends.Helmet.Barbarian.bear_headpiece]
 		]));
 
 	}

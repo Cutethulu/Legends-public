@@ -120,9 +120,9 @@ this.legend_alchemist_background <- this.inherit("scripts/skills/backgrounds/cha
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[2, ""],
-			[1, "oriental/vizier_headgear"],
-			[1, "oriental/engineer_hat"]
+			[2, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Southern.vizier_headgear],
+			[1, ::Legends.Helmet.Southern.engineer_hat]
 		]));
 	}
 });

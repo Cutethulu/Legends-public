@@ -31,7 +31,7 @@
 		]));
 
 		this.m.Items.equip(this.Const.World.Common.pickHelmet([
-			[1, "barbarians/beastmasters_headpiece"]
+			[1, ::Legends.Helmet.Barbarian.beastmasters_headpiece]
 		]));
 	}
 });

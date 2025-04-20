@@ -66,9 +66,9 @@
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Head))
 		{
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
-				[1, "barbarians/crude_faceguard_helmet"],
-				[1, "barbarians/closed_scrap_metal_helmet"],
-				[1, "barbarians/crude_metal_helmet"]
+				[1, ::Legends.Helmet.Barbarian.crude_faceguard_helmet],
+				[1, ::Legends.Helmet.Barbarian.closed_scrap_metal_helmet],
+				[1, ::Legends.Helmet.Barbarian.crude_metal_helmet]
 			]));
 
 		}

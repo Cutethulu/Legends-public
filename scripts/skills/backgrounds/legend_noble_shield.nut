@@ -178,14 +178,14 @@ this.legend_noble_shield <- this.inherit("scripts/skills/backgrounds/character_b
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[10, "aketon_cap"],
-			[10, "open_leather_cap"],
-			[10, "kettle_hat"],
-			[10, "padded_kettle_hat"],
-			[10, "kettle_hat_with_mail"],
-			[10, "mail_coif"],
-			[1, "legend_enclave_vanilla_armet_02"],
-			[1, "legend_enclave_vanilla_skullcap_01"]
+			[10, ::Legends.Helmet.Standard.aketon_cap],
+			[10, ::Legends.Helmet.Standard.open_leather_cap],
+			[10, ::Legends.Helmet.Standard.kettle_hat],
+			[10, ::Legends.Helmet.Standard.padded_kettle_hat],
+			[10, ::Legends.Helmet.Standard.kettle_hat_with_mail],
+			[10, ::Legends.Helmet.Standard.mail_coif],
+			[1, ::Legends.Helmet.Standard.legend_enclave_vanilla_armet_02],
+			[1, ::Legends.Helmet.Standard.legend_enclave_vanilla_skullcap_01]
 		]));
 	}
 });

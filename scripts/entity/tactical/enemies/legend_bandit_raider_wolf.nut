@@ -112,11 +112,11 @@ this.legend_bandit_raider_wolf <- this.inherit("scripts/entity/tactical/enemies/
 		if (this.Math.rand(1, 100) <= 75)
 		{
 			local item = this.Const.World.Common.pickHelmet([
-				[1, "nasal_helmet"],
-				[1, "dented_nasal_helmet"],
-				[1, "rusty_mail_coif"],
-				[1, "headscarf"],
-				[1, "nasal_helmet_with_rusty_mail"]
+				[1, ::Legends.Helmet.Standard.nasal_helmet],
+				[1, ::Legends.Helmet.Standard.dented_nasal_helmet],
+				[1, ::Legends.Helmet.Standard.rusty_mail_coif],
+				[1, ::Legends.Helmet.Standard.headscarf],
+				[1, ::Legends.Helmet.Standard.nasal_helmet_with_rusty_mail]
 			]);
 			if (item != null)
 			{

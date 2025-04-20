@@ -41,8 +41,8 @@
 		if (this.Math.rand(1, 100) <= 50)
 		{
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
-				[2, "oriental/southern_head_wrap"],
-				[1, "oriental/nomad_head_wrap"]
+				[2, ::Legends.Helmet.Southern.southern_head_wrap],
+				[1, ::Legends.Helmet.Southern.nomad_head_wrap]
 			]));
 		}
 	}

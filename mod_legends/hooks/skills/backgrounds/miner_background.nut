@@ -153,8 +153,8 @@
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, ""],
-			[1, "mouth_piece"]
+			[1, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.mouth_piece]
 		]));
 	}
 

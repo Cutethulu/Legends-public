@@ -234,15 +234,15 @@
 		]));
 
 		local helm = [
-			[1, "nasal_helmet"],
-			[1, "nasal_helmet_with_mail"],
-			[1, "mail_coif"],
-			[1, "bascinet_with_mail"],
-			[1, "closed_flat_top_helmet"]
+			[1, ::Legends.Helmet.Standard.nasal_helmet],
+			[1, ::Legends.Helmet.Standard.nasal_helmet_with_mail],
+			[1, ::Legends.Helmet.Standard.mail_coif],
+			[1, ::Legends.Helmet.Standard.bascinet_with_mail],
+			[1, ::Legends.Helmet.Standard.closed_flat_top_helmet]
 		];
 
 
-		helm.push([1, "theamson_barbute_helmet"]);
+		helm.push([1, ::Legends.Helmet.Standard.theamson_barbute_helmet]);
 
 
 		items.equip(this.Const.World.Common.pickHelmet(helm));

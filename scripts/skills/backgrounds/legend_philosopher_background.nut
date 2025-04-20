@@ -98,9 +98,9 @@ this.legend_philosopher_background <- this.inherit("scripts/skills/backgrounds/c
 		// this.getContainer().getActor().fillTalentValues(2, true);
 		local items = this.getContainer().getActor().getItems();
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, ""],
-			[1, "dark_cowl"],
-			[1, "witchhunter_hat"]
+			[1, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.dark_cowl],
+			[1, ::Legends.Helmet.Standard.witchhunter_hat]
 		]));
 		items.equip(this.Const.World.Common.pickArmor([
 			[1, "thick_dark_tunic"]

@@ -197,7 +197,7 @@ this.legend_trader_commander_background <- this.inherit("scripts/skills/backgrou
 			[1, "linen_tunic"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "feathered_hat"]
+			[1, ::Legends.Helmet.Standard.feathered_hat]
 		]));
 	}
 });

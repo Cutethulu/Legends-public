@@ -58,9 +58,9 @@
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Head))
 		{
 			local helmet = [
-				[1, "oriental/turban_helmet"],
-				[1, "oriental/heavy_lamellar_helmet"],
-				[1, "oriental/southern_helmet_with_coif"]
+				[1, ::Legends.Helmet.Southern.turban_helmet],
+				[1, ::Legends.Helmet.Southern.heavy_lamellar_helmet],
+				[1, ::Legends.Helmet.Southern.southern_helmet_with_coif]
 			];
 			this.m.Items.equip(this.Const.World.Common.pickHelmet(helmet));
 		}

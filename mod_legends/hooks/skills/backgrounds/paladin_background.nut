@@ -289,9 +289,9 @@
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[2, "heavy_mail_coif"],
-			[2, "adorned_closed_flat_top_with_mail"],
-			[1, "adorned_full_helm"]
+			[2, ::Legends.Helmet.Standard.heavy_mail_coif],
+			[2, ::Legends.Helmet.Standard.adorned_closed_flat_top_with_mail],
+			[1, ::Legends.Helmet.Standard.adorned_full_helm]
 		]));
 	}
 

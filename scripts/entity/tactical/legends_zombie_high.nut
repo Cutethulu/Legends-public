@@ -106,10 +106,10 @@ this.legends_zombie_high <- this.inherit("scripts/entity/tactical/legend_zombie"
 		]));
 
 		local item = this.Const.World.Common.pickHelmet([
-			[2, "decayed_closed_flat_top_with_mail"],
-			[1, "decayed_closed_flat_top_with_sack"],
-			[3, "decayed_full_helm"],
-			[3, "decayed_great_helm"]
+			[2, ::Legends.Helmet.Standard.decayed_closed_flat_top_with_mail],
+			[1, ::Legends.Helmet.Standard.decayed_closed_flat_top_with_sack],
+			[3, ::Legends.Helmet.Standard.decayed_full_helm],
+			[3, ::Legends.Helmet.Standard.decayed_great_helm]
 		]);
 
 		if (item != null)

@@ -301,17 +301,17 @@ this.legend_puppet_background <- this.inherit("scripts/skills/backgrounds/charac
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-		//	[1, "decayed_great_helm"],
-			[1, "decayed_closed_flat_top_with_mail"],
-			[1, "decayed_closed_flat_top_with_sack"],
-		//	[1, "decayed_full_helm"],
-		//	[2, "legend_noble_southern_hat"],
-			[2, "full_aketon_cap"],
-			[2, "kettle_hat"],
-		//	[2, "dark_southern_helmet_00"],
-			[3, "open_leather_cap"],
-			[3, "full_leather_cap"],
-			[4, ""]
+		//	[1, ::Legends.Helmet.Standard.decayed_great_helm],
+			[1, ::Legends.Helmet.Standard.decayed_closed_flat_top_with_mail],
+			[1, ::Legends.Helmet.Standard.decayed_closed_flat_top_with_sack],
+		//	[1, ::Legends.Helmet.Standard.decayed_full_helm],
+		//	[2, ::Legends.Helmet.Standard.legend_noble_southern_hat],
+			[2, ::Legends.Helmet.Standard.full_aketon_cap],
+			[2, ::Legends.Helmet.Standard.kettle_hat],
+		//	[2, ::Legends.Helmet.Standard.dark_southern_helmet_00],
+			[3, ::Legends.Helmet.Standard.open_leather_cap],
+			[3, ::Legends.Helmet.Standard.full_leather_cap],
+			[4, ::Legends.Helmet.None]
 		]));
 	}
 });

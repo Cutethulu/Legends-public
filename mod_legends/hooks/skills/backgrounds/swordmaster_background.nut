@@ -190,8 +190,8 @@
 			[1, "padded_surcoat"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[67, ""],
-			[33, "greatsword_hat"]
+			[67, ::Legends.Helmet.None],
+			[33, ::Legends.Helmet.Standard.greatsword_hat]
 		]));
 
 	}

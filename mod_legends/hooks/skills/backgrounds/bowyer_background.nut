@@ -174,8 +174,8 @@
 
 
 		local item = this.Const.World.Common.pickHelmet([
-				[1, "feathered_hat"],
-				[2, ""]
+				[1, ::Legends.Helmet.Standard.feathered_hat],
+				[2, ::Legends.Helmet.None]
 		]);
 		items.equip(item);
 	}

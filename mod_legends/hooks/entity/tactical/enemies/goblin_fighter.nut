@@ -76,8 +76,8 @@
 		if (this.m.Items.getItemAtSlot(this.Const.ItemSlot.Head) == null)
 		{
 			local item = this.Const.World.Common.pickHelmet([
-				[75, "greenskins/goblin_light_helmet"],
-				[25, "greenskins/goblin_heavy_helmet"]
+				[75, ::Legends.Helmet.Greenskin.goblin_light_helmet],
+				[25, ::Legends.Helmet.Greenskin.goblin_heavy_helmet]
 			]);
 			if (item != null)
 			{

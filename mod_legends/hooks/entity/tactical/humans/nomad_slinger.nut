@@ -35,10 +35,10 @@
 			[3, "oriental/cloth_sash"]
 		]));
 		local helmet = [
-			[3, "oriental/nomad_head_wrap"],
-			[1, "citrene_nomad_cutthroat_helmet_00"],
-			[1, "citrene_nomad_cutthroat_helmet_01"],
-			[2, "oriental/nomad_leather_cap"]
+			[3, ::Legends.Helmet.Southern.nomad_head_wrap],
+			[1, ::Legends.Helmet.Standard.citrene_nomad_cutthroat_helmet_00],
+			[1, ::Legends.Helmet.Standard.citrene_nomad_cutthroat_helmet_01],
+			[2, ::Legends.Helmet.Southern.nomad_leather_cap]
 		];
 		this.m.Items.equip(this.Const.World.Common.pickHelmet(helmet));
 	}

@@ -133,8 +133,8 @@ this.legend_taxidermist_background <- this.inherit("scripts/skills/backgrounds/c
 			[1, "legend_blacksmith_apron"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, ""],
-			[1, "feathered_hat"]
+			[1, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.feathered_hat]
 		]));
 	}
 });

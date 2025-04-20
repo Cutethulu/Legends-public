@@ -34,7 +34,7 @@ this.legend_destroyed_caravan_event <- this.inherit("scripts/events/event", {
 					[1, "oriental/cloth_sash"]
 				]));
 				items.push(this.Const.World.Common.pickHelmet([
-					[1, "oriental/gunner_hat"]
+					[1, ::Legends.Helmet.Southern.gunner_hat]
 				]));
 
 				items.push(this.new("scripts/items/weapons/oriental/nomad_mace"));
@@ -93,7 +93,7 @@ this.legend_destroyed_caravan_event <- this.inherit("scripts/events/event", {
 					[1, "wizard_robe"]
 				]));
 				items.push(this.Const.World.Common.pickHelmet([
-					[1, "wizard_hat"]
+					[1, ::Legends.Helmet.Standard.wizard_hat]
 				]));
 
 				items.push(this.new("scripts/items/weapons/bludgeon"));
@@ -147,7 +147,7 @@ this.legend_destroyed_caravan_event <- this.inherit("scripts/events/event", {
 					[1, "barbarians/hide_and_bone_armor"]
 				]));
 				items.push(this.Const.World.Common.pickHelmet([
-					[1, "wizard_hat"]
+					[1, ::Legends.Helmet.Standard.wizard_hat]
 				]));
 
 				items.push(this.new("scripts/items/weapons/barbarians/axehammer"));

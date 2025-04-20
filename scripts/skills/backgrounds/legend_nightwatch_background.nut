@@ -185,8 +185,8 @@ this.legend_nightwatch_background <- this.inherit("scripts/skills/backgrounds/ch
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "hood"],
-			[2, "aketon_cap"]
+			[1, ::Legends.Helmet.Standard.hood],
+			[2, ::Legends.Helmet.Standard.aketon_cap]
 		]));
 	}
 });

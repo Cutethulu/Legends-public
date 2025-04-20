@@ -125,9 +125,9 @@ this.legend_warlock_background <- this.inherit("scripts/skills/backgrounds/chara
 		local items = this.getContainer().getActor().getItems();
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, ""],
-			[1, "dark_cowl"],
-			[1, "witchhunter_hat"]
+			[1, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.dark_cowl],
+			[1, ::Legends.Helmet.Standard.witchhunter_hat]
 		]));
 
 		items.equip(this.Const.World.Common.pickArmor([

@@ -49,8 +49,8 @@
 		]));
 
 		local helm =this.Const.World.Common.pickHelmet([
-			[3, ""],
-			[1, "oriental/southern_head_wrap"]
+			[3, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Southern.southern_head_wrap]
 		]);
 		items.equip(helm);
 	}

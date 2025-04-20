@@ -109,7 +109,7 @@
 				});
 
 				item = this.Const.World.Common.pickHelmet([
-					[1, "padded_kettle_hat"]
+					[1, ::Legends.Helmet.Standard.padded_kettle_hat]
 				]);
 				this.World.Assets.getStash().add(item);
 				this.List.push({
@@ -167,7 +167,7 @@
 				});
 
 				item = this.Const.World.Common.pickHelmet([
-					[1, "padded_kettle_hat"]
+					[1, ::Legends.Helmet.Standard.padded_kettle_hat]
 				]);
 				this.World.Assets.getStash().add(item);
 				this.List.push({
@@ -227,7 +227,7 @@
 				});
 
 				item = this.Const.World.Common.pickHelmet([
-					[1, "padded_kettle_hat"]
+					[1, ::Legends.Helmet.Standard.padded_kettle_hat]
 				]);
 				this.World.Assets.getStash().add(item);
 				this.List.push({
@@ -293,7 +293,7 @@
 				});
 
 				item = this.Const.World.Common.pickHelmet([
-					[1, "closed_mail_coif"]
+					[1, ::Legends.Helmet.Standard.closed_mail_coif]
 				]);
 				this.World.Assets.getStash().add(item);
 				this.List.push({
@@ -360,7 +360,7 @@
 				});
 
 				item = this.Const.World.Common.pickHelmet([
-					[1, "closed_mail_coif"]
+					[1, ::Legends.Helmet.Standard.closed_mail_coif]
 				]);
 				this.World.Assets.getStash().add(item);
 				this.List.push({
@@ -411,7 +411,7 @@
 				});
 
 				item = this.Const.World.Common.pickHelmet([
-					[1, "conic_helmet_with_closed_mail"]
+					[1, ::Legends.Helmet.Standard.conic_helmet_with_closed_mail]
 				]);
 				this.World.Assets.getStash().add(item);
 				this.List.push({

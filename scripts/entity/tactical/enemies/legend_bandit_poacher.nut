@@ -109,8 +109,8 @@ this.legend_bandit_poacher <- this.inherit("scripts/entity/tactical/legend_rando
 	// 	if (this.Math.rand(1, 100) <= 50)
 	// 	{
 	// 		local item = this.Const.World.Common.pickHelmet([
-	// 			[1, "headscarf"],
-	// 			[1, "mouth_piece"]
+	// 			[1, ::Legends.Helmet.Standard.headscarf],
+	// 			[1, ::Legends.Helmet.Standard.mouth_piece]
 	// 		])
 	// 		if (item != null)
 	// 		{

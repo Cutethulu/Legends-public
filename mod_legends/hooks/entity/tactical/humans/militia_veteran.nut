@@ -69,9 +69,9 @@
 		if (this.Math.rand(1, 100) <= 75)
 		{
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
-				[1, "hood"],
-				[1, "aketon_cap"],
-				[1, "full_leather_cap"]
+				[1, ::Legends.Helmet.Standard.hood],
+				[1, ::Legends.Helmet.Standard.aketon_cap],
+				[1, ::Legends.Helmet.Standard.full_leather_cap]
 			]))
 		}
 	}

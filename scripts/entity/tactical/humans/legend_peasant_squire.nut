@@ -60,7 +60,7 @@ this.legend_peasant_squire <- this.inherit("scripts/entity/tactical/human", {
 
 		this.m.Items.equip(this.Const.World.Common.pickArmor([[1, "worn_mail_shirt"]]));
 
-		this.m.Items.equip(this.Const.World.Common.pickHelmet([[1, "padded_nasal_helmet"]]))
+		this.m.Items.equip(this.Const.World.Common.pickHelmet([[1, ::Legends.Helmet.Standard.padded_nasal_helmet]]))
 
 	}
 

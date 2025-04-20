@@ -200,10 +200,10 @@ this.legend_puppet_master_background <- this.inherit("scripts/skills/backgrounds
 		local items = this.getContainer().getActor().getItems();
 		//items
 		items.equip(this.Const.World.Common.pickHelmet([
-			[3, "dark_southern_helmet_00"],
-			[2, "dark_cowl"],
-			[1, ""],
-			[4, "witchhunter_hat"]
+			[3, ::Legends.Helmet.Standard.dark_southern_helmet_00],
+			[2, ::Legends.Helmet.Standard.dark_cowl],
+			[1, ::Legends.Helmet.None],
+			[4, ::Legends.Helmet.Standard.witchhunter_hat]
 		]));
 
 		items.equip(this.Const.World.Common.pickArmor([

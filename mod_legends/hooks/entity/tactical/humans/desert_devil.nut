@@ -48,8 +48,8 @@
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Head))
 		{
 			local helm =this.Const.World.Common.pickHelmet([
-				[1, "oriental/blade_dancer_head_wrap"],
-				[1, "blade_dancer_helmet_00"]
+				[1, ::Legends.Helmet.Southern.blade_dancer_head_wrap],
+				[1, ::Legends.Helmet.Southern.blade_dancer_helmet_00]
 			]);
 			this.m.Items.equip(helm);
 		}

@@ -223,13 +223,13 @@
 			]));
 
 			items.equip(this.Const.World.Common.pickHelmet([
-				[1, "nasal_helmet"],
-				[1, "padded_nasal_helmet"],
-				[1, "aketon_cap"],
-				[1, "full_aketon_cap"],
-				[1, "mail_coif"],
-				[1, "feathered_hat"],
-				[3, ""]
+				[1, ::Legends.Helmet.Standard.nasal_helmet],
+				[1, ::Legends.Helmet.Standard.padded_nasal_helmet],
+				[1, ::Legends.Helmet.Standard.aketon_cap],
+				[1, ::Legends.Helmet.Standard.full_aketon_cap],
+				[1, ::Legends.Helmet.Standard.mail_coif],
+				[1, ::Legends.Helmet.Standard.feathered_hat],
+				[3, ::Legends.Helmet.None]
 			]));
 		}
 		else
@@ -268,13 +268,13 @@
 			]));
 
 			items.equip(this.Const.World.Common.pickHelmet([
-				[1, "nasal_helmet"],
-				[1, "padded_nasal_helmet"],
-				[1, "aketon_cap"],
-				[1, "full_aketon_cap"],
-				[1, "mail_coif"],
-				[1, "feathered_hat"],
-				[3, ""]
+				[1, ::Legends.Helmet.Standard.nasal_helmet],
+				[1, ::Legends.Helmet.Standard.padded_nasal_helmet],
+				[1, ::Legends.Helmet.Standard.aketon_cap],
+				[1, ::Legends.Helmet.Standard.full_aketon_cap],
+				[1, ::Legends.Helmet.Standard.mail_coif],
+				[1, ::Legends.Helmet.Standard.feathered_hat],
+				[3, ::Legends.Helmet.None]
 			]));
 		}
 	}

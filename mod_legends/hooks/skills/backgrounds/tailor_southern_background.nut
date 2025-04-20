@@ -43,8 +43,8 @@
 			[1, "oriental/cloth_sash"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "feathered_hat"],
-			[1, "oriental/southern_head_wrap"]
+			[1, ::Legends.Helmet.Standard.feathered_hat],
+			[1, ::Legends.Helmet.Southern.southern_head_wrap]
 		]))
 	}
 

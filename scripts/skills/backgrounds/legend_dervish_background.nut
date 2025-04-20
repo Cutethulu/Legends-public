@@ -116,9 +116,9 @@ this.legend_dervish_background <- this.inherit("scripts/skills/backgrounds/chara
 		]);
 		items.equip(armor);
 		local helm = this.Const.World.Common.pickHelmet([
-			[2, "oriental/southern_head_wrap"],
-			[1, "legend_noble_southern_hat"],
-			[3, ""]
+			[2, ::Legends.Helmet.Southern.southern_head_wrap],
+			[1, ::Legends.Helmet.Standard.legend_noble_southern_hat],
+			[3, ::Legends.Helmet.None]
 		]);
 		items.equip(helm)
 	}

@@ -235,9 +235,9 @@
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[2, "undertaker_hat"],
-			[2, "physician_mask"],
-			[1, "masked_kettle_helmet"]
+			[2, ::Legends.Helmet.Standard.undertaker_hat],
+			[2, ::Legends.Helmet.Standard.physician_mask],
+			[1, ::Legends.Helmet.Standard.masked_kettle_helmet]
 		]));
 	}
 

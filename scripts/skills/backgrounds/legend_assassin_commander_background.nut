@@ -278,7 +278,7 @@ this.legend_assassin_commander_background <- this.inherit("scripts/skills/backgr
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "hood"]
+			[1, ::Legends.Helmet.Standard.hood]
 		]));
 	}
 

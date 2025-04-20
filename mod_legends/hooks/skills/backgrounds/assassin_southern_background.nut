@@ -225,7 +225,7 @@
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "oriental/assassin_head_wrap"]
+			[1, ::Legends.Helmet.Southern.assassin_head_wrap]
 		]))
 	}
 

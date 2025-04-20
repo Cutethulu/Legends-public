@@ -151,8 +151,8 @@
 
 
 		local item = this.Const.World.Common.pickHelmet([
-			[2, ""],
-			[1, "greenskins/orc_berserker_helmet"]
+			[2, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Greenskin.orc_berserker_helmet]
 		]);
 		if (item != null)
 		{

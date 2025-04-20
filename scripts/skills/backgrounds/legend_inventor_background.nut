@@ -145,8 +145,8 @@ this.legend_inventor_background <- this.inherit("scripts/skills/backgrounds/char
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "mouth_piece"],
-			[1, "headscarf"]
+			[1, ::Legends.Helmet.Standard.mouth_piece],
+			[1, ::Legends.Helmet.Standard.headscarf]
 		]));
 
 		r = this.Math.rand(0, 1);

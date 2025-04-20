@@ -123,7 +123,7 @@
 			[1, "noble_tunic"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "pimp_hat"]
+			[1, ::Legends.Helmet.Standard.pimp_hat]
 		]));
 	}
 

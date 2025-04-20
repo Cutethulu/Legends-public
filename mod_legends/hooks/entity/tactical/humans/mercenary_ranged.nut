@@ -72,15 +72,15 @@
 		if (this.Math.rand(1, 100) <= 75)
 		{
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
-				[1, "hood"],
-				[1, "aketon_cap"],
-				[1, "full_aketon_cap"],
-				[1, "full_leather_cap"],
-				[1, "headscarf"],
-				[1, "kettle_hat"],
-				[1, "rondel_helm"],
-				[1, "scale_helm"],
-				[1, "mail_coif"]
+				[1, ::Legends.Helmet.Standard.hood],
+				[1, ::Legends.Helmet.Standard.aketon_cap],
+				[1, ::Legends.Helmet.Standard.full_aketon_cap],
+				[1, ::Legends.Helmet.Standard.full_leather_cap],
+				[1, ::Legends.Helmet.Standard.headscarf],
+				[1, ::Legends.Helmet.Standard.kettle_hat],
+				[1, ::Legends.Helmet.Standard.rondel_helm],
+				[1, ::Legends.Helmet.Standard.scale_helm],
+				[1, ::Legends.Helmet.Standard.mail_coif]
 			]))
 		}
 	}

@@ -220,11 +220,11 @@
 		if (this.Math.rand(1, 100) <= 33)
 		{
 			local item = this.Const.World.Common.pickHelmet([
-				[1, "aketon_cap"],
-				[1, "full_aketon_cap"],
-				[1, "kettle_hat"],
-				[1, "padded_kettle_hat"],
-				[1, "full_leather_cap"]
+				[1, ::Legends.Helmet.Standard.aketon_cap],
+				[1, ::Legends.Helmet.Standard.full_aketon_cap],
+				[1, ::Legends.Helmet.Standard.kettle_hat],
+				[1, ::Legends.Helmet.Standard.padded_kettle_hat],
+				[1, ::Legends.Helmet.Standard.full_leather_cap]
 			]);
 			if (item != null)
 			{

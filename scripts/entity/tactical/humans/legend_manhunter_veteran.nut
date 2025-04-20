@@ -156,25 +156,25 @@ this.legend_manhunter_veteran <- this.inherit("scripts/entity/tactical/human", {
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Head))
 		{
 			local helmets = [
-				[2, "oriental/spiked_skull_cap_with_mail"],
-				[2, "oriental/southern_helmet_with_coif"]
+				[2, ::Legends.Helmet.Southern.spiked_skull_cap_with_mail],
+				[2, ::Legends.Helmet.Southern.southern_helmet_with_coif]
 			];
 
 			if (this.World.getTime().Days > 50) {
 				helmets.extend([
-					[1, "oriental/heavy_lamellar_helmet"],
-					[1, "oriental/turban_helmet"]
+					[1, ::Legends.Helmet.Southern.heavy_lamellar_helmet],
+					[1, ::Legends.Helmet.Southern.turban_helmet]
 				]);
 			}
 
 			if (this.Const.DLC.Wildmen)
 			{
 				helmets.extend([
-					[1, "conic_helmet_with_closed_mail"],
-					[1, "conic_helmet_with_faceguard"],
-					[1, "barbute_helmet"],
+					[1, ::Legends.Helmet.Standard.conic_helmet_with_closed_mail],
+					[1, ::Legends.Helmet.Standard.conic_helmet_with_faceguard],
+					[1, ::Legends.Helmet.Standard.barbute_helmet],
 				]);
-				helmets.push([1, "theamson_barbute_helmet"])
+				helmets.push([1, ::Legends.Helmet.Standard.theamson_barbute_helmet])
 			}
 
 

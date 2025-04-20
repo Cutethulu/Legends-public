@@ -126,8 +126,8 @@
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, ""],
-			[4, "legend_jewelry"]
+			[1, ::Legends.Helmet.None],
+			[4, ::Legends.Helmet.Southern.legend_jewelry]
 		]));
 	}
 });

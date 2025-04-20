@@ -182,9 +182,9 @@
 		this.m.Items.equip(item);
 
 		local item = this.Const.World.Common.pickHelmet([
-			[1, "greenskins/orc_young_light_helmet"],
-			[1, "greenskins/orc_young_medium_helmet"],
-			[1, "greenskins/orc_young_heavy_helmet"]
+			[1, ::Legends.Helmet.Greenskin.orc_young_light_helmet],
+			[1, ::Legends.Helmet.Greenskin.orc_young_medium_helmet],
+			[1, ::Legends.Helmet.Greenskin.orc_young_heavy_helmet]
 		]);
 
 		if (item != null)

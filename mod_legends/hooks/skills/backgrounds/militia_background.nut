@@ -166,12 +166,12 @@
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, ""],
-			[1, "aketon_cap"],
-			[1, "full_aketon_cap"],
-			[1, "open_leather_cap"],
-			[1, "full_leather_cap"],
-			[1, "straw_hat"]
+			[1, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.aketon_cap],
+			[1, ::Legends.Helmet.Standard.full_aketon_cap],
+			[1, ::Legends.Helmet.Standard.open_leather_cap],
+			[1, ::Legends.Helmet.Standard.full_leather_cap],
+			[1, ::Legends.Helmet.Standard.straw_hat]
 		]));
 
 	}

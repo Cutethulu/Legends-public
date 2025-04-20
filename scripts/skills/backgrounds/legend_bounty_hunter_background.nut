@@ -239,9 +239,9 @@ this.legend_bounty_hunter_background <- this.inherit("scripts/skills/backgrounds
 		]));
 
 		local helm = this.Const.World.Common.pickHelmet([
-			[1, "oriental/assassin_face_mask"],
-			[1, "theamson_barbute_helmet"],
-			[1, "blade_dancer_helmet_00"]
+			[1, ::Legends.Helmet.Southern.assassin_face_mask],
+			[1, ::Legends.Helmet.Standard.theamson_barbute_helmet],
+			[1, ::Legends.Helmet.Southern.blade_dancer_helmet_00]
 		]);
 		items.equip(helm);
 	}

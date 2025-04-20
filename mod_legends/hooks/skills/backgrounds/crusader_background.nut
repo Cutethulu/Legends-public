@@ -200,9 +200,9 @@
 			[1, "worn_mail_shirt"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "nasal_helmet_with_mail"],
-			[1, "full_helm"],
-			[1, "closed_flat_top_helmet"]
+			[1, ::Legends.Helmet.Standard.nasal_helmet_with_mail],
+			[1, ::Legends.Helmet.Standard.full_helm],
+			[1, ::Legends.Helmet.Standard.closed_flat_top_helmet]
 		]));
 	}
 });

@@ -183,9 +183,9 @@ this.legend_necro_background <- this.inherit("scripts/skills/backgrounds/charact
 		this.getContainer().getActor().fillTalentValues(1, true);
 		local items = this.getContainer().getActor().getItems();
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, ""],
-			[1, "dark_cowl"],
-			[1, "witchhunter_hat"]
+			[1, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.dark_cowl],
+			[1, ::Legends.Helmet.Standard.witchhunter_hat]
 		]));
 		items.equip(this.Const.World.Common.pickArmor([
 			[1, "thick_dark_tunic"]

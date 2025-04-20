@@ -204,9 +204,9 @@ this.legend_conscript_background <- this.inherit("scripts/skills/backgrounds/cha
 		]));
 
 		local helm = this.Const.World.Common.pickHelmet([
-			[1, "oriental/southern_head_wrap"],
-			[1, "oriental/wrapped_southern_helmet"],
-			[1, "oriental/spiked_skull_cap_with_mail"]
+			[1, ::Legends.Helmet.Southern.southern_head_wrap],
+			[1, ::Legends.Helmet.Southern.wrapped_southern_helmet],
+			[1, ::Legends.Helmet.Southern.spiked_skull_cap_with_mail]
 		]);
 		items.equip(helm);
 	}

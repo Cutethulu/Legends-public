@@ -38,7 +38,7 @@
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Head))
 		{
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
-				[1, "barbarians/barbarian_ritual_helmet"]
+				[1, ::Legends.Helmet.Barbarian.barbarian_ritual_helmet]
 			]));
 		}
 	}

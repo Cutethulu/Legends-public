@@ -154,9 +154,9 @@
 			[1, "padded_surcoat"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "nasal_helmet"],
-			[1, "padded_nasal_helmet"],
-			[1, "hood"]
+			[1, ::Legends.Helmet.Standard.nasal_helmet],
+			[1, ::Legends.Helmet.Standard.padded_nasal_helmet],
+			[1, ::Legends.Helmet.Standard.hood]
 		]));
 	}
 });

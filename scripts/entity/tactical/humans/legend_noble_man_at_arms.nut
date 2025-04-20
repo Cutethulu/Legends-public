@@ -126,9 +126,9 @@ this.legend_noble_man_at_arms <- this.inherit("scripts/entity/tactical/human", {
 		local helmet;
 
 		helmet = this.Const.World.Common.pickHelmet([
-			[3, "stag_helm"],
-			[3, "swan_helm"],
-			[1, "heavy_noble_house_helmet_00"]
+			[3, ::Legends.Helmet.Standard.stag_helm],
+			[3, ::Legends.Helmet.Standard.swan_helm],
+			[1, ::Legends.Helmet.Standard.heavy_noble_house_helmet_00]
 		]);
 
 

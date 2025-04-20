@@ -343,8 +343,8 @@ this.legend_kobold_wolfrider <- this.inherit("scripts/entity/tactical/legend_kob
 		}
 
 		local item = this.Const.World.Common.pickHelmet([
-			[25, "greenskins/goblin_light_helmet"],
-			[75, ""]
+			[25, ::Legends.Helmet.Greenskin.goblin_light_helmet],
+			[75, ::Legends.Helmet.None]
 		]);
 		if (item != null)
 		{

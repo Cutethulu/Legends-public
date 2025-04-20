@@ -60,10 +60,10 @@ this.legend_peasant_butcher <- this.inherit("scripts/entity/tactical/human", {
 			if (this.Math.rand(1, 100) <= 33)
 			{
 				this.m.Items.equip(this.Const.World.Common.pickHelmet([
-					[1, "headscarf"],
-					[1, "hood"],
-					[1, "headscarf"],
-					[1, "feathered_hat"]
+					[1, ::Legends.Helmet.Standard.headscarf],
+					[1, ::Legends.Helmet.Standard.hood],
+					[1, ::Legends.Helmet.Standard.headscarf],
+					[1, ::Legends.Helmet.Standard.feathered_hat]
 				]))
 			}
 		}
@@ -85,7 +85,7 @@ this.legend_peasant_butcher <- this.inherit("scripts/entity/tactical/human", {
 		::Legends.Perks.grant(this, ::Legends.Perk.LegendSpecialistButcher);
 		::Legends.Traits.grant(this, ::Legends.Trait.Fearless);
 		this.m.Items.equip(this.Const.World.Common.pickHelmet([
-			[1, "legend_champion_butcher_helmet"]
+			[1, ::Legends.Helmet.Standard.legend_champion_butcher_helmet]
 		]))
 	}
 

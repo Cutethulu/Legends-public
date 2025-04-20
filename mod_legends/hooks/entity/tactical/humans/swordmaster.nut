@@ -70,11 +70,11 @@
 		{
 
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
-				[3, "nasal_helmet"],
-				[2, "nasal_helmet_with_mail"],
-				[2, "mail_coif"],
-				[1, "feathered_hat"],
-				[1, "headscarf"]
+				[3, ::Legends.Helmet.Standard.nasal_helmet],
+				[2, ::Legends.Helmet.Standard.nasal_helmet_with_mail],
+				[2, ::Legends.Helmet.Standard.mail_coif],
+				[1, ::Legends.Helmet.Standard.feathered_hat],
+				[1, ::Legends.Helmet.Standard.headscarf]
 			]))
 
 		}

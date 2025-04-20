@@ -264,11 +264,11 @@ this.legend_necro_commander_background <- this.inherit("scripts/skills/backgroun
 		local items = this.getContainer().getActor().getItems();
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "necromancer_hat"],
-			[2, "dark_cowl"],
-			[2, "undertaker_hat"],
-			[3, "witchhunter_hat"],
-			[3, "physician_mask"]
+			[1, ::Legends.Helmet.Standard.necromancer_hat],
+			[2, ::Legends.Helmet.Standard.dark_cowl],
+			[2, ::Legends.Helmet.Standard.undertaker_hat],
+			[3, ::Legends.Helmet.Standard.witchhunter_hat],
+			[3, ::Legends.Helmet.Standard.physician_mask]
 		]));
 
 		items.equip(this.Const.World.Common.pickArmor([

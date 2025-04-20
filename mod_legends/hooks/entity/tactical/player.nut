@@ -914,31 +914,31 @@
 		]));
 
 		local item = this.Const.World.Common.pickHelmet([
-			[6, ""],
-			[1, "hood"],
-			[1, "mail_coif"],
-			[1, "closed_mail_coif"],
-			[1, "reinforced_mail_coif"],
-			[1, "kettle_hat"],
-			[1, "nasal_helmet"],
-			[1, "padded_nasal_helmet"],
-			[1, "nasal_helmet_with_mail"],
-			[1, "full_helm"],
-			[1, "flat_top_helmet"],
-			[1, "padded_flat_top_helmet"],
-			[1, "flat_top_with_mail"],
-			[1, "kettle_hat_with_mail"],
-			[1, "kettle_hat_with_closed_mail"],
-			[1, "closed_flat_top_with_neckguard"],
-			[1, "closed_flat_top_helmet"],
-			[1, "closed_flat_top_with_mail"],
-			[1, "witchhunter_hat"],
-			[1, "named/golden_feathers_helmet"],
-			[1, "named/heraldic_mail_helmet"],
-			[1, "named/nasal_feather_helmet"],
-			[1, "named/norse_helmet"],
-			[1, "named/sallet_green_helmet"],
-			[1, "named/wolf_helmet"]
+			[6, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.hood],
+			[1, ::Legends.Helmet.Standard.mail_coif],
+			[1, ::Legends.Helmet.Standard.closed_mail_coif],
+			[1, ::Legends.Helmet.Standard.reinforced_mail_coif],
+			[1, ::Legends.Helmet.Standard.kettle_hat],
+			[1, ::Legends.Helmet.Standard.nasal_helmet],
+			[1, ::Legends.Helmet.Standard.padded_nasal_helmet],
+			[1, ::Legends.Helmet.Standard.nasal_helmet_with_mail],
+			[1, ::Legends.Helmet.Standard.full_helm],
+			[1, ::Legends.Helmet.Standard.flat_top_helmet],
+			[1, ::Legends.Helmet.Standard.padded_flat_top_helmet],
+			[1, ::Legends.Helmet.Standard.flat_top_with_mail],
+			[1, ::Legends.Helmet.Standard.kettle_hat_with_mail],
+			[1, ::Legends.Helmet.Standard.kettle_hat_with_closed_mail],
+			[1, ::Legends.Helmet.Standard.closed_flat_top_with_neckguard],
+			[1, ::Legends.Helmet.Standard.closed_flat_top_helmet],
+			[1, ::Legends.Helmet.Standard.closed_flat_top_with_mail],
+			[1, ::Legends.Helmet.Standard.witchhunter_hat],
+			[1, ::Legends.Helmet.Named.golden_feathers_helmet],
+			[1, ::Legends.Helmet.Named.heraldic_mail_helmet],
+			[1, ::Legends.Helmet.Named.nasal_feather_helmet],
+			[1, ::Legends.Helmet.Named.norse_helmet],
+			[1, ::Legends.Helmet.Named.sallet_green_helmet],
+			[1, ::Legends.Helmet.Named.wolf_helmet]
 		]);
 
 		if (item != null)
@@ -1039,12 +1039,12 @@
 		]));
 
 		local item = this.Const.World.Common.pickHelmet([
-			[2, ""],
-			[1, "hood"],
-			[1, "aketon_cap"],
-			[1, "full_aketon_cap"],
-			[1, "open_leather_cap"],
-			[1, "full_leather_cap"]
+			[2, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.hood],
+			[1, ::Legends.Helmet.Standard.aketon_cap],
+			[1, ::Legends.Helmet.Standard.full_aketon_cap],
+			[1, ::Legends.Helmet.Standard.open_leather_cap],
+			[1, ::Legends.Helmet.Standard.full_leather_cap]
 		]);
 
 		if (item != null)
@@ -1091,10 +1091,10 @@
 		]));
 
 		local item = this.Const.World.Common.pickHelmet([
-			[1, ""],
-			[1, "hood"],
-			[1, "aketon_cap"],
-			[1, "full_aketon_cap"]
+			[1, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.hood],
+			[1, ::Legends.Helmet.Standard.aketon_cap],
+			[1, ::Legends.Helmet.Standard.full_aketon_cap]
 		]);
 
 		if (item != null)

@@ -207,10 +207,10 @@
 		]));
 
 		local helm = [
-			[1, "feathered_hat"],
-			[1, "headscarf"],
-			[1, "mail_coif"],
-			[1, "greatsword_hat"]
+			[1, ::Legends.Helmet.Standard.feathered_hat],
+			[1, ::Legends.Helmet.Standard.headscarf],
+			[1, ::Legends.Helmet.Standard.mail_coif],
+			[1, ::Legends.Helmet.Standard.greatsword_hat]
 		];
 
 		items.equip(this.Const.World.Common.pickHelmet(helm));

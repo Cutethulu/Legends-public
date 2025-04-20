@@ -220,10 +220,7 @@ this.mage_legend_mage_commander_background <- this.inherit("scripts/skills/backg
 			]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[
-				1,
-				"legend_seer_hat"
-			]
+			[1, ::Legends.Helmet.Standard.legend_seer_hat]
 		]));
 		items.equip(this.new("scripts/items/weapons/legend_mystic_staff"));
 	}

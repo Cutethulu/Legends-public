@@ -43,10 +43,10 @@
 			];
 
 			local helmet = [
-				[1, "barbarians/heavy_horned_plate_helmet"],
-				[1, "barbarian_chosen_helmet_00"],
-				[1, "barbarian_chosen_helmet_01"],
-				[1, "barbarian_chosen_helmet_02"],
+				[1, ::Legends.Helmet.Barbarian.heavy_horned_plate_helmet],
+				[1, ::Legends.Helmet.Standard.barbarian_chosen_helmet_00],
+				[1, ::Legends.Helmet.Standard.barbarian_chosen_helmet_01],
+				[1, ::Legends.Helmet.Standard.barbarian_chosen_helmet_02],
 			];
 
 			local outfits = [
@@ -75,10 +75,10 @@
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Head))
 		{
 			local helmet = [
-				[1, "barbarians/heavy_horned_plate_helmet"],
-				[1, "barbarian_chosen_helmet_00"],
-				[1, "barbarian_chosen_helmet_01"],
-				[1, "barbarian_chosen_helmet_02"],
+				[1, ::Legends.Helmet.Barbarian.heavy_horned_plate_helmet],
+				[1, ::Legends.Helmet.Standard.barbarian_chosen_helmet_00],
+				[1, ::Legends.Helmet.Standard.barbarian_chosen_helmet_01],
+				[1, ::Legends.Helmet.Standard.barbarian_chosen_helmet_02],
 			];
 			this.m.Items.equip(this.Const.World.Common.pickHelmet(helmet));
 		}

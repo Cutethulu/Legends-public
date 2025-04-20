@@ -56,9 +56,9 @@ this.legend_peasant_blacksmith <- this.inherit("scripts/entity/tactical/human", 
 		if (this.Math.rand(1, 100) <= 66)
 		{
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
-				[1, "headscarf"],
-				[2, "hood"],
-				[1, "straw_hat"]
+				[1, ::Legends.Helmet.Standard.headscarf],
+				[2, ::Legends.Helmet.Standard.hood],
+				[1, ::Legends.Helmet.Standard.straw_hat]
 			]))
 		}
 	}

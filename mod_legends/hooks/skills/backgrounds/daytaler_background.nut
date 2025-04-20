@@ -61,7 +61,7 @@
 				this.Const.Perks.ThrowingTree
 			],
 			Defense = [
-				this.Const.Perks.MediumArmorTree		
+				this.Const.Perks.MediumArmorTree
 			],
 			Traits = [
 				this.Const.Perks.FitTree,
@@ -83,7 +83,7 @@
 
 		this.m.Name = "Washerwoman";
 		this.m.Icon = "ui/backgrounds/washerwoman.png";
-		this.m.BackgroundDescription = "Washerwomen are used to all kinds of physical work, scrubbing isn\'t easy work.";		
+		this.m.BackgroundDescription = "Washerwomen are used to all kinds of physical work, scrubbing isn\'t easy work.";
 		this.m.Faces = this.Const.Faces.AllWhiteFemale;
 		this.m.Hairs = this.Const.Hair.AllFemale;
 		this.m.HairColors = this.Const.HairColors.All;
@@ -181,10 +181,10 @@
 			[1, "linen_tunic", this.Math.rand(6, 7)],
 			[1, "gambeson"]
 		]));
-		
+
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "headscarf"],
-			[4, ""]
-		]));	
+			[1, ::Legends.Helmet.Standard.headscarf],
+			[4, ::Legends.Helmet.None]
+		]));
 	}
 });

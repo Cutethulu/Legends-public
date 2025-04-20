@@ -169,7 +169,7 @@
 			local items = this.getContainer().getActor().getItems();
 
 			items.equip(this.Const.World.Common.pickHelmet([
-				[1, "legend_nun_habit"]
+				[1, ::Legends.Helmet.Standard.legend_nun_habit]
 			]));
 
 			items.equip(this.Const.World.Common.pickArmor([

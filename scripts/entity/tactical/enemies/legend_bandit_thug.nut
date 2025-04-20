@@ -306,12 +306,12 @@ this.legend_bandit_thug <- this.inherit("scripts/entity/tactical/legend_randomiz
 	// 	if (this.Math.rand(1, 100) <= chance)
 	// 	{
 	// 		local item = this.Const.World.Common.pickHelmet([
-	// 			[1, "hood"],
-	// 			[1, "open_leather_cap"],
-	// 			[1, "headscarf"],
-	// 			[1, "mouth_piece"],
-	// 			[1, "full_leather_cap"],
-	// 			[1, "aketon_cap"]
+	// 			[1, ::Legends.Helmet.Standard.hood],
+	// 			[1, ::Legends.Helmet.Standard.open_leather_cap],
+	// 			[1, ::Legends.Helmet.Standard.headscarf],
+	// 			[1, ::Legends.Helmet.Standard.mouth_piece],
+	// 			[1, ::Legends.Helmet.Standard.full_leather_cap],
+	// 			[1, ::Legends.Helmet.Standard.aketon_cap]
 	// 		])
 	// 		if (item != null)
 	// 		{

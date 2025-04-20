@@ -147,7 +147,7 @@ this.legend_healer_background <- this.inherit("scripts/skills/backgrounds/charac
 			[1, "monk_robe"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "noble_headgear"]
+			[1, ::Legends.Helmet.Standard.noble_headgear]
 		]));
 	}
 });

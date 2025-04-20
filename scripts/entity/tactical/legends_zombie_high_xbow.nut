@@ -36,14 +36,14 @@ this.legends_zombie_high_xbow <- this.inherit("scripts/entity/tactical/legend_zo
 
 
 		local item = this.Const.World.Common.pickHelmet([
-			[2, ""],
-			[1, "aketon_cap"],
-			[1, "full_aketon_cap"],
-			[1, "kettle_hat"],
-			[1, "padded_kettle_hat"],
-			[1, "dented_nasal_helmet"],
-			[1, "mail_coif"],
-			[1, "full_leather_cap"]
+			[2, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.aketon_cap],
+			[1, ::Legends.Helmet.Standard.full_aketon_cap],
+			[1, ::Legends.Helmet.Standard.kettle_hat],
+			[1, ::Legends.Helmet.Standard.padded_kettle_hat],
+			[1, ::Legends.Helmet.Standard.dented_nasal_helmet],
+			[1, ::Legends.Helmet.Standard.mail_coif],
+			[1, ::Legends.Helmet.Standard.full_leather_cap]
 		]);
 
 		if (item != null)

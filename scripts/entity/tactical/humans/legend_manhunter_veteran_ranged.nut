@@ -154,20 +154,20 @@ this.legend_manhunter_veteran_ranged <- this.inherit("scripts/entity/tactical/hu
 		if (this.m.Items.hasEmptySlot(this.Const.ItemSlot.Head))
 		{
 			local helmets = [
-				[1, "oriental/wrapped_southern_helmet"],
-				[1, "oriental/spiked_skull_cap_with_mail"],
-				[1, "oriental/southern_helmet_with_coif"]
+				[1, ::Legends.Helmet.Southern.wrapped_southern_helmet],
+				[1, ::Legends.Helmet.Southern.spiked_skull_cap_with_mail],
+				[1, ::Legends.Helmet.Southern.southern_helmet_with_coif]
 			];
 
 			if (this.World.getTime().Days > 50) {
 				helmets.extend([
-					[1, "oriental/heavy_lamellar_helmet"]
+					[1, ::Legends.Helmet.Southern.heavy_lamellar_helmet]
 				]);
 
 				if (this.Const.DLC.Wildmen)
 				{
 					helmets.extend([
-						[1, "conic_helmet_with_closed_mail"]
+						[1, ::Legends.Helmet.Standard.conic_helmet_with_closed_mail]
 					]);
 				}
 			}

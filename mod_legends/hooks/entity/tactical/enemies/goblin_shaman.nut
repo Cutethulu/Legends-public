@@ -23,7 +23,7 @@
 		]);
 		this.m.Items.equip(item);
 		local item = this.Const.World.Common.pickHelmet([
-			[1, "greenskins/goblin_shaman_helmet"]
+			[1, ::Legends.Helmet.Greenskin.goblin_shaman_helmet]
 		]);
 		this.m.Items.equip(item);
 	}

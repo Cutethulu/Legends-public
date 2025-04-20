@@ -116,16 +116,16 @@ this.legend_manhunter <- this.inherit("scripts/entity/tactical/human", {
 		this.m.Items.equip(this.Const.World.Common.pickArmor(armor));
 
 		local helmet = [
-			[1, "oriental/nomad_leather_cap"],
-			[1, "oriental/nomad_light_helmet"],
-			[1, "oriental/wrapped_southern_helmet"],
-			[1, "oriental/spiked_skull_cap_with_mail"]
+			[1, ::Legends.Helmet.Southern.nomad_leather_cap],
+			[1, ::Legends.Helmet.Southern.nomad_light_helmet],
+			[1, ::Legends.Helmet.Southern.wrapped_southern_helmet],
+			[1, ::Legends.Helmet.Southern.spiked_skull_cap_with_mail]
 		];
 
 		if (this.World.getTime().Days <= 18)
 		{
 			helmet.extend([
-				[1, "oriental/southern_head_wrap"]
+				[1, ::Legends.Helmet.Southern.southern_head_wrap]
 			]);
 		}
 		this.m.Items.equip(this.Const.World.Common.pickHelmet(helmet));

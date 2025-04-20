@@ -17,7 +17,7 @@
 			if (this.Math.rand(1, 100) <= 33)
 			{
 				this.m.Items.equip(this.Const.World.Common.pickHelmet([
-					[1, "feathered_hat"]
+					[1, ::Legends.Helmet.Standard.feathered_hat]
 				]));
 				withHelmet = false;
 			}
@@ -46,7 +46,7 @@
 			if (this.Math.rand(1, 100) <= 50)
 			{
 				this.m.Items.equip(this.Const.World.Common.pickHelmet([
-					[1, "wizard_hat"]
+					[1, ::Legends.Helmet.Standard.wizard_hat]
 				]));
 				withHelmet = false;
 			}
@@ -72,13 +72,13 @@
 			if (this.Math.rand(1, 100) <= 50)
 			{
 				this.m.Items.equip(this.Const.World.Common.pickHelmet([
-						[1, "feathered_hat"]
+						[1, ::Legends.Helmet.Standard.feathered_hat]
 					]))
 			}
 			else
 			{
 				this.m.Items.equip(this.Const.World.Common.pickHelmet([
-						[1, "noble_headgear"]
+						[1, ::Legends.Helmet.Standard.noble_headgear]
 					]))
 			}
 		}

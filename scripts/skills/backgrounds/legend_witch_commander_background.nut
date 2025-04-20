@@ -187,7 +187,7 @@ this.legend_witch_commander_background <- this.inherit("scripts/skills/backgroun
 			[1, "legend_seer_robes"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "legend_seer_hat"]
+			[1, ::Legends.Helmet.Standard.legend_seer_hat]
 		]));
 		items.equip(this.new("scripts/items/weapons/legend_mystic_staff"));
 	}

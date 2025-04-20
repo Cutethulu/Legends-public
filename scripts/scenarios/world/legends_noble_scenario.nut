@@ -132,7 +132,7 @@ this.legends_noble_scenario <- this.inherit("scripts/scenarios/world/starting_sc
 			[1, "linen_tunic"]
 		]));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "feathered_hat"]
+			[1, ::Legends.Helmet.Standard.feathered_hat]
 		]));
 		items.equip(this.new("scripts/items/supplies/legend_pudding_item"));
 		items.addToBag(this.new("scripts/items/supplies/wine_item"));

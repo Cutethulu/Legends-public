@@ -80,11 +80,11 @@ this.legend_noble_slinger <- this.inherit("scripts/entity/tactical/human", {
 			[1, "gambeson"]
 		]));
 		local helmet = this.Const.World.Common.pickHelmet([
-				[1, "aketon_cap"],
-				[1, "full_aketon_cap"],
-				[1, "headscarf"],
-				[1, "mail_coif"],
-				[1, ""]
+				[1, ::Legends.Helmet.Standard.aketon_cap],
+				[1, ::Legends.Helmet.Standard.full_aketon_cap],
+				[1, ::Legends.Helmet.Standard.headscarf],
+				[1, ::Legends.Helmet.Standard.mail_coif],
+				[1, ::Legends.Helmet.None]
 			]);
 
 		if (helmet != null)

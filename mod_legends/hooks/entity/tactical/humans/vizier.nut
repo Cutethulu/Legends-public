@@ -26,9 +26,9 @@
 		if (withHelmet && this.Math.rand(1, 100) <= 80)
 		{
 			local helmet = [
-				[5, "oriental/vizier_headgear"],
-				[1, "legend_noble_southern_crown"],
-				[1, "legend_noble_southern_hat"]
+				[5, ::Legends.Helmet.Southern.vizier_headgear],
+				[1, ::Legends.Helmet.Standard.legend_noble_southern_crown],
+				[1, ::Legends.Helmet.Standard.legend_noble_southern_hat]
 			];
 			this.m.Items.equip(this.Const.World.Common.pickHelmet(helmet));
 		}

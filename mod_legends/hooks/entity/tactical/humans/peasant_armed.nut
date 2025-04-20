@@ -46,10 +46,10 @@
 		if (this.Math.rand(1, 100) <= 33)
 		{
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
-				[1, "straw_hat"],
-				[1, "hood"],
-				[1, "headscarf"],
-				[1, "feathered_hat"]
+				[1, ::Legends.Helmet.Standard.straw_hat],
+				[1, ::Legends.Helmet.Standard.hood],
+				[1, ::Legends.Helmet.Standard.headscarf],
+				[1, ::Legends.Helmet.Standard.feathered_hat]
 			]))
 		}
 	}

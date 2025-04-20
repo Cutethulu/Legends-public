@@ -164,10 +164,7 @@ this.legends_escaped_slaves_scenario <- this.inherit("scripts/scenarios/world/st
 		this.addRandomEquipment(items);
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Head));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[
-				5,
-				"oriental/gunner_hat"
-			]
+			[5, ::Legends.Helmet.Southern.gunner_hat]
 		]));
 
 		bros[3].setStartValuesEx([
@@ -301,30 +298,12 @@ this.legends_escaped_slaves_scenario <- this.inherit("scripts/scenarios/world/st
 
 		if (getsHelmet) {
 			items.equip(this.Const.World.Common.pickHelmet([
-				[
-					5,
-					"oriental/nomad_reinforced_helmet"
-				],
-				[
-					5,
-					"oriental/wrapped_southern_helmet"
-				],
-				[
-					5,
-					"oriental/spiked_skull_cap_with_mail"
-				],
-				[
-					20,
-					"oriental/nomad_head_wrap"
-				],
-				[
-					15,
-					"oriental/nomad_leather_cap"
-				],
-				[
-					15,
-					"oriental/nomad_light_helmet"
-				]
+				[5, ::Legends.Helmet.Southern.nomad_reinforced_helmet],
+				[5, ::Legends.Helmet.Southern.wrapped_southern_helmet],
+				[5, ::Legends.Helmet.Southern.spiked_skull_cap_with_mail],
+				[20, ::Legends.Helmet.Southern.nomad_head_wrap],
+				[15, ::Legends.Helmet.Southern.nomad_leather_cap],
+				[15, ::Legends.Helmet.Southern.nomad_light_helmet]
 			]));
 			local helmet = items.getItemAtSlot(this.Const.ItemSlot.Head);
 

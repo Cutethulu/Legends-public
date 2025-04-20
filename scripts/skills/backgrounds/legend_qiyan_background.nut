@@ -128,13 +128,13 @@ this.legend_qiyan_background <- this.inherit("scripts/skills/backgrounds/charact
 		]);
 		items.equip(armor);
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, ""],
-			[1, "legend_headband_coin"],
-			[1, "legend_headress_coin"],
-			[1, "legend_earings"],
-			[5, "legend_southern_veil"],
-			[1, "legend_southern_veil_coin"],
-			[1, "legend_southern_cloth_headress"]
+			[1, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Southern.legend_headband_coin],
+			[1, ::Legends.Helmet.Southern.legend_headress_coin],
+			[1, ::Legends.Helmet.Southern.legend_earings],
+			[5, ::Legends.Helmet.Southern.legend_southern_veil],
+			[1, ::Legends.Helmet.Southern.legend_southern_veil_coin],
+			[1, ::Legends.Helmet.Southern.legend_southern_cloth_headress]
 		]));
 	}
 });

@@ -158,7 +158,7 @@ this.legend_illusionist_background <- this.inherit("scripts/skills/backgrounds/c
 		]));
 		items.equip(this.new("scripts/items/weapons/legend_mystic_staff"));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "legend_seer_hat"]
+			[1, ::Legends.Helmet.Standard.legend_seer_hat]
 		]));
 	}
 });

@@ -57,8 +57,8 @@ this.legend_peasant_witchhunter <- this.inherit("scripts/entity/tactical/human",
 		if (this.Math.rand(1, 100) <= 66)
 		{
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
-				[1, "witchhunter_hat"],
-				[6, "hood"]
+				[1, ::Legends.Helmet.Standard.witchhunter_hat],
+				[6, ::Legends.Helmet.Standard.hood]
 			]))
 		}
 	}

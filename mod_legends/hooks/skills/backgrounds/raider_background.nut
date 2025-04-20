@@ -82,7 +82,7 @@
 	o.getTooltip = function ()
 	{
 		return this.character_background.getTooltip();
-	}	
+	}
 
 	//Default Male
 	o.setGender <- function (_gender = -1)
@@ -220,9 +220,9 @@
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, ""],
-			[1, "dented_nasal_helmet"],
-			[1, "nasal_helmet_with_rusty_mail"]
+			[1, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.dented_nasal_helmet],
+			[1, ::Legends.Helmet.Standard.nasal_helmet_with_rusty_mail]
 		]));
 
 	}

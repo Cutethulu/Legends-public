@@ -20,13 +20,13 @@
 				[1, "patched_mail_shirt"],
 			]);
 		else if (r == 3)
-			item = this.Const.World.Common.pickHelmet([[1, "dented_nasal_helmet"]]);
+			item = this.Const.World.Common.pickHelmet([[1, ::Legends.Helmet.Standard.dented_nasal_helmet]]);
 		else if (r == 4)
-			item = this.Const.World.Common.pickHelmet([[1, "mail_coif"]]);
+			item = this.Const.World.Common.pickHelmet([[1, ::Legends.Helmet.Standard.mail_coif]]);
 		else if (r == 5)
-			item = this.Const.World.Common.pickHelmet([[1, "cultist_hood"]]);
+			item = this.Const.World.Common.pickHelmet([[1, ::Legends.Helmet.Standard.cultist_hood]]);
 		else if (r == 6)
-			item = this.Const.World.Common.pickHelmet([[1, "full_leather_cap"]]);
+			item = this.Const.World.Common.pickHelmet([[1, ::Legends.Helmet.Standard.full_leather_cap]]);
 		else if (r == 7)
 			item = this.Const.World.Common.pickArmor([
 				[1, "ragged_surcoat"],

@@ -67,8 +67,8 @@
 			];
 
 			local helmet = [
-				[4, "oriental/southern_helmet_with_coif"],
-				[8, "oriental/nomad_reinforced_helmet"]
+				[4, ::Legends.Helmet.Southern.southern_helmet_with_coif],
+				[8, ::Legends.Helmet.Southern.nomad_reinforced_helmet]
 			];
 
 			local outfits = [
@@ -97,14 +97,14 @@
 		if (this.m.Items.getItemAtSlot(this.Const.ItemSlot.Head) == null)
 		{
 			local helmet = [
-				[4, "oriental/southern_helmet_with_coif"],
-				[1, "theamson_nomad_leader_helmet_facemask"],
-				[1, "theamson_nomad_leader_helmet_heavy"],
-				[8, "oriental/nomad_reinforced_helmet"]
+				[4, ::Legends.Helmet.Southern.southern_helmet_with_coif],
+				[1, ::Legends.Helmet.Standard.theamson_nomad_leader_helmet_facemask],
+				[1, ::Legends.Helmet.Standard.theamson_nomad_leader_helmet_heavy],
+				[8, ::Legends.Helmet.Southern.nomad_reinforced_helmet]
 			];
 
-			helmet.push([4, "oriental/kamy_southern_helmet"]);
-			helmet.push([4, "southern_knight_helmet"]);
+			helmet.push([4, ::Legends.Helmet.Southern.kamy_southern_helmet]);
+			helmet.push([4, ::Legends.Helmet.Standard.southern_knight_helmet]);
 
 			this.m.Items.equip(this.Const.World.Common.pickHelmet(helmet));
 		}

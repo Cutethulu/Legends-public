@@ -116,33 +116,33 @@
 		];
 
 		local helm = [
-			[1, ""],
-			[5, "nasal_helmet_with_mail"],
-			[5, "nasal_helmet"],
-			[5, "mail_coif"],
-			[5, "reinforced_mail_coif"],
-			[5, "headscarf"],
-			[5, "kettle_hat"],
-			[5, "kettle_hat_with_mail"],
-			[5, "rondel_helm"],
-			[5, "traze_northern_mercenary_cap"],
-			[5, "deep_sallet"],
-			[5, "scale_helm"],
-			[5, "flat_top_helmet"],
-			[5, "flat_top_with_mail"],
-			[5, "closed_flat_top_helmet"],
-			[5, "closed_mail_coif"],
-			[5, "bascinet_with_mail"],
-			[5, "nordic_helmet"],
-			[5, "nordic_helmet_with_closed_mail"],
-			[5, "legend_enclave_vanilla_kettle_sallet_02"],
-			[5, "legend_enclave_vanilla_kettle_sallet_03"],
-			[5, "legend_enclave_vanilla_skullcap_01"],
-			[5, "steppe_helmet_with_mail"],
-			[5, "barbute_helmet"]
+			[1, ::Legends.Helmet.None],
+			[5, ::Legends.Helmet.Standard.nasal_helmet_with_mail],
+			[5, ::Legends.Helmet.Standard.nasal_helmet],
+			[5, ::Legends.Helmet.Standard.mail_coif],
+			[5, ::Legends.Helmet.Standard.reinforced_mail_coif],
+			[5, ::Legends.Helmet.Standard.headscarf],
+			[5, ::Legends.Helmet.Standard.kettle_hat],
+			[5, ::Legends.Helmet.Standard.kettle_hat_with_mail],
+			[5, ::Legends.Helmet.Standard.rondel_helm],
+			[5, ::Legends.Helmet.Standard.traze_northern_mercenary_cap],
+			[5, ::Legends.Helmet.Standard.deep_sallet],
+			[5, ::Legends.Helmet.Standard.scale_helm],
+			[5, ::Legends.Helmet.Standard.flat_top_helmet],
+			[5, ::Legends.Helmet.Standard.flat_top_with_mail],
+			[5, ::Legends.Helmet.Standard.closed_flat_top_helmet],
+			[5, ::Legends.Helmet.Standard.closed_mail_coif],
+			[5, ::Legends.Helmet.Standard.bascinet_with_mail],
+			[5, ::Legends.Helmet.Standard.nordic_helmet],
+			[5, ::Legends.Helmet.Standard.nordic_helmet_with_closed_mail],
+			[5, ::Legends.Helmet.Standard.legend_enclave_vanilla_kettle_sallet_02],
+			[5, ::Legends.Helmet.Standard.legend_enclave_vanilla_kettle_sallet_03],
+			[5, ::Legends.Helmet.Standard.legend_enclave_vanilla_skullcap_01],
+			[5, ::Legends.Helmet.Standard.steppe_helmet_with_mail],
+			[5, ::Legends.Helmet.Standard.barbute_helmet]
 		];
 
-		helm.push([5, "theamson_barbute_helmet"]);
+		helm.push([5, ::Legends.Helmet.Standard.theamson_barbute_helmet]);
 
 		local outfits = [
 			[1, ::Legends.Outfit.northern_mercenary_outfit_00],

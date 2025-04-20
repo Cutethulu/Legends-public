@@ -108,7 +108,7 @@ this.mage_background <- this.inherit("scripts/skills/backgrounds/character_backg
 		]));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "wizard_hat"]
+			[1, ::Legends.Helmet.Standard.wizard_hat]
 		]));
 
 	}

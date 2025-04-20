@@ -173,8 +173,8 @@
 		items.equip(this.new("scripts/items/weapons/woodcutters_axe"));
 
 		items.equip(this.Const.World.Common.pickHelmet([
-				[1, "hood"],
-				[1, "headscarf"]
+				[1, ::Legends.Helmet.Standard.hood],
+				[1, ::Legends.Helmet.Standard.headscarf]
 		]))
 	}
 });;

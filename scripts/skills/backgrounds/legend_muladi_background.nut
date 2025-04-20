@@ -213,9 +213,9 @@ this.legend_muladi_background <- this.inherit("scripts/skills/backgrounds/charac
 		]));
 
 		local helm = this.Const.World.Common.pickHelmet([
-			[1, "oriental/southern_head_wrap"],
-			[1, "oriental/leather_head_wrap"],
-			[1, "oriental/nomad_head_wrap"]
+			[1, ::Legends.Helmet.Southern.southern_head_wrap],
+			[1, ::Legends.Helmet.Southern.leather_head_wrap],
+			[1, ::Legends.Helmet.Southern.nomad_head_wrap]
 		]);
 		items.equip(helm);
 	}

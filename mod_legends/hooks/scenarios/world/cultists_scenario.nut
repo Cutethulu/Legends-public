@@ -73,10 +73,7 @@
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Body));
 		items.equip(this.new("scripts/items/weapons/militia_spear"));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[
-				1,
-				"cultist_leather_hood"
-			]
+			[1, ::Legends.Helmet.Standard.cultist_leather_hood]
 		]));
 		items.equip(this.Const.World.Common.pickArmor([
 			[
@@ -97,10 +94,7 @@
 		items.unequip(items.getItemAtSlot(this.Const.ItemSlot.Head));
 		items.equip(this.new("scripts/items/weapons/pickaxe"));
 		items.equip(this.Const.World.Common.pickHelmet([
-			[
-				1,
-				"cultist_hood"
-			]
+			[1, ::Legends.Helmet.Standard.cultist_hood]
 		]));
 		items.equip(this.Const.World.Common.pickArmor([
 			[

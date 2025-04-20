@@ -67,9 +67,9 @@ this.legend_peasant_monk <- this.inherit("scripts/entity/tactical/human", {
 		];
 
 		local helmet = [
-			[1, "straw_hat"],
-			[2, "hood"],
-			[1, "headscarf"]
+			[1, ::Legends.Helmet.Standard.straw_hat],
+			[2, ::Legends.Helmet.Standard.hood],
+			[1, ::Legends.Helmet.Standard.headscarf]
 		];
 
 		local outfits = [

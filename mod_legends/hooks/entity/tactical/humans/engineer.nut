@@ -32,7 +32,7 @@
 			[1, "oriental/padded_vest"]
 		]));
 		local helm =this.Const.World.Common.pickHelmet([
-				[1, "oriental/engineer_hat"]
+				[1, ::Legends.Helmet.Southern.engineer_hat]
 		]);
 		this.m.Items.equip(helm);
 	}

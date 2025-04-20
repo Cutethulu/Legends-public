@@ -39,7 +39,7 @@
 		local armor = this.Const.World.Common.pickArmor(aList);
 		this.m.Items.equip(armor);
 		local helmet = [
-			[1, "oriental/nomad_head_wrap"]
+			[1, ::Legends.Helmet.Southern.nomad_head_wrap]
 		];
 		this.m.Items.equip(this.Const.World.Common.pickHelmet(helmet));
 	}
