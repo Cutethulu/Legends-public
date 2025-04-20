@@ -29,7 +29,7 @@
 			[1, ::Legends.Armor.Southern.padded_vest]
 		]));
 		local helm =this.Const.World.Common.pickHelmet([
-				[1, ::Legends.Helmet.Southern.gunner_hat]
+			[1, ::Legends.Helmet.Southern.gunner_hat]
 		]);
 		this.m.Items.equip(helm);
 	}

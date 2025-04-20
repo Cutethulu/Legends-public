@@ -58,10 +58,13 @@ this.legend_peasant_squire <- this.inherit("scripts/entity/tactical/human", {
 			this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));
 		}
 
-		this.m.Items.equip(this.Const.World.Common.pickArmor([[1, ::Legends.Armor.Standard.worn_mail_shirt]]));
+		this.m.Items.equip(this.Const.World.Common.pickArmor([
+			[1, ::Legends.Armor.Standard.worn_mail_shirt]
+		]));
 
-		this.m.Items.equip(this.Const.World.Common.pickHelmet([[1, ::Legends.Helmet.Standard.padded_nasal_helmet]]))
-
+		this.m.Items.equip(this.Const.World.Common.pickHelmet([
+			[1, ::Legends.Helmet.Standard.padded_nasal_helmet]
+		]))
 	}
 
 });

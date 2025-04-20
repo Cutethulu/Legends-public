@@ -21,41 +21,39 @@
 	o.assignRandomEquipment = function ()
 	{
 
-			local r = this.Math.rand(1, 5);
+		local r = this.Math.rand(1, 5);
 
-			if (r == 1)
-			{
-				this.m.Items.equip(this.new("scripts/items/weapons/legend_militia_glaive"));
-			}
-			else if (r == 2)
-			{
-				this.m.Items.equip(this.new("scripts/items/weapons/militia_spear"));
-			}
-			else if (r == 3)
-			{
-				this.m.Items.equip(this.new("scripts/items/weapons/ancient/ancient_spear"));
-			}
-			else if (r == 4)
-			{
-				this.m.Items.equip(this.new("scripts/items/weapons/legend_saw"));
-			}
-			// else if (r == 6)
-			// {
-			// 	this.m.Items.equip(this.new("scripts/items/weapons/legend_sickle")); // Unsure about this
-			// }
+		if (r == 1)
+		{
+			this.m.Items.equip(this.new("scripts/items/weapons/legend_militia_glaive"));
+		}
+		else if (r == 2)
+		{
+			this.m.Items.equip(this.new("scripts/items/weapons/militia_spear"));
+		}
+		else if (r == 3)
+		{
+			this.m.Items.equip(this.new("scripts/items/weapons/ancient/ancient_spear"));
+		}
+		else if (r == 4)
+		{
+			this.m.Items.equip(this.new("scripts/items/weapons/legend_saw"));
+		}
+		// else if (r == 6)
+		// {
+		// 	this.m.Items.equip(this.new("scripts/items/weapons/legend_sickle")); // Unsure about this
+		// }
 
-			local r = this.Math.rand(1, 4);
+		local r = this.Math.rand(1, 4);
 
-			if (r == 1)
-			{
-				this.m.Items.equip(this.new("scripts/items/shields/buckler_shield"));
-			}
-			if (r == 2)
-			{
-				this.m.Items.equip(this.new("scripts/items/shields/wooden_shield"));
-			}
-
-
+		if (r == 1)
+		{
+			this.m.Items.equip(this.new("scripts/items/shields/buckler_shield"));
+		}
+		if (r == 2)
+		{
+			this.m.Items.equip(this.new("scripts/items/shields/wooden_shield"));
+		}
 
 		this.m.Items.equip(this.Const.World.Common.pickArmor([
 			[1, ::Legends.Armor.Standard.leather_tunic],

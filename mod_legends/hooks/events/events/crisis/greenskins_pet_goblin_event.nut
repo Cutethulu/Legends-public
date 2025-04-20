@@ -24,7 +24,7 @@
 						item = this.Const.World.Common.pickHelmet([[1, ::Legends.Helmet.Named.wolf_helmet]]);
 					else if (r == 4) {
 						item = this.Const.World.Common.pickArmor([
-						[1, ::Legends.Armor.Named.black_leather_armor],
+							[1, ::Legends.Armor.Named.black_leather_armor],
 						]);
 					}
 

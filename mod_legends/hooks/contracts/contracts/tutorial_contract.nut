@@ -45,7 +45,7 @@
 					::Legends.Perks.remove(e, ::Legends.Perk.Overwhelm);
 					::Legends.Perks.remove(e, ::Legends.Perk.Nimble);
 					local armor = this.Const.World.Common.pickArmor([
-						[1, "mail_hauberk", 32],
+						[1, ::Legends.Armor.Standard.mail_hauberk, 32],
 					]);
 					armor.setArmor(0);
 					e.getItems().equip(armor);

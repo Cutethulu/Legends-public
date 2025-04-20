@@ -46,7 +46,7 @@
 			if (this.Math.rand(1, 100) <= 25)
 			{
 				local h = this.Const.World.Common.pickHelmet([
-					[1, "greatsword_faction_helm", this.World.FactionManager.getFaction(this.getFaction()).getBanner()]
+					[1, ::Legends.Helmet.Standard.greatsword_faction_helm, this.World.FactionManager.getFaction(this.getFaction()).getBanner()]
 				]);
 				this.m.Items.equip(h);
 			}
@@ -76,7 +76,7 @@
 			if (this.Math.rand(1, 100) <= 25)
 			{
 				local h = this.Const.World.Common.pickHelmet([
-					[1, "greatsword_faction_helm", this.World.FactionManager.getFaction(this.getFaction()).getBanner()]
+					[1, ::Legends.Helmet.Standard.greatsword_faction_helm, this.World.FactionManager.getFaction(this.getFaction()).getBanner()]
 				]);
 				this.m.Items.equip(h);
 			}

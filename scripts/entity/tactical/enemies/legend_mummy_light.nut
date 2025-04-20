@@ -92,7 +92,7 @@ this.legend_mummy_light <- this.inherit("scripts/entity/tactical/legend_mummy", 
 
 		local armor = [
 			[2, ::Legends.Armor.Ancient.legend_mummy_bandages],
-			[3, ""]
+			[3, ::Legends.Armor.None]
 
 		];
 		local item = this.Const.World.Common.pickArmor(armor);

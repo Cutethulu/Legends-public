@@ -85,7 +85,6 @@
 		items.equip(this.Const.World.Common.pickHelmet([
 			[1, ::Legends.Helmet.Southern.nomad_head_wrap]
 		]));
-		items.equip(this.new("scripts/items/helmets/oriental/nomad_head_wrap"));
 	}
 });
 

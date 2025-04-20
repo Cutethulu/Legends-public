@@ -1235,7 +1235,7 @@ if (!("World" in ::Const))
 	{
 		if (variant != null)
 		{
-			if (helm == "greatsword_faction_helm") //this doesn't set variant properly for things like [1, "hood", 63] in cripple_background file
+			if (helm == "greatsword_faction_helm" || helm == ::Legends.Helmet.Standard.greatsword_faction_helm) //this doesn't set variant properly for things like [1, "hood", 63] in cripple_background file
 				helmet.setupArmor(variant);
 		}
 

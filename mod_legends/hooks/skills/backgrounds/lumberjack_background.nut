@@ -170,6 +170,5 @@
 			[1, ::Legends.Helmet.None],
 			[1, ::Legends.Helmet.Standard.hood]
 		]));
-
 	}
 });

@@ -150,7 +150,7 @@ this.legend_death_summoner_background <- this.inherit("scripts/skills/background
 		}
 		else if (r >= 4)
 		{
-		 items.equip(this.new("scripts/items/weapons/legend_cat_o_nine_tails"));
+			items.equip(this.new("scripts/items/weapons/legend_cat_o_nine_tails"));
 		}
 	}
 });

@@ -46,9 +46,6 @@
 				"ammo/quiver_of_arrows"
 			]
 		];
-		local armor = [
-			"armor/named/black_leather_armor"
-		];
 
 		if (this.Math.rand(1, 100) <= 70)
 		{

@@ -287,8 +287,8 @@
 		items.equip(a);
 
 		items.equip(this.Const.World.Common.pickHelmet([
-			[1, "oriental/gladiator_helmet", this.Math.rand(13, 15)],
-			[1, ""]
+			[1, ::Legends.Helmet.Southern.gladiator_helmet, this.Math.rand(13, 15)],
+			[1, ::Legends.Helmet.None]
 		]));
 
 	}

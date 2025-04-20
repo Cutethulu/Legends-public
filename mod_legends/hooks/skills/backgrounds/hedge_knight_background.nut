@@ -233,18 +233,13 @@
 			[1, ::Legends.Armor.Standard.worn_mail_shirt]
 		]));
 
-		local helm = [
+		items.equip(this.Const.World.Common.pickHelmet([
 			[1, ::Legends.Helmet.Standard.nasal_helmet],
 			[1, ::Legends.Helmet.Standard.nasal_helmet_with_mail],
 			[1, ::Legends.Helmet.Standard.mail_coif],
 			[1, ::Legends.Helmet.Standard.bascinet_with_mail],
-			[1, ::Legends.Helmet.Standard.closed_flat_top_helmet]
-		];
-
-
-		helm.push([1, ::Legends.Helmet.Standard.theamson_barbute_helmet]);
-
-
-		items.equip(this.Const.World.Common.pickHelmet(helm));
+			[1, ::Legends.Helmet.Standard.closed_flat_top_helmet],
+			[1, ::Legends.Helmet.Standard.theamson_barbute_helmet]
+		]));
 	}
 });

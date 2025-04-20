@@ -110,7 +110,7 @@
 			this.m.Items.equip(this.Const.World.Common.pickHelmet([
 				[1, ::Legends.Helmet.Standard.full_aketon_cap],
 				[2, ::Legends.Helmet.Standard.aketon_cap],
-				[1, ""],
+				[1, ::Legends.Helmet.None],
 				[1, ::Legends.Helmet.Standard.headscarf]
 			]))
 		}

@@ -68,11 +68,11 @@
 		]));
 
 		local helmet = this.Const.World.Common.pickHelmet([
-				[1, ::Legends.Helmet.Standard.mail_coif],
-				[1, ::Legends.Helmet.Standard.aketon_cap],
-				[1, ::Legends.Helmet.Standard.open_leather_cap],
-				[1, ::Legends.Helmet.Standard.headscarf],
-				[1, ::Legends.Helmet.None]
+			[1, ::Legends.Helmet.Standard.mail_coif],
+			[1, ::Legends.Helmet.Standard.aketon_cap],
+			[1, ::Legends.Helmet.Standard.open_leather_cap],
+			[1, ::Legends.Helmet.Standard.headscarf],
+			[1, ::Legends.Helmet.None]
 		]);
 		if (helmet != null)
 		{

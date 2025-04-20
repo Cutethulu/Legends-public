@@ -191,8 +191,8 @@
 		]));
 
 		local item = this.Const.World.Common.pickHelmet([
-			[3, ""],
-			[1, "hood", 28]
+			[3, ::Legends.Helmet.None],
+			[1, ::Legends.Helmet.Standard.hood, 28]
 		]);
 		items.equip(item);
 	}

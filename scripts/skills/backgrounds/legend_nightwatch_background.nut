@@ -160,23 +160,19 @@ this.legend_nightwatch_background <- this.inherit("scripts/skills/backgrounds/ch
 
 		if (r == 0)
 		{
-		items.equip(this.new("scripts/items/weapons/wooden_stick"));
-		}
-		else if (r == 1)
-		{
-		items.equip(this.new(""));
+			items.equip(this.new("scripts/items/weapons/wooden_stick"));
 		}
 		else if (r == 2)
 		{
-		items.equip(this.new("scripts/items/weapons/hatchet"));
+			items.equip(this.new("scripts/items/weapons/hatchet"));
 		}
 		else if (r == 3)
 		{
-		items.equip(this.new("scripts/items/weapons/legend_staff"));
+			items.equip(this.new("scripts/items/weapons/legend_staff"));
 		}
 		else if (r == 4)
 		{
-		items.equip(this.new("scripts/items/weapons/legend_sling"));
+			items.equip(this.new("scripts/items/weapons/legend_sling"));
 		}
 
 		items.equip(this.Const.World.Common.pickArmor([

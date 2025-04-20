@@ -206,7 +206,7 @@
 			[1, ::Legends.Helmet.Standard.open_leather_cap],
 			[1, ::Legends.Helmet.Standard.aketon_cap],
 			[1, ::Legends.Helmet.Standard.full_aketon_cap],
-			[2, ""]
+			[2, ::Legends.Helmet.None]
 		]));
 	}
 

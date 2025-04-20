@@ -206,14 +206,12 @@
 			[1, ::Legends.Armor.Standard.reinforced_mail_hauberk]
 		]));
 
-		local helm = [
+		items.equip(this.Const.World.Common.pickHelmet([
 			[1, ::Legends.Helmet.Standard.feathered_hat],
 			[1, ::Legends.Helmet.Standard.headscarf],
 			[1, ::Legends.Helmet.Standard.mail_coif],
 			[1, ::Legends.Helmet.Standard.greatsword_hat]
-		];
-
-		items.equip(this.Const.World.Common.pickHelmet(helm));
+		]));
 	}
 
 });
