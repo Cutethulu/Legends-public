@@ -534,8 +534,6 @@
 			{
 				::Legends.Effects.grant(e, ::Legends.Effect.LegendRain);
 			}
-
-
 		}
 	}
 

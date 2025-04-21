@@ -550,7 +550,7 @@ if (!("World" in ::Const))
 	//New Legends Dynamic Spawn lists
 	if (typeof(_partyList) == "table")
 	{
-		p = this.Const.World.Common.buildDynamicTroopList(_partyList, _resources);
+		p = ::Const.World.Common.buildDynamicTroopList(_partyList, _resources);
 	}
 	//Vanilla partlyList spawnlists
 	else
@@ -649,7 +649,7 @@ if (!("World" in ::Const))
 	local minibossChanceMap = this.getMinibossChances(p, _minibossify);
 	foreach( t in p.Troops ) {
 		for( local i = 0; i != t.Num; i = ++i ) {
-			this.addTroop(_party, t, false, minibossChanceMap[t.Type.ID]);
+			::Const.World.Common.addTroop(_party, t, false, minibossChanceMap[t.Type.ID]);
 		}
 	}
 	_party.updateStrength();
@@ -662,6 +662,8 @@ if (!("World" in ::Const))
 	troop.Party <- this.WeakTableRef(_party);
 	troop.Faction <- _party.getFaction();
 	troop.Name <- "";
+	if (("Credits" in troop))
+		troop.Credits <- _troop.Credits;
 
 	if (troop.Variant > 0)
 	{
@@ -689,6 +691,60 @@ if (!("World" in ::Const))
 		_party.updateStrength();
 	}
 
+	return troop;
+}
+
+::Const.World.Common.serializeTroop <- function (_out, _troop) {
+	_out.writeU16(_troop.ID);
+	_out.writeU8(_troop.Variant);
+	_out.writeF32(_troop.Strength);
+	_out.writeI8(_troop.Row);
+	_out.writeString(_troop.Name);
+	if ("Outfits" in _troop) {
+		_out.writeBool(true);
+		_out.writeU8(_troop.Outfits.len());
+		foreach (o in _troop.Outfits) {
+			_out.writeU8(o.len());
+			_out.writeU8(o[0]);
+			_out.writeString(o[1]);
+			if (o.len() == 3)
+				_out.writeString(o[2]);
+		}
+	} else {
+		_out.writeBool(false);
+	}
+	_out.writeI32(this.IO.scriptHashByFilename(_troop.Script));
+	_out.writeI16(("Credits" in _troop) ? _troop.Credits : 0);
+	_out.writeI8(("DieRoll" in _troop) ? _troop.DieRoll : 100);
+}
+
+::Const.World.Common.deserializeTroop <- function (_in) {
+	local troop = clone this.Const.World.Spawn.Unit;
+	troop.ID = _in.readU16();
+	troop.Variant = _in.readU8();
+	troop.Strength = _in.readF32();
+	troop.Row = _in.readI8();
+	troop.Name = _in.readString();
+
+	if (_in.readBool())
+	{
+		local outfits = [];
+		local outfitLength = _in.readU8();
+		for (local i = 0; i < outfitLength; i++) {
+			if (_in.readU8() == 2) {
+				outfits.push( [_in.readU8(), _in.readString()] )
+			} else {
+				outfits.push( [_in.readU8(), _in.readString(), _in.readString()] )
+			}
+		}
+		troop.Outfits <- clone outfits
+	}
+
+	local hash = _in.readI32();
+	if (hash != 0)
+		troop.Script = this.IO.scriptFilenameByHash(hash);
+	troop.Credits <- _in.readI16();
+	troop.DieRoll <- _in.readI8();
 	return troop;
 }
 
@@ -1112,14 +1168,14 @@ if (!("World" in ::Const))
 		return "MaxR" in _template ? (_resources * 1.0) / (_template.MaxR * 1.0) : 1.0;
 	},
 	// Defines how excess credits should be spent after fixed units are added
-	selectDynamicTroops = function(_template, _resources, _scale, _troopMap, _credits) {
+	selectDynamicTroops = function(_template, _resources, _scale, _troopMap, _credits, _limit) {
 		local credits = _credits;
 		if ("Troops" in _template && _template.Troops.len() > 0)
 		{
-			local tries = 200;
+			local tries = _limit;
 			while (credits > 0 && tries > 0)
 			{
-				credits = this.Const.World.Common.dynamicSelectTroop(_template.Troops, _resources, _scale, _troopMap, credits);
+				credits = ::Const.World.Common.dynamicSelectTroop(_template.Troops, _resources, _scale, _troopMap, credits);
 				tries--;
 			}
 		}
@@ -1129,11 +1185,12 @@ if (!("World" in ::Const))
 
 ::Const.World.Common.buildDynamicTroopList <- function( _template, _resources)
 {
-//	::logInfo("*DynamicTroopList : template = " + _template.Name + " : resources = " + _resources)
+//	::logInfo("*DynamicTroopList : template = " + _template.Name + " : resources = " + _resources);
 	local credits = ::Const.World.Common.DynamicTroops.getCredits(_template, _resources);
 	local scale = ::Const.World.Common.DynamicTroops.getScale(_template, _resources);
 	local troopMap = {};
 	local prevPoints = 0;
+//	::logInfo("*DynamicTroopList : credits = " + credits + " : scale = " + scale);
 
 	foreach(name in ::Const.World.Common.DynamicTroops.Templates) {
 		if (name in _template) {
@@ -1141,14 +1198,22 @@ if (!("World" in ::Const))
 		}
 	}
 
-	credits = ::Const.World.Common.DynamicTroops.selectDynamicTroops(_template, _resources, scale, troopMap, credits);
+	local count = 0;
+	foreach (k, v in troopMap)
+		count += v.Num;
+	local partySizeLimit = 200 - count;
+
+	credits = ::Const.World.Common.DynamicTroops.selectDynamicTroops(_template, _resources, scale, troopMap, credits, partySizeLimit);
+	credits = ::Math.max(0, credits);
 
 	local T = [];
-	foreach (k, v in troopMap)
+	foreach (k, v in troopMap) {
+		v.Credits <- credits,
 		T.push(v);
+	}
 
-//	 foreach (t in T) //TESTING
-//	 	::logInfo(t.Type.Script + " : " + t.Num);
+//	::MSU.Log.printData(T, 100); // test
+
 	return {
 		MovementSpeedMult = _template.MovementSpeedMult,
 		VisibilityMult = _template.VisibilityMult,
