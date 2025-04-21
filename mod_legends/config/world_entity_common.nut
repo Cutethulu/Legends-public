@@ -662,7 +662,7 @@ if (!("World" in ::Const))
 	troop.Party <- this.WeakTableRef(_party);
 	troop.Faction <- _party.getFaction();
 	troop.Name <- "";
-	if (("Credits" in troop))
+	if (("Credits" in _troop))
 		troop.Credits <- _troop.Credits;
 
 	if (troop.Variant > 0)
@@ -1201,7 +1201,7 @@ if (!("World" in ::Const))
 	local count = 0;
 	foreach (k, v in troopMap)
 		count += v.Num;
-	local partySizeLimit = 200 - count;
+	local partySizeLimit = 5 - count;
 
 	credits = ::Const.World.Common.DynamicTroops.selectDynamicTroops(_template, _resources, scale, troopMap, credits, partySizeLimit);
 	credits = ::Math.max(0, credits);
