@@ -102,6 +102,8 @@
 ::Legends.Compat.HardIncompat.add("mod_avatar", "1.0.2");
 ::Legends.Compat.HardIncompat.add("mod_avgmax", "1.0"); // Average bro max stats
 ::Legends.Compat.HardIncompat.add("mod_backgrounds_attribute_ranges", "2.0.0");
+::Legends.Compat.HardIncompat.add("backgroundBonuses"); // Nexus author states this is the "Reforged version"
+::Legends.Compat.HardIncompat.add("backgroundBonusesMore"); //Calls for hard req of Hacks "More Backgrounds & Events" which is apparently not Legends compat according to Nexus comments on that mod
 ::Legends.Compat.HardIncompat.add("mod_background_perks", "2.6"); // Starting Perks by Background Hackflow
 ::Legends.Compat.HardIncompat.add("mod_balanced_tryout", "1.0"); // Balanced Tryouts
 ::Legends.Compat.HardIncompat.add("battle_fatigue", "0.5.0");
@@ -136,11 +138,13 @@
 ::Legends.Compat.HardIncompat.add("graven_passive_shield_damage_bonus", "1.0");
 ::Legends.Compat.HardIncompat.add("graven_plentiful_paints", "1.1");
 ::Legends.Compat.HardIncompat.add("mod_hackflows_perks", "1.4");
+::Legends.Compat.HardIncompat.add("mod_hardened"); // Darx's RF submod
 ::Legends.Compat.HardIncompat.add("mod_healable_injury", "1.0");
 ::Legends.Compat.HardIncompat.add("Mod_Heavy_Injuries_MSU", "3.0.0");
 ::Legends.Compat.HardIncompat.add("mod_hireNaked", "1.0");
 ::Legends.Compat.HardIncompat.add("mod_hitpoint_injury", "1");
 ::Legends.Compat.HardIncompat.add("mod_Drakes_Improved_Ambitions", "1.4.1");
+::Legends.Compat.HardIncompat.add("mod_IMBAvani");
 ::Legends.Compat.HardIncompat.add("mod_items_recipes", "2.0.0");
 ::Legends.Compat.HardIncompat.add("mod_jin", "1.0"); // Jurchen mod
 ::Legends.Compat.HardIncompat.add("mod_lifetime_stats", "1");
