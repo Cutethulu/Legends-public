@@ -11,11 +11,6 @@ this.legend_spider_cluster <- this.inherit("scripts/entity/tactical/actor", {
 		IsFlipping = false
 	},
 
-//TO DO;-
-//- add art files to metadata files
-//- make art files (body, injured body, dead)
-//- 
-
 	function create()
 	{
 		this.m.Type = this.Const.EntityType.LegendSpiderCluster; 
@@ -125,7 +120,7 @@ this.legend_spider_cluster <- this.inherit("scripts/entity/tactical/actor", {
 			local body_decal;
 			this.m.IsCorpseFlipped = flip;
 			local body = this.getSprite("body");
-			decal = _tile.spawnDetail("bust_spider_body_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip); //need art
+			decal = _tile.spawnDetail("bust_spider_cluster_body_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
 			decal.Color = body.Color;
 			decal.Saturation = body.Saturation;
 			decal.Scale = 0.9 * this.m.Size;
@@ -134,7 +129,7 @@ this.legend_spider_cluster <- this.inherit("scripts/entity/tactical/actor", {
 			this.spawnTerrainDropdownEffect(_tile);
 			this.spawnFlies(_tile);
 			local corpse = clone this.Const.Corpse;
-			corpse.CorpseName = "A cluster of Hatchlings";
+			corpse.CorpseName = "A dead cluster of Hatchlings";
 			corpse.IsConsumable = false;
 			_tile.Properties.set("Corpse", corpse);
 			this.Tactical.Entities.addCorpse(_tile);
@@ -197,7 +192,7 @@ this.legend_spider_cluster <- this.inherit("scripts/entity/tactical/actor", {
 		this.m.MaxTraversibleLevels = 3;
 		this.addSprite("socket").setBrush("bust_base_beasts");
 		local body = this.addSprite("body");
-		body.setBrush("bust_spider_body_0" + this.Math.rand(1, 4)); //need art
+		body.setBrush("bust_spider_cluster_body_01"); 
 
 		if (this.Math.rand(0, 100) < 90)
 		{
@@ -216,7 +211,7 @@ this.legend_spider_cluster <- this.inherit("scripts/entity/tactical/actor", {
 
 		local injury = this.addSprite("injury");
 		injury.Visible = false;
-		injury.setBrush("bust_spider_01_injured"); //change
+		injury.setBrush("bust_spider_cluster_body_01_wounds");
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.65;
 		this.setSpriteOffset("status_rooted", this.createVec(7, 10));
