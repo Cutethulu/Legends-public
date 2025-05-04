@@ -36,18 +36,18 @@
 ]);
 
 ::Const.Strings.FreeCompanyNames <- clone ::Const.Strings.MercenaryCompanyNames;
+//dunno entirely if this works, gonna let Breaky and Chop hash it out
+// local gt = this.getroottable();
 
-local gt = this.getroottable();
-
-if (!("Encounters" in gt.Const))
-{
-    gt.Const.Encounters <- {};
-}
+// if (!("Encounters" in gt.Const))
+// {
+//     gt.Const.Encounters <- {};
+// }
 
 
-if (!("TownTitleTemplates" in gt.Const.Encounters))
-{
-    gt.Const.TownTitleTemplates <- {};
-}
+// if (!("TownTitleTemplates" in gt.Const.Encounters))
+// {
+//     gt.Const.TownTitleTemplates <- {};
+// }
 
-gt.Const.Encounters.TownTitleTemplates= ["{While at %settlement... | Strolling through %settlement% | Something\'s up at %settlement}"];
+// gt.Const.Encounters.TownTitleTemplates= ["{While at %settlement... | Strolling through %settlement% | Something\'s up at %settlement}"];
