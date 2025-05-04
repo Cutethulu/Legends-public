@@ -85,6 +85,7 @@ if (!("LegendMod" in ::Const))
 ];
 ::Const.LegendMod.FavoriteSpider <- [
 	this.Const.EntityType.Spider,
+	this.Const.EntityType.LegendSpiderCluster,
 	//this.Const.EntityType.SpiderBodyguard,
 	this.Const.EntityType.SpiderEggs,
 	this.Const.EntityType.LegendRedbackSpider
