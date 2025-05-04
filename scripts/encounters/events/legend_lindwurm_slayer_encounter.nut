@@ -2,7 +2,7 @@ this.legend_lindwurm_slayer_encounter <- this.inherit("scripts/encounters/encoun
     m = {},
     function create() {
         this.m.Type = "encounter.legend_lindwurm_slayer_encounter";
-        this.m.Name = "Dragon slayer";
+        this.m.Name = "{While at %settlement... | Strolling through %settlement%. | Something\'s up at %settlement.}";
 		this.m.Event = "event.crisis.lindwurm_slayer";
 	}
 
