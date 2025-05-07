@@ -14,17 +14,17 @@ this.legend_recruitment_druid_encounter <- this.inherit("scripts/encounters/enco
             ID = "Start",
             Title = "The forest burns...",
 			Text = "[img]gfx/ui/events/event_25.png[/img]{From a distance, you see a great blaze, the size of a small mountain, over a section of the old woods. You reckon it\'s perhaps a little under an hour\'s trek, but you feel oddly compelled to pay tribute to the death of something that has spanned so many centuries.}",
-            Image = "",
-            List = [],
+			Image = "",
+			List = [],
 			Characters = [],
 			Options = [
-	            {
-	                Text = "Let us pay our respects.",
-	                function getResult( _event )
+				{
+					Text = "Let us pay our respects.",
+					function getResult( _event )
 					{
 						return "recruit";
 					}
-	            },
+				},
 				{
 					Text = "A frivolous whim, nothing more.",
 					function getResult(_event) {
@@ -64,48 +64,46 @@ this.legend_recruitment_druid_encounter <- this.inherit("scripts/encounters/enco
 				},
 			],
 
-            function start(_event) {
+			function start(_event) {
 				local roster = ::World.getTemporaryRoster();
 				_event.m.Druid = roster.create("scripts/entity/tactical/player");
 				_event.m.Druid.setStartValuesEx(["legend_druid_background"]);
 				this.Characters.push(_event.m.Druid.getImagePath());
-            }
-        });
-    }
+			}
+		});
+	}
 
-    o.onPrepareVariables = function (_vars) {
-        this.Const.LegendMod.extendVarsWithPronouns(_vars, this.m.Dude.getGender(), "Druid");
-    }
-  
-    function isValid(_camp) {
-      local currentTile = this.World.State.getPlayer().getTile();
-      if (currentTile.Type != this.Const.World.TerrainType.Forest && currentTile.Type != this.Const.World.TerrainType.SnowyForest && currentTile.Type != this.Const.World.TerrainType.LeaveForest && currentTile.Type != this.Const.World.TerrainType.AutumnForest)
-      {
-        return false;
-      }
-      if (::World.getPlayerRoster().getSize() >= ::World.Assets.getBrothersMax())
-        return false;
+	o.onPrepareVariables = function (_vars) {
+		this.Const.LegendMod.extendVarsWithPronouns(_vars, this.m.Dude.getGender(), "Druid");
+	}
 
-      local totalbrothers = 0;
-      local brotherlevels = 0;
+	function isValid(_camp) {
+	local currentTile = this.World.State.getPlayer().getTile();
+	if (currentTile.Type != this.Const.World.TerrainType.Forest && currentTile.Type != this.Const.World.TerrainType.SnowyForest && currentTile.Type != this.Const.World.TerrainType.LeaveForest && currentTile.Type != this.Const.World.TerrainType.AutumnForest)
+		return false;
+	if (::World.getPlayerRoster().getSize() >= ::World.Assets.getBrothersMax())
+		return false;
 
-      foreach(t in towns){
-        if (t.getTile().getDistanceTo(playerTile)<=7)
-          return false //if too close to town, disable
-      }		
-      foreach (bro in ::World.getPlayerRoster().getAll()) {
-        if ((bro.getBackground().getID() == "background.legend_druid") || (bro.getBackground().getID() == "background.legend_commander_druid"))
-          return false;
+	local totalbrothers = 0;
+	local brotherlevels = 0;
 
-        totalbrothers += 1;
-        brotherlevels += bro.getLevel();
-      }
+	foreach(t in towns){
+		if (t.getTile().getDistanceTo(playerTile)<=7)
+			return false //if too close to town, disable
+	}		
+	foreach (bro in ::World.getPlayerRoster().getAll()) {
+		if ((bro.getBackground().getID() == "background.legend_druid") || (bro.getBackground().getID() == "background.legend_commander_druid"))
+			return false;
 
-      if (totalbrothers < 1 || brotherlevels < 30)
-        return false;
+		totalbrothers += 1;
+		brotherlevels += bro.getLevel();
+	}
 
-	    return !isOnCooldown();
-    }
+	if (totalbrothers < 1 || brotherlevels < 30)
+		return false;
+
+		return !isOnCooldown();
+	}
 
 	function onClear() {
 		this.m.Druid = null;
