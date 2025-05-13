@@ -52,7 +52,7 @@ this.legend_second_wind_skill <- this.inherit("scripts/skills/skill", {
 	{
 		local actor = this.getContainer().getActor();
 		local fatiguePct = this.getContainer().getActor().getFatiguePct() < 0.5;
-		return this.skill.isUsable() && actor.getFatiguePct() < 0.5 && !actor.getSkills().hasEffect(::Legends.Effect.LegendSecondWind);
+		return this.skill.isUsable() && actor.getFatiguePct() > 0.5 && !actor.getSkills().hasEffect(::Legends.Effect.LegendSecondWind);
 	}
 
 	function onUse( _user, _targetTile )
