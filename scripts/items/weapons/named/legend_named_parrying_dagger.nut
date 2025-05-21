@@ -193,6 +193,11 @@ this.legend_named_parrying_dagger <- this.inherit("scripts/items/shields/named/n
 
 		foreach (id, offhandSkill in m.OffHandWeaponSkills)
 		{
+
+			if (::MSU.isNull(offhandSkill)) {
+				continue;
+			}
+
 			local mainhandSkill = getContainer().getActor().getSkills().getSkillByID(id);
 
 			if (mainhandSkill != null)
@@ -220,11 +225,14 @@ this.legend_named_parrying_dagger <- this.inherit("scripts/items/shields/named/n
 			local mainhandSkill = getContainer().getActor().getSkills().getSkillByID(id);
 
 			if (mainhandSkill == null) {
-				offhandSkill.m.IsHidden = false;
+				if (offhandSkill != null && "m" in offhandSkill) {
+					offhandSkill.m.IsHidden = false;
+				}
 				continue;
-			}
-			else if (::MSU.isNull(offhandSkill)) {
-				mainhandSkill.m.IsHidden = false;
+			} else if (::MSU.isNull(offhandSkill)) {
+				if (mainhandSkill != null && "m" in mainhandSkill) {
+					mainhandSkill.m.IsHidden = false;
+				}
 				continue;
 			}
 
