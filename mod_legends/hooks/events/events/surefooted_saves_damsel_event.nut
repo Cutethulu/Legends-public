@@ -37,7 +37,6 @@
 		}
 
 		this.m.Surefooted = candidates[this.Math.rand(0, candidates.len() - 1)];
-		this.m.Town = town;
 		this.m.Score = candidates.len() * 15;
 	}
 });
