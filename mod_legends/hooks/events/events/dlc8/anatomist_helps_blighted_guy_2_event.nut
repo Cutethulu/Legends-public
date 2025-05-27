@@ -12,9 +12,9 @@
 					_event.m.MilitiaCaptain.getSkills().removeByID("background.vagabond");
 					_event.m.MilitiaCaptain.getSkills().add(bg);
 					_event.m.MilitiaCaptain.getBackground().m.RawDescription = "You found %name% being buried alive for carrying some unknown blight. The anatomists took interest in %them_militiacaptain% and rescued %them_militiacaptain%, nursing %them_militiacaptain% back to health. Now, %they_militiacaptain% fights for you, putting to use the skills that made %them_militiacaptain% captain of the guard in a previous life.";
-					_event.m.Dude.getBackground().buildDescription(true);
-					_event.m.Dude.getBackground().rebuildPerkTree(oldPerkTree);
-					_event.m.Dude.resetPerks();
+					_event.m.MilitiaCaptain.getBackground().buildDescription(true);
+					_event.m.MilitiaCaptain.getBackground().rebuildPerkTree(oldPerkTree);
+					_event.m.MilitiaCaptain.resetPerks();
 					_event.m.MilitiaCaptain.improveMood(1.0, "Recovered from the blight afflicting him");
 
 					if (_event.m.MilitiaCaptain.getMoodState() >= this.Const.MoodState.Neutral)
