@@ -48,12 +48,6 @@ this.legend_ranged_flail_skill <- this.inherit("scripts/skills/skill", {
 				type = "text",
 				icon = "ui/icons/vision.png",
 				text = "Has a range of [color=" + this.Const.UI.Color.PositiveValue + "]2[/color] tiles"
-			},
-			{
-				id = 7,
-				type = "text",
-				icon = "ui/icons/special.png",
-				text = "Ignores the bonus to Melee Defense granted by shields"
 			}
 		]);
 

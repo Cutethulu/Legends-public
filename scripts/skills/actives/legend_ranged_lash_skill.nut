@@ -43,24 +43,7 @@ this.legend_ranged_lash_skill <- this.inherit("scripts/skills/skill", {
 	function getTooltip()
 	{
 		local ret = this.getDefaultTooltip();
-		ret.extend([
-			{
-				id = 9,
-				type = "text",
-				icon = "ui/icons/special.png",
-				text = "Has a [color=" + this.Const.UI.Color.PositiveValue + "]100%[/color] chance to hit the head"
-			}
-		]);
 
-		if (this.getContainer().getActor().getCurrentProperties().IsSpecializedInFlails)
-		{
-			ret.push({
-				id = 8,
-				type = "text",
-				icon = "ui/icons/special.png",
-				text = "Ignores the bonus to Melee Defense granted by shields"
-			});
-		}
 		if (!this.getContainer().getActor().getCurrentProperties().IsSpecializedInPolearms)
 		{
 			ret.push({

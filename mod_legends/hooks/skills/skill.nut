@@ -158,6 +158,16 @@
 			});
 		}
 
+		if (!this.m.IsShieldRelevant)
+		{
+			ret.push({
+				id = 8,
+				type = "text",
+				icon = "ui/icons/special.png",
+				text = "Ignores the bonus to Melee Defense granted by shields"
+			});
+		}
+
 		if (p.DamageMinimum > 0)
 		{
 			ret.push({
@@ -165,6 +175,16 @@
 				type = "text",
 				icon = "ui/icons/special.png",
 				text = "Always inflicts at least [color=" + this.Const.UI.Color.DamageValue + "]" + p.DamageMinimum + "[/color] damage to hitpoints, regardless of armor"
+			});
+		}
+
+		if (p.HitChance[this.Const.BodyPart.Head] > 0)
+		{
+			ret.push({
+				id = 7,
+				type = "text",
+				icon = "ui/icons/chance_to_hit_head.png",
+				text = "Has a [color=" + this.Const.UI.Color.PositiveValue + "]" + this.Math.min(100, p.HitChance[this.Const.BodyPart.Head]) + "%[/color] chance to hit the head"
 			});
 		}
 
