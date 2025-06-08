@@ -34,10 +34,11 @@ foreach(entry in [
 foreach (location in [
 	"entity/world/locations/undead_vampire_coven_location",
 ]) {
-	::mods_hookExactClass(location, function(q) {
-		q.onDropLootForPlayer = @(__original) function (_lootTable) {
+	::mods_hookExactClass(location, function(o) {
+		local onDropLootForPlayer = o.onDropLootForPlayer;
+		o.onDropLootForPlayer = function (_lootTable) {
 			_lootTable.push(this.new("scripts/items/misc/mfl_legendary_map"));
-			__original(_lootTable);
+			onDropLootForPlayer(_lootTable);
 		}
 	});
 }
