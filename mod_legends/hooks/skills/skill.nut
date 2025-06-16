@@ -1399,7 +1399,7 @@
 			}
 		}
 
-		if (isHit && this.Math.rand(1, 100) <= _targetEntity.getCurrentProperties().RerollDefenseChance)
+		if (isHit && this.Math.rand(1, 100) <= defenderProperties.RerollDefenseChance)
 		{
 			r = this.Math.rand(1, 100);
 			isHit = r <= toHit;
