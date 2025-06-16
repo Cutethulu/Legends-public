@@ -33,7 +33,7 @@
 ::Legends.Map.Oracle <- ::Legends.Maps.add("location.holy_site.oracle", "The Oracle");
 ::Legends.Map.AncientCity <- ::Legends.Maps.add("location.holy_site.vulcano", "The Ancient City");
 ::Legends.Map.AbandonedVillage <- ::Legends.Maps.add("location.abandoned_village", "Abandoned Village");
-::Legends.Map.ArtifactReliquary <- ::Legends.Maps.add("location.holy_site.vulcano", "Artifact Reliquary");
+::Legends.Map.ArtifactReliquary <- ::Legends.Maps.add("location.artifact_reliquary", "Artifact Reliquary");
 
 // legends locations
 ::Legends.Map.AncientMastaba <- ::Legends.Maps.add("location.legend_mummy", "Ancient Mastaba");
