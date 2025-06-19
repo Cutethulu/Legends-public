@@ -116,7 +116,7 @@
 			],
 			Profession = [
 				this.Const.Perks.HealerProfessionTree,
-				this.Const.Perks.HerbalismProfessionTree,
+				this.Const.Perks.HerbalistProfessionTree,
 			],
 			Magic = [
 				this.Const.Perks.PhilosophyMagicTree
