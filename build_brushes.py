@@ -21,13 +21,14 @@ class BrushBuildError(Exception):
 
 class BrushBuilder:
     def __init__(self, build_dir=None, repo_dir="Legends-public"):
-        # Set default build directory (matches shell script default)
+        self.current_dir = Path.cwd()
+
+        # Set default build directory
         if build_dir is None:
-            build_dir = ".\\build"
+            build_dir = self.current_dir / "build"
 
         self.build_dir = Path(build_dir)
         self.repo_dir = repo_dir
-        self.current_dir = Path.cwd()
         self.bin_dir = self.current_dir.parent / "bin"
 
         # Determine executable extension based on OS
@@ -287,7 +288,7 @@ class BrushBuilder:
 def main():
     """Main entry point"""
     parser = argparse.ArgumentParser(description="Build brushes for Legends mod")
-    parser.add_argument("build_dir", nargs="?", help="Build directory (default: .\\build)")
+    parser.add_argument("build_dir", nargs="?", help="Build directory (default: ./build)")
     parser.add_argument(
         "repo_dir",
         nargs="?",

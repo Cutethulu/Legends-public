@@ -47,7 +47,7 @@ The simplest way is to install `wine`. You will also need Microsoft C++ Runtime;
 
 ```
 #!/bin/bash
-wine bbrusher.exe
+wine bbrusher.exe "$@"
 ```
 
 ## Platform-Specific Features
