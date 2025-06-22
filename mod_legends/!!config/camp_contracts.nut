@@ -11,7 +11,6 @@
 			_banner = _banner.slice(0, _banner.len() - 4);
 		this.EmployerBanner.push(_banner);
 		this.EmployerFactory.push(_factory);
-		::logInfo("adding faction " + faction);
 		return faction;
 	}
 }
