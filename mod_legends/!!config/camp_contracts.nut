@@ -17,7 +17,7 @@
 
 ::Legends.CampContracts.EmployerFaction.Barbarians <- ::Legends.CampContracts.addFaction("ui/banners/factions/banner_legend_barbarians_s.png", function (_factionID, _roster) {
 	local unit = ::Const.World.Spawn.Troops.BarbarianChampion;
-	local character = _roster.create(unit.Script);
+	local character = _roster.create("scripts/entity/tactical/employer/legend_barbarian_employer");
 	character.setFaction(_factionID);
 	character.m.HairColors = ::Const.HairColors.Young;
 	character.setAppearance();
@@ -27,7 +27,7 @@
 
 ::Legends.CampContracts.EmployerFaction.Bandits <- ::Legends.CampContracts.addFaction("ui/banners/factions/banner_legend_bandits_s.png", function (_factionID, _roster) {
 	local unit = ::Const.World.Spawn.Troops.BanditLeader;
-	local character = _roster.create(unit.Script);
+	local character = _roster.create("scripts/entity/tactical/employer/legend_bandit_employer");
 	character.setFaction(_factionID);
 	character.m.HairColors = ::Const.HairColors.Young;
 	character.setAppearance();
@@ -37,7 +37,7 @@
 
 ::Legends.CampContracts.EmployerFaction.Necromancers <- ::Legends.CampContracts.addFaction("ui/banners/factions/banner_legend_necro_s.png", function (_factionID, _roster) {
 	local unit = ::Const.World.Spawn.Troops.Necromancer;
-	local character = _roster.create(unit.Script);
+	local character = _roster.create("scripts/entity/tactical/employer/legend_necromancer_employer");
 	character.setFaction(_factionID);
 	character.m.HairColors = this.Const.HairColors.Old;
 	character.setAppearance();
