@@ -24,6 +24,6 @@ this.perk_legend_specialist_blacksmith <- this.inherit("scripts/skills/legend_sp
 	{
 		this.legend_specialist_abstract.onAnySkillUsed(_skill, _targetEntity, _properties);
 		if (this.onAnySkillUsedSpecialistChecks(_skill))
-			_properties.DamageMinimum += this.Math.floor(_skill.getItem().m.ArmorDamageMult * 5);
+			_properties.DamageArmorMult += 0.01 * this.calculateSpecialistBonus(30, _skill.getItem());
 	}
 });
