@@ -427,23 +427,23 @@
 	TitleList = this.Const.Strings.LegendManhunterVeteranTitles
 };
 
-::Const.World.Spawn.Troops.KoboldFighter <- {
-	ID = this.Const.EntityType.KoboldFighter,
-	Variant = 0,
-	Strength = 5,
-	Cost = 5,
-	Row = 0,
-	Script = "scripts/entity/tactical/enemies/legend_kobold_fighter"
-};
+// ::Const.World.Spawn.Troops.KoboldFighter <- {
+// 	ID = this.Const.EntityType.KoboldFighter,
+// 	Variant = 0,
+// 	Strength = 5,
+// 	Cost = 5,
+// 	Row = 0,
+// 	Script = "scripts/entity/tactical/enemies/legend_kobold_fighter"
+// };
 
-::Const.World.Spawn.Troops.KoboldWolfrider <- {
-	ID = this.Const.EntityType.KoboldWolfrider,
-	Variant = 0,
-	Strength = 20,
-	Cost = 20,
-	Row = 1,
-	Script = "scripts/entity/tactical/enemies/legend_kobold_wolfrider"
-};
+// ::Const.World.Spawn.Troops.KoboldWolfrider <- {
+// 	ID = this.Const.EntityType.KoboldWolfrider,
+// 	Variant = 0,
+// 	Strength = 20,
+// 	Cost = 20,
+// 	Row = 1,
+// 	Script = "scripts/entity/tactical/enemies/legend_kobold_wolfrider"
+// };
 
 ::Const.World.Spawn.Troops.LegendMummyLight <- {
 	ID = this.Const.EntityType.LegendMummyLight,

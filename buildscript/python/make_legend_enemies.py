@@ -23,15 +23,7 @@ brush_only_layers = [
     {"template": [Normal], "entity":"goblins", "name": "bust_goblin_02_helmet", "suffix": "dead", "img":"bust_goblin_04_helmet_00_dead", "min" : 20, "max" : 26, "w": 125, "h": 114,  "left": -10, "right" :46, "top": -46, "bottom": 4, "offsetY" : 15},
 
     {"template": [Normal], "entity":"undead", "name": "mummy_head",                   "min" : 1, "max" : 9, "w": 104, "h": 142, "left": -17, "right" :29, "top": -14, "bottom": 48, "offsetY" : 35},
-    {"template": [Full],   "entity":"undead", "name": "mummy_head", "suffix": "dead", "min" : 1, "max" : 9, "w": 191, "h": 185, "left": -45, "right" :11, "top": -53, "bottom": 3, "offsetY" : 10, "offsetX" : 6, "f1":-15, "f2": -15},
-
-    {"template": [Normal], "entity":"goblins", "name": "bust_kobold",                      "min" : 1, "max" : 5, "w": 66, "h": 68, "left": -33, "right" :33, "top": -51, "bottom": 17, "offsetY" : 35},
-    {"template": [Normal], "entity":"goblins", "name": "bust_kobold", "suffix": "damaged", "min" : 1, "max" : 5, "w": 66, "h": 66, "left": -33, "right" :33, "top": -51, "bottom": 17, "offsetY" : 35},
-    {"template": [Normal], "entity":"goblins", "name": "bust_kobold", "suffix": "dead",    "min" : 1, "max" : 5, "w": 118, "h": 94, "left": -59, "right" :59, "top": -67, "bottom": 27, "offsetY" : 35},
-
-    {"template": [Normal], "entity":"goblins", "name": "head_kobold",                      "min" : 1, "max" : 5, "w": 82, "h": 64, "left": -41, "right" :41, "top": -32, "bottom": 32, "offsetY" : 35},
-    {"template": [Normal], "entity":"goblins", "name": "head_kobold", "suffix": "dead",    "min" : 1, "max" : 5, "w": 70, "h": 50, "left": -45, "right" :25, "top": -65, "bottom": -15, "offsetY" : 35},
-
+    {"template": [Full],   "entity":"undead", "name": "mummy_head", "suffix": "dead", "min" : 1, "max" : 9, "w": 191, "h": 185, "left": -45, "right" :11, "top": -53, "bottom": 3, "offsetY" : 10, "offsetX" : 6, "f1":-15, "f2": -15}
 ]
 
 
@@ -413,8 +405,8 @@ enemies = r"""
 <sprite id="bust_dawg_01_armor_01" offsetY="25" ic="FF212748" width="104" height="142" img="entity\beasts\bust_dawg_01_armor_01.png" left="-34" right="30" top="-37" bottom="21" />
 <sprite id="bust_dawg_01_armor_01_damaged" offsetY="25" ic="FF202645" width="104" height="142" img="entity\beasts\bust_dawg_01_armor_01_damaged.png" left="-34" right="30" top="-37" bottom="21" />
 <sprite id="bust_dawg_01_armor_01_dead" offsetY="4" f="64FF" ic="FF222849" width="117" height="64" img="entity\beasts\bust_dawg_01_armor_01_dead.png" left="-14" right="58" top="-29" bottom="33" />
-<sprite id="bust_dawg_01_body_01_dead_arrows" offsetY="8" f="64FA" ic="FF434A4F" width="117" height="64" img="entity\beasts\bust_dawg_01_body_dead_arrows.png" left="26" right="58" />
-<sprite id="bust_dawg_01_body_01_dead_javelin" offsetY="8" f="64FA" ic="FF151C29" width="117" height="130" img="entity\beasts\bust_dawg_01_body_dead_javelin.png" left="-6" right="54" top="-21" bottom="63" />
+<sprite id="bust_dawg_01_body_01_dead_arrows" offsetY="8" f="64FA" ic="FF434A4F" width="117" height="64" img="entity\beasts\bust_direwolf_white_01_body_dead_arrows.png" left="26" right="58" />
+<sprite id="bust_dawg_01_body_01_dead_javelin" offsetY="8" f="64FA" ic="FF151C29" width="117" height="130" img="entity\beasts\bust_direwolf_white_01_body_dead_javelin.png" left="-6" right="54" top="-21" bottom="63" />
 <sprite id="bust_dawg_01_head_01_dead_bloodpool" offsetY="8" f="6420" f1="-10" f2="-15" width="117" height="64" img="entity\beasts\bust_dawg_01_head_dead_bloodpool.png" left="-32" right="28" top="-32" bottom="12" />
 <sprite id="bust_dawg_01_injured" offsetY="25" ic="FF111134" width="104" height="142" img="entity\beasts\bust_dawg_01_injured.png" left="-22" right="30" top="-23" bottom="35" />
 <sprite id="bust_dawg_01_body_01" offsetY="25" ic="FF242B3A" width="104" height="142" img="entity\beasts\bust_dawg_01_body_01.png" left="-34" right="42" top="-37" bottom="21" />

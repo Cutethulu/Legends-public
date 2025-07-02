@@ -39,8 +39,8 @@ if (!("LegendMod" in ::Const))
 	this.Const.EntityType.GoblinLeader,
 	this.Const.EntityType.GoblinShaman,
 	this.Const.EntityType.GoblinWolfrider,
-	this.Const.EntityType.KoboldWolfrider, //Not used currently
-	this.Const.EntityType.KoboldFighter //Not used currently
+	// this.Const.EntityType.KoboldWolfrider, //Not used currently
+	// this.Const.EntityType.KoboldFighter //Not used currently
 ];
 
 ::Const.LegendMod.FavoriteHexe <- [

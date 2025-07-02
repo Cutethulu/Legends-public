@@ -630,10 +630,10 @@ if (!("Spawn" in ::Const.World))
 					Type = this.Const.World.Spawn.Troops.Hyena,
 					Cost = 15
 				},
-		 		{
-		 			Type = this.Const.World.Spawn.Troops.KoboldFighter,
-		 			Cost = 15
-		 		},
+		 		// {
+		 		// 	Type = this.Const.World.Spawn.Troops.KoboldFighter,
+		 		// 	Cost = 15
+		 		// },
 				{
 					Type = this.Const.World.Spawn.Troops.Direwolf,
 					Cost = 20

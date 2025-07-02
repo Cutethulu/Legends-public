@@ -206,10 +206,10 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 	::Const.EntityType.addNew("mummy_heavy_orientation", "Embalmed Noble", "Embalmed Nobles", this.Const.FactionType.Undead);
 ::Const.EntityType.LegendMummyQueen <-
 	::Const.EntityType.addNew("mummy_queen_orientation", "Embalmed Queen", "Embalmed Queens", this.Const.FactionType.Undead);
-::Const.EntityType.KoboldFighter <-
-	::Const.EntityType.addNew("kobold_fighter_orientation", "Kobold Fighter", "Kobold Fighters", this.Const.FactionType.Goblins);
-::Const.EntityType.KoboldWolfrider <-
-	::Const.EntityType.addNew("kobold_wolfrider_orientation", "Kobold Wolfrider", "Kobold Wolfriders", this.Const.FactionType.Goblins);
+// ::Const.EntityType.KoboldFighter <-
+// 	::Const.EntityType.addNew("kobold_fighter_orientation", "Kobold Fighter", "Kobold Fighters", this.Const.FactionType.Goblins);
+// ::Const.EntityType.KoboldWolfrider <-
+// 	::Const.EntityType.addNew("kobold_wolfrider_orientation", "Kobold Wolfrider", "Kobold Wolfriders", this.Const.FactionType.Goblins);
 ::Const.EntityType.LegendMummyPriest <-
 	::Const.EntityType.addNew("mummy_priest_orientation", "Embalmed Priest", "Embalmed Priests", this.Const.FactionType.Undead);
 ::Const.EntityType.FreeCompanySpearman <-

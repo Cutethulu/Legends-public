@@ -78,11 +78,11 @@
 		{
 			Weight = 40,
 			Types = [
-				{
+				// {
 
-					Type = this.Const.World.Spawn.Troops.KoboldFighter,
-					Cost = 10
-				},
+				// 	Type = this.Const.World.Spawn.Troops.KoboldFighter,
+				// 	Cost = 10
+				// },
 				{
 					Type = this.Const.World.Spawn.Troops.GoblinAmbusherLOW,
 					Cost = 20
@@ -316,14 +316,14 @@
 				}
 			]
 		},
-		 {
-		 	Weight = 1,
-			Types = [
-		 		{
-		 			Type = this.Const.World.Spawn.Troops.KoboldFighter,
-		 			Cost = 10
-		 		}
-		 	]
-		 }
+		 // {
+		 // 	Weight = 1,
+		// 	Types = [
+		 // 		{
+		 // 			Type = this.Const.World.Spawn.Troops.KoboldFighter,
+		 // 			Cost = 10
+		 // 		}
+		 // 	]
+		 // }
 	]
 }
