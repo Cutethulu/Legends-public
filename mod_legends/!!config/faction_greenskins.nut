@@ -38,6 +38,44 @@
 	FatigueRecoveryRate = 30,
 	DamageTotalMult = 1.00
 };
+::Const.Tactical.Actor.LegendGoblinEliteFighter <- {
+	XP = 400,
+	ActionPoints = 10,
+	Hitpoints = 120,
+	Bravery = 85,
+	Stamina = 140,
+	MeleeSkill = 90,
+	RangedSkill = 65,
+	MeleeDefense = 45,
+	RangedDefense = 25,
+	Initiative = 150,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		100,
+		50
+	],
+	FatigueRecoveryRate = 20
+};
+::Const.Tactical.Actor.LegendGoblinEliteWolfRider <- {
+	XP = 500, // 400 + 600 / 2
+	ActionPoints = 15,
+	Hitpoints = 240, // 120 + 200 - 25%
+	Bravery = 120,
+	Stamina = 150,
+	MeleeSkill = 90,
+	RangedSkill = 50,
+	MeleeDefense = 35,
+	RangedDefense = 20,
+	Initiative = 150,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		100,
+		50
+	],
+	FatigueRecoveryRate = 20
+};
 // ::Const.Tactical.Actor.KoboldFighter <- {
 // 	XP = 150,
 // 	ActionPoints = 9,

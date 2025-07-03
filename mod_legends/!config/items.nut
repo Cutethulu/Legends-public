@@ -126,6 +126,10 @@ foreach (i in garbage)
 	"weapons/named/legend_named_orc_flail_2h"
 ]);
 
+::Const.Items.NamedGoblinWeapons.extend([
+	"weapons/named/legend_named_goblin_axe_2h"
+]);
+
 ::Const.Items.NamedMeleeWeapons.extend([
 	"weapons/named/named_fencing_sword",
 	"weapons/named/legend_named_longsword",
