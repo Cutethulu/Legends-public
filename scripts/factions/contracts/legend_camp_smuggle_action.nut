@@ -10,8 +10,12 @@ this.legend_camp_smuggle_action <- this.inherit("scripts/factions/faction_action
 	}
 
 	function onUpdate(_faction) {
-		if (this.World.Assets.getOrigin().getID() == "scenario.legend_risen_legion")
-			return;
+		foreach(scenario in [
+			"scenario.legend_risen_legion"
+		]) {
+			if (::World.Assets.getOrigin().getID() == scenario)
+				return;
+		}
 
 		if (::World.State.getRegions().len() == 0)
 			return;

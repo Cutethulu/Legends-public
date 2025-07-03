@@ -104,6 +104,9 @@ this.legend_camp_smuggle_contract <- ::inherit("scripts/contracts/legend_camp_co
 				this.Contract.setScreen("Overview");
 				::World.Contracts.setActiveContract(this.Contract);
 				this.Contract.m.Town.getSprite("selection").Visible = true;
+				if (!::World.Assets.getStash().hasEmptySlot())
+					::World.Assets.getStash().makeEmptySlots(1);
+				::World.Assets.getStash().add(::new("scripts/items/misc/legend_smuggle_box_item"));
 			}
 		});
 
@@ -141,6 +144,12 @@ this.legend_camp_smuggle_contract <- ::inherit("scripts/contracts/legend_camp_co
 					this.Contract.setScreen("FailedPursuit");
 					this.World.Contracts.showActiveContract();
 					return;
+				}
+
+				if (this.Flags.get("BoxOpened")) {
+					::World.Assets.addBusinessReputation(::Const.World.Assets.ReputationOnContractFail);
+					::World.Contracts.finishActiveContract(true);
+					this.Contract.spawnRevengeParty();
 				}
 			}
 
@@ -191,9 +200,16 @@ this.legend_camp_smuggle_contract <- ::inherit("scripts/contracts/legend_camp_co
 					}
 					return;
 				}
+
 				if (this.Flags.get("IsFinalBattleWon")) {
 					this.Contract.setScreen("Success");
 					::World.Contracts.showActiveContract();
+				}
+
+				if (this.Flags.get("BoxOpened")) {
+					::World.Assets.addBusinessReputation(::Const.World.Assets.ReputationOnContractFail);
+					::World.Contracts.finishActiveContract(true);
+					this.Contract.spawnRevengeParty();
 				}
 			}
 
@@ -415,6 +431,46 @@ this.legend_camp_smuggle_contract <- ::inherit("scripts/contracts/legend_camp_co
 		return party;
 	}
 
+	function spawnRevengeParty() {
+		local tile = this.getTileToSpawnLocation(::World.State.getPlayer().getTile(), 6, 8);
+		if (this.m.Camp != null && !this.m.Camp.isNull())
+			tile = this.m.Camp.getTile();
+		local party = ::World.FactionManager.getFaction(::Const.Faction.Bandits)
+			.spawnEntity(tile, "Your employer", false, ::Const.World.Spawn.BanditArmy, 130 * this.getDifficultyMult() * this.getScaledDifficultyMult(), this.getMinibossModifier());
+		party.setDescription("Bandit army of your employer.");
+		party.setFootprintType(::Const.World.FootprintsType.Brigands);
+		party.getLoot().Money = this.Math.rand(50, 100);
+		party.getLoot().ArmorParts = this.Math.rand(0, 10);
+		party.getLoot().Medicine = this.Math.rand(0, 2);
+		party.getLoot().Ammo = this.Math.rand(0, 20);
+		party.setFaction(::Const.Faction.Enemy);
+		party.setMovementSpeed(::Const.World.MovementSettings.Speed * 2.0);
+
+		local r = this.Math.rand(1, 6);
+		if (r == 1) {
+			party.addToInventory("supplies/bread_item");
+		} else if (r == 2) {
+			party.addToInventory("supplies/roots_and_berries_item");
+		} else if (r == 3) {
+			party.addToInventory("supplies/dried_fruits_item");
+		} else if (r == 4) {
+			party.addToInventory("supplies/ground_grains_item");
+		} else if (r == 5) {
+			party.addToInventory("supplies/pickled_mushrooms_item");
+		}
+
+		party.setAttackableByAI(false);
+		party.setAlwaysAttackPlayer(true);
+
+		local c = party.getController();
+		local intercept = this.new("scripts/ai/world/orders/intercept_order");
+		intercept.setTarget(::World.State.getPlayer());
+		c.addOrder(intercept);
+		c.getBehavior(::Const.World.AI.Behavior.ID.Attack)
+			.setEnabled(true);
+		return party;
+	}
+
 	function spawnAmbushParty(_properties) {
 		if (this.getDifficulty() <= 2) { // we want militia party for these
 			::Const.World.Common.addUnitsToCombat(_properties.Entities, ::Const.World.Spawn.Militia, 100 * this.getDifficultyMult() * this.getScaledDifficultyMult(), ::Const.Faction.Enemy);
@@ -450,6 +506,12 @@ this.legend_camp_smuggle_contract <- ::inherit("scripts/contracts/legend_camp_co
 		}
 		if (this.m.PursuitParty != null && !this.m.PursuitParty.isNull()) {
 			this.m.PursuitParty.die();
+		}
+		local stash = ::World.Assets.getStash().getItems();
+		foreach( i, item in stash ) {
+			if (item != null && item.getID() == "misc.legend_smuggle_box") {
+				stash[i] = null;
+			}
 		}
 	}
 
