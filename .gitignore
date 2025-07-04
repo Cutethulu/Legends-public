@@ -53,6 +53,7 @@ buildscript/python/**/__pycache__/
 
 build_compile_*.sh
 unstaged_build_*.sh
+build_legends_mod_*.py
 __pycache__
 
 *.sublime-workspace
