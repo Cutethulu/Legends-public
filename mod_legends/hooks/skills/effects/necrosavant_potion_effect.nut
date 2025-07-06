@@ -6,7 +6,6 @@
 			return;
 		}
 		if (!_targetEntity.isAlive() || _targetEntity.isDying() || _targetEntity.getCurrentProperties().IsImmuneToBleeding) {
-		{
 			return;
 		}
 		onTargetHit(_skill, _targetEntity, _bodyPart, _damageInflictedHitpoints, _damageInflictedArmor);
