@@ -3,6 +3,29 @@
 	o.m.IsOrcWeapon <- false;
 	o.m.OverflowDamage <- 0;
 
+	local create = o.create;
+	o.create = function()
+	{
+		create();
+		this.m.DirectDamageMult = 0.4;
+	}
+
+	local getTooltip = o.getTooltip;
+	o.getTooltip = function()
+	{
+		local ret = getTooltip();
+		if (::Legends.Effects.has(this, ::Legends.Effect.DoubleGrip) && ::Legends.Effects.get(this, ::Legends.Effect.DoubleGrip).canDoubleGrip())
+		{
+			ret.push({
+				id = 8,
+				type = "text",
+				icon = "ui/icons/shield_damage.png",
+				text = "[color=" + this.Const.UI.Color.PositiveValue + "]25%[/color] bonus damage to shields from Double Grip"
+			});
+		}
+		return ret;
+	}
+
 	o.setApplyOrcWeapon <- function ( _f )
 	{
 		this.m.IsOrcWeapon = _f;

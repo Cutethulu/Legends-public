@@ -10,6 +10,9 @@ this.legend_camp_unhold_bondage_action <- this.inherit("scripts/factions/faction
 	}
 
 	function onUpdate(_faction) {
+		if (this.World.Assets.getOrigin().getID() == "scenario.legend_risen_legion")
+			return;
+
 		if (::World.State.getRegions().len() == 0)
 			return;
 

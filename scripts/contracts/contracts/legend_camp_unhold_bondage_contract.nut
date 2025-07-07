@@ -1,7 +1,6 @@
 this.legend_camp_unhold_bondage_contract <- this.inherit("scripts/contracts/legend_camp_contract", {
 	m = {
 		Target = null,
-		Dude = null,
 		IsPlayerAttacking = true
 	},
 
@@ -249,7 +248,7 @@ this.legend_camp_unhold_bondage_contract <- this.inherit("scripts/contracts/lege
 		this.m.Screens.push({
 			ID = "Success",
 			Title = "On your return...",
-			Text = "[img]gfx/ui/events/event_31.png[/img]{You hand over the cage over to the %employer%.%speech_on%Impressive, fine specimen.%speech_off%Tribe leaves with their new pet, while you wonder, what will happen to it.}",
+			Text = "[img]gfx/ui/events/event_31.png[/img]{You hand over the cage over to the %employer%. %SPEECH_ON%Impressive, fine specimen.%SPEECH_OFF%Tribe leaves with their new pet, while you wonder, what will happen to it.}",
 			Image = "",
 			Characters = [],
 			List = [],
@@ -259,12 +258,6 @@ this.legend_camp_unhold_bondage_contract <- this.inherit("scripts/contracts/lege
 				function getResult() {
 					this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 					this.World.Assets.addMoney(this.Contract.m.Payment.getOnCompletion());
-					this.World.Assets.getStash().add(this.new("scripts/items/supplies/mead_item"));
-					this.World.Assets.getStash().add(this.new("scripts/items/supplies/cured_venison_item"));
-					this.World.Assets.getStash().add(this.new("scripts/items/supplies/medicine_item"));
-					this.World.Assets.getStash().add(this.new("scripts/items/loot/ancient_gold_coins_item"));
-					this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "Rid the town of rock unholds");
-					this.World.FactionManager.getFaction(this.Contract.getFaction()).addPlayerRelation(this.Const.World.Assets.RelationCivilianContractSuccess, "Saviour of the lands");
 					this.World.Contracts.finishActiveContract();
 					return 0;
 				}
@@ -277,7 +270,6 @@ this.legend_camp_unhold_bondage_contract <- this.inherit("scripts/contracts/lege
 				});
 				this.Contract.m.SituationID = this.Contract.resolveSituation(this.Contract.m.SituationID, this.Contract.m.Home, this.List);
 			}
-
 		});
 
 		this.m.Screens.push({
