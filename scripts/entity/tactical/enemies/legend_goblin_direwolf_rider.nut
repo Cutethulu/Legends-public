@@ -21,6 +21,13 @@ this.legend_goblin_direwolf_rider <- this.inherit("scripts/entity/tactical/enemi
 
 	function assignSkills()
 	{
+		::Legends.Perks.grant(this, ::Legends.Perk.Backstabber);
+		::Legends.Perks.grant(this, ::Legends.Perk.CripplingStrikes);
+		if(::Legends.isLegendaryDifficulty())
+		{
+			::Legends.Perks.grant(this, ::Legends.Perk.Nimble);
+			::Legends.Perks.grant(this, ::Legends.Perk.Dodge);
+		}
 		::Legends.Actives.grant(this, ::Legends.Active.WerewolfBite, function (_skill) {
 			_skill.setRestrained(true);
 			_skill.m.ActionPointCost = 0;

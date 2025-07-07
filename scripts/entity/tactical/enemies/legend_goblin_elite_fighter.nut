@@ -15,19 +15,15 @@ this.legend_goblin_elite_fighter <- this.inherit("scripts/entity/tactical/enemie
 		this.goblin_fighter.onInit();
 		local b = this.m.BaseProperties;
 		b.setValues(this.Const.Tactical.Actor.LegendGoblinEliteFighter);
-		// todo: add some perks
-		// ::Legends.Perks.grant(this, ::Legends.Perk.ReachAdvantage);
-		// ::Legends.Perks.grant(this, ::Legends.Perk.BattleForged);
-		// ::Legends.Perks.grant(this, ::Legends.Perk.Fearsome);
-		// ::Legends.Perks.grant(this, ::Legends.Perk.ShieldExpert);
-		// ::Legends.Perks.grant(this, ::Legends.Perk.ReachAdvantage);
-		// ::Legends.Traits.grant(this, ::Legends.Trait.LegendFleshless);
-		// if(::Legends.isLegendaryDifficulty())
-		// {
-		// 	::Legends.Perks.grant(this, ::Legends.Perk.BattleForged);
-		// 	::Legends.Perks.grant(this, ::Legends.Perk.CripplingStrikes);
-		// 	::Legends.Perks.grant(this, ::Legends.Perk.CoupDeGrace);
-		// }
+		::Legends.Perks.grant(this, ::Legends.Perk.Backstabber);
+		::Legends.Perks.grant(this, ::Legends.Perk.CripplingStrikes);
+		if(::Legends.isLegendaryDifficulty())
+		{
+			::Legends.Perks.grant(this, ::Legends.Perk.Nimble);
+			::Legends.Perks.grant(this, ::Legends.Perk.Dodge);
+			::Legends.Perks.grant(this, ::Legends.Perk.BattleForged);
+			::Legends.Perks.grant(this, ::Legends.Perk.CoupDeGrace);
+		}
 		this.m.Skills.update();
 	}
 
