@@ -1,13 +1,18 @@
-this.legend_goblin_elite_wolfrider <- this.inherit("scripts/entity/tactical/goblin", {
+this.legend_goblin_rider_abstract <- this.inherit("scripts/entity/tactical/goblin", {
 	m = {
 		Variant = 1,
 		LastBodyPartHit = this.Const.BodyPart.Body,
-		Info = null
+		Info = null,
+		AssignAIAgent = "scripts/ai/tactical/agents/goblin_wolfrider_agent",
+		AssignEntityType = this.Const.EntityType.GoblinWolfrider,
+		AssignActor = this.Const.Tactical.Actor.GoblinWolfrider,
+		WolfScript = "scripts/entity/tactical/enemies/wolf",
+		GoblinScript = "scripts/entity/tactical/enemies/goblin_fighter"
 	},
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.LegendGoblinEliteWolfRider;
-		this.m.XP = this.Const.Tactical.Actor.LegendGoblinEliteWolfRider.XP;
+		this.m.Type = this.m.AssignEntityType;
+		this.m.XP = this.m.AssignActor.XP;
 		this.goblin.create();
 		this.m.ShakeLayers = [
 			[
@@ -24,48 +29,52 @@ this.legend_goblin_elite_wolfrider <- this.inherit("scripts/entity/tactical/gobl
 			]
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Other1] = [
-			"sounds/enemies/wolf_hurt_00.wav",
-			"sounds/enemies/wolf_hurt_01.wav",
-			"sounds/enemies/wolf_hurt_02.wav",
-			"sounds/enemies/wolf_hurt_03.wav"
+			"sounds/enemies/werewolf_hurt_01.wav",
+			"sounds/enemies/werewolf_hurt_02.wav",
+			"sounds/enemies/werewolf_hurt_03.wav",
+			"sounds/enemies/werewolf_hurt_04.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Other2] = [
-			"sounds/enemies/wolf_death_00.wav",
-			"sounds/enemies/wolf_death_01.wav",
-			"sounds/enemies/wolf_death_02.wav",
-			"sounds/enemies/wolf_death_03.wav",
-			"sounds/enemies/wolf_death_04.wav",
-			"sounds/enemies/wolf_death_05.wav"
+			"sounds/enemies/werewolf_death_01.wav",
+			"sounds/enemies/werewolf_death_02.wav",
+			"sounds/enemies/werewolf_death_03.wav",
+			"sounds/enemies/werewolf_death_04.wav",
+			"sounds/enemies/werewolf_death_05.wav"
 		];
 		this.m.Sound[this.Const.Sound.ActorEvent.Idle] = [
-			"sounds/enemies/wolf_idle_00.wav",
-			"sounds/enemies/wolf_idle_01.wav",
-			"sounds/enemies/wolf_idle_02.wav",
-			"sounds/enemies/wolf_idle_03.wav",
-			"sounds/enemies/wolf_idle_04.wav",
-			"sounds/enemies/wolf_idle_06.wav",
-			"sounds/enemies/wolf_idle_07.wav",
-			"sounds/enemies/wolf_idle_08.wav",
-			"sounds/enemies/wolf_idle_09.wav"
+			"sounds/enemies/werewolf_idle_01.wav",
+			"sounds/enemies/werewolf_idle_02.wav",
+			"sounds/enemies/werewolf_idle_03.wav",
+			"sounds/enemies/werewolf_idle_04.wav",
+			"sounds/enemies/werewolf_idle_05.wav",
+			"sounds/enemies/werewolf_idle_06.wav",
+			"sounds/enemies/werewolf_idle_07.wav",
+			"sounds/enemies/werewolf_idle_08.wav",
+			"sounds/enemies/werewolf_idle_09.wav",
+			"sounds/enemies/werewolf_idle_10.wav",
+			"sounds/enemies/werewolf_idle_11.wav",
+			"sounds/enemies/werewolf_idle_12.wav",
+			"sounds/enemies/werewolf_idle_13.wav",
+			"sounds/enemies/werewolf_idle_14.wav",
+			"sounds/enemies/werewolf_idle_15.wav",
+			"sounds/enemies/werewolf_idle_16.wav",
+			"sounds/enemies/werewolf_idle_17.wav",
+			"sounds/enemies/werewolf_idle_18.wav",
+			"sounds/enemies/werewolf_idle_19.wav",
+			"sounds/enemies/werewolf_idle_20.wav",
+			"sounds/enemies/werewolf_idle_21.wav"
 		];
 		this.m.SoundVolume[this.Const.Sound.ActorEvent.Idle] = 0.6;
 		this.m.Sound[this.Const.Sound.ActorEvent.Move] = [
-			"sounds/enemies/goblin_wolfrider_move_00.wav",
-			"sounds/enemies/goblin_wolfrider_move_01.wav",
-			"sounds/enemies/goblin_wolfrider_move_02.wav",
-			"sounds/enemies/goblin_wolfrider_move_03.wav",
-			"sounds/enemies/goblin_wolfrider_move_04.wav",
-			"sounds/enemies/goblin_wolfrider_move_05.wav",
-			"sounds/enemies/goblin_wolfrider_move_06.wav",
-			"sounds/enemies/goblin_wolfrider_move_07.wav",
-			"sounds/enemies/goblin_wolfrider_move_08.wav",
-			"sounds/enemies/goblin_wolfrider_move_09.wav",
-			"sounds/enemies/goblin_wolfrider_move_10.wav",
-			"sounds/enemies/goblin_wolfrider_move_11.wav",
-			"sounds/enemies/goblin_wolfrider_move_12.wav",
-			"sounds/enemies/goblin_wolfrider_move_13.wav"
+			"sounds/enemies/werewolf_fatigue_01.wav",
+			"sounds/enemies/werewolf_fatigue_02.wav",
+			"sounds/enemies/werewolf_fatigue_03.wav",
+			"sounds/enemies/werewolf_fatigue_04.wav",
+			"sounds/enemies/werewolf_fatigue_05.wav",
+			"sounds/enemies/werewolf_fatigue_06.wav",
+			"sounds/enemies/werewolf_fatigue_07.wav"
 		];
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/goblin_wolfrider_agent");
+		this.m.AIAgent = this.new(this.m.AssignAIAgent);
 		this.m.AIAgent.setActor(this);
 	}
 
@@ -73,7 +82,7 @@ this.legend_goblin_elite_wolfrider <- this.inherit("scripts/entity/tactical/gobl
 	{
 		this.goblin.onInit();
 		local b = this.m.BaseProperties;
-		b.setValues(this.Const.Tactical.Actor.LegendGoblinEliteWolfRider);
+		b.setValues(this.m.AssignActor);
 		b.AdditionalActionPointCost = 1;
 		b.DamageDirectMult = 1.25;
 		b.IsSpecializedInSwords = true;
@@ -83,6 +92,13 @@ this.legend_goblin_elite_wolfrider <- this.inherit("scripts/entity/tactical/gobl
 		this.m.CurrentProperties = clone b;
 		this.m.ActionPointCosts = this.Const.DefaultMovementAPCost;
 		this.m.FatigueCosts = this.Const.DefaultMovementFatigueCost;
+		this.createSprites();
+		this.assignSkills();
+		this.applySpriteOffset(0, -20);
+	}
+
+	function createSprites()
+	{
 		this.getSprite("head").setBrush("bust_goblin_01_head_0" + this.Math.rand(1, 3));
 		this.setAlwaysApplySpriteOffset(true);
 		local offset = this.createVec(8, 14);
@@ -93,28 +109,37 @@ this.legend_goblin_elite_wolfrider <- this.inherit("scripts/entity/tactical/gobl
 		this.setSpriteOffset("helmet", offset);
 		this.setSpriteOffset("helmet_damage", offset);
 		this.setSpriteOffset("body_blood", offset);
+		local variant = this.Math.rand(1, 2);
 		local wolf = this.addSprite("wolf");
-		wolf.setBrush("bust_direwolf_white_01_body");
+		wolf.setBrush("bust_wolf_0" + variant + "_body");
 		wolf.varySaturation(0.15);
 		wolf.varyColor(0.07, 0.07, 0.07);
 		local wolf = this.addSprite("wolf_head");
-		wolf.setBrush("bust_direwolf_white_01_head");
+		wolf.setBrush("bust_wolf_0" + variant + "_head");
 		wolf.Saturation = wolf.Saturation;
 		wolf.Color = wolf.Color;
 		this.removeSprite("injury_body");
 		local wolf_injury = this.addSprite("injury_body");
-		wolf_injury.setBrush("bust_direwolf_white_injured");
+		wolf_injury.setBrush("bust_wolf_01_injured");
 		wolf_injury.Visible = false;
 		local wolf_armor = this.addSprite("wolf_armor");
 		wolf_armor.setBrush("bust_wolf_02_armor_01");
-		offset = this.createVec(0, -20);
+	}
+
+	function applySpriteOffset(_x, _y, _armsX=15, _armsY=15, _rotation=13.0)
+	{
+		local offset = this.createVec(_x, _y);
 		this.setSpriteOffset("wolf", offset);
 		this.setSpriteOffset("wolf_head", offset);
 		this.setSpriteOffset("wolf_armor", offset);
 		this.setSpriteOffset("injury_body", offset);
 		this.addDefaultStatusSprites();
-		this.setSpriteOffset("arms_icon", this.createVec(15, 15));
-		this.getSprite("arms_icon").Rotation = 13.0;
+		this.setSpriteOffset("arms_icon", this.createVec(_armsX, _armsY));
+		this.getSprite("arms_icon").Rotation = _rotation;
+	}
+
+	function assignSkills()
+	{
 		::Legends.Actives.grant(this, ::Legends.Active.WolfBite, function (_skill) {
 			_skill.setRestrained(true);
 			_skill.m.ActionPointCost = 0;
@@ -213,60 +238,12 @@ this.legend_goblin_elite_wolfrider <- this.inherit("scripts/entity/tactical/gobl
 
 	function spawnDeadWolf( _killer, _skill, _tile, _fatalityType )
 	{
-		if (_tile == null)
-		{
-			return;
-		}
-
-		local flip = this.Math.rand(0, 100) < 50;
-		local decal;
-		this.m.IsCorpseFlipped = flip;
-		decal = _tile.spawnDetail(this.getSprite("wolf").getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
-		decal.setBrightness(0.9);
-		decal.Scale = 0.95;
-		decal = _tile.spawnDetail("bust_wolf_02_armor_01_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
-		decal.setBrightness(0.9);
-		decal.Scale = 0.95;
-
-		if (_fatalityType != this.Const.FatalityType.Decapitated)
-		{
-			decal = _tile.spawnDetail(this.getSprite("wolf_head").getBrush().Name + "_dead", this.Const.Tactical.DetailFlag.Corpse, flip);
-			decal.setBrightness(0.9);
-			decal.Scale = 0.95;
-		}
-		else if (_fatalityType == this.Const.FatalityType.Decapitated)
-		{
-			local layers = [
-				this.getSprite("wolf_head").getBrush().Name + "_dead"
-			];
-			local decap = this.Tactical.spawnHeadEffect(this.getTile(), layers, this.createVec(-20, 15), 0.0, "bust_wolf_head_bloodpool");
-			decap[0].setBrightness(0.9);
-			decap[0].Scale = 0.95;
-		}
-		else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Arrow)
-		{
-			decal = _tile.spawnDetail(this.getSprite("wolf").getBrush().Name + "_dead_arrows", this.Const.Tactical.DetailFlag.Corpse, flip);
-			decal.Scale = 0.95;
-		}
-		else if (_skill && _skill.getProjectileType() == this.Const.ProjectileType.Javelin)
-		{
-			decal = _tile.spawnDetail(this.getSprite("wolf").getBrush().Name + "_dead_javelin", this.Const.Tactical.DetailFlag.Corpse, flip);
-			decal.Scale = 0.95;
-		}
-
-		this.spawnTerrainDropdownEffect(_tile);
-		local corpse = clone this.Const.Corpse;
-		corpse.CorpseName = "A Whitewolf";
-		corpse.IsHeadAttached = _fatalityType != this.Const.FatalityType.Decapitated;
-		corpse.IsResurrectable = false;
-		_tile.Properties.set("Corpse", corpse);
-		this.Tactical.Entities.addCorpse(_tile);
 	}
 
 	function spawnWolf( _info )
 	{
 		this.Sound.play(this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived][this.Math.rand(0, this.m.Sound[this.Const.Sound.ActorEvent.DamageReceived].len() - 1)], this.Const.Sound.Volume.Actor * this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1], _info.Tile.Pos, 1.0);
-		local entity = this.Tactical.spawnEntity("scripts/entity/tactical/enemies/legend_white_warwolf", _info.Tile.Coords.X, _info.Tile.Coords.Y);
+		local entity = this.Tactical.spawnEntity(this.m.WolfScript, _info.Tile.Coords.X, _info.Tile.Coords.Y);
 
 		if (entity != null)
 		{
@@ -279,12 +256,11 @@ this.legend_goblin_elite_wolfrider <- this.inherit("scripts/entity/tactical/gobl
 	function spawnGoblin( _info )
 	{
 		this.Sound.play(this.m.Sound[this.Const.Sound.ActorEvent.Other1][this.Math.rand(0, this.m.Sound[this.Const.Sound.ActorEvent.Other1].len() - 1)], this.Const.Sound.Volume.Actor * this.m.SoundVolume[this.Const.Sound.ActorEvent.Other1], _info.Tile.Pos, 1.0);
-		local entity = this.Tactical.spawnEntity("scripts/entity/tactical/enemies/legend_goblin_elite_fighter", _info.Tile.Coords.X, _info.Tile.Coords.Y);
-		if (this.makeMiniboss())
+		local entity = this.Tactical.spawnEntity(this.m.GoblinScript, _info.Tile.Coords.X, _info.Tile.Coords.Y);
+		if (this.m.IsMiniboss)
 		{
 			entity.makeMiniboss();
 		}
-
 		if (entity != null)
 		{
 			local newBody = entity.getSprite("body");
@@ -322,55 +298,6 @@ this.legend_goblin_elite_wolfrider <- this.inherit("scripts/entity/tactical/gobl
 
 	function assignRandomEquipment()
 	{
-		local r;
-		r = this.Math.rand(1, 2);
-
-		if (r == 1)
-		{
-			this.m.Items.equip(this.new("scripts/items/weapons/greenskins/goblin_spear"));
-		}
-		else if (r == 2)
-		{
-			this.m.Items.equip(this.new("scripts/items/weapons/greenskins/goblin_falchion"));
-		}
-
-		if (this.Math.rand(1, 100) <= 25)
-		{
-			this.m.Items.equip(this.new("scripts/items/armor/greenskins/goblin_medium_armor"));
-		}
-		else
-		{
-			this.m.Items.equip(this.new("scripts/items/armor/greenskins/goblin_heavy_armor"));
-		}
-
-		if (this.Math.rand(1, 100) <= 25)
-		{
-			this.m.Items.equip(this.new("scripts/items/helmets/greenskins/goblin_light_helmet"));
-		}
-		else
-		{
-			this.m.Items.equip(this.new("scripts/items/helmets/greenskins/goblin_heavy_helmet"));
-		}
-	}
-
-	function makeMiniboss()
-	{
-		if (!this.actor.makeMiniboss())
-		{
-			return false;
-		}
-
-		this.getSprite("miniboss").setBrush("bust_miniboss");
-		local weapons = [
-			"weapons/named/named_goblin_falchion",
-			"weapons/named/named_goblin_pike",
-			"weapons/named/named_goblin_spear"
-		];
-		this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));
-		::Legends.Perks.grant(this, ::Legends.Perk.Nimble);
-		::Legends.Perks.grant(this, ::Legends.Perk.Dodge);
-		::Legends.Perks.grant(this, ::Legends.Perk.Relentless);
-		return true;
 	}
 
 });

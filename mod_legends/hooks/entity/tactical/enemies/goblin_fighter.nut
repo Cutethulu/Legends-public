@@ -28,7 +28,7 @@
 				"weapons/greenskins/goblin_spear",
 				"weapons/legend_chain",
 				"weapons/greenskins/goblin_notched_blade",
-				"weapons/greenskins/legend_goblin_longaxe",
+				"weapons/greenskins/legend_goblin_infantry_axe",
 				"weapons/greenskins/goblin_pike"
 			];
 

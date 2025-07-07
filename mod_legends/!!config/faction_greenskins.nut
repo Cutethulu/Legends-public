@@ -57,10 +57,10 @@
 	],
 	FatigueRecoveryRate = 20
 };
-::Const.Tactical.Actor.LegendGoblinEliteWolfRider <- {
+::Const.Tactical.Actor.LegendGoblinWhiteDirewolfRider <- {
 	XP = 500, // 400 + 600 / 2
 	ActionPoints = 15,
-	Hitpoints = 240, // 120 + 200 - 25%
+	Hitpoints = 240, // 120 + 200 + 25%
 	Bravery = 120,
 	Stamina = 150,
 	MeleeSkill = 90,
@@ -75,6 +75,26 @@
 		50
 	],
 	FatigueRecoveryRate = 20
+};
+
+::Const.Tactical.Actor.LegendGoblinDirewolfRider <- {
+	XP = 400,
+	ActionPoints = 13,
+	Hitpoints = 200,
+	Bravery = 110,
+	Stamina = 150,
+	MeleeSkill = 85,
+	RangedSkill = 50,
+	MeleeDefense = 30,
+	RangedDefense = 15,
+	Initiative = 150,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 20,
+	Armor = [
+		60,
+		30
+	]
 };
 // ::Const.Tactical.Actor.KoboldFighter <- {
 // 	XP = 150,
