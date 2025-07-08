@@ -155,7 +155,7 @@ this.legend_vala_background <- this.inherit("scripts/skills/backgrounds/characte
 			],
 			RangedDefense = [
 				-2,
-				-4
+				4
 			],
 			Initiative = [
 				10,
