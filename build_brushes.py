@@ -215,7 +215,7 @@ class BrushBuilder:
         """Build all brushes"""
         # Static brush list
         brushes = [
-            "entity_blood",
+            # "entity_blood",
             "legend_characters",
             "legend_enemies",
             "legend_weapons",
