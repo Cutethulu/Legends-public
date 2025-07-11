@@ -20,6 +20,9 @@ this.legend_camp_smuggle_action <- this.inherit("scripts/factions/faction_action
 		if (::World.State.getRegions().len() == 0)
 			return;
 
+		if (this.World.Assets.getBusinessReputation() < 800)
+			return;
+
 		if (_faction.getType() != ::Const.FactionType.FreeCompany)
 			return;
 
