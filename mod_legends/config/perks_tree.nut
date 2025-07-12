@@ -502,6 +502,11 @@ local VanillaTree = [
 					{
 						continue
 					}
+					if (i >= _tree.len()) {
+						for (local j = _tree.len(); j <= i; j++) {
+							_tree.push([]);
+						}
+					}
 					_tree[i].push(p);
 				}
 			}
@@ -512,4 +517,3 @@ local VanillaTree = [
 }
 
 ::Const.Perks.PerksTreeTemplate <- ::Const.Perks.BuildCustomPerkTree(VanillaTree)
-
