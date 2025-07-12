@@ -9,7 +9,31 @@ import sys
 import subprocess
 import shutil
 import argparse
+import platform
 from pathlib import Path
+
+
+def load_config():
+    """Load configuration from .build_config.py if it exists"""
+    config = {"REPO_DIR": "Legends-public", "BB_DIR": None, "BUILD_DIR": "./build"}
+
+    try:
+        config_path = Path(__file__).parent / ".build_config.py"
+        if config_path.exists():
+            import importlib.util
+
+            spec = importlib.util.spec_from_file_location("config", config_path)
+            config_module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(config_module)
+
+            # Update config with values from the file
+            for key in config:
+                if hasattr(config_module, key):
+                    config[key] = getattr(config_module, key)
+    except Exception:
+        pass  # Use defaults if config loading fails
+
+    return config
 
 
 class PatchBuildError(Exception):
@@ -19,11 +43,28 @@ class PatchBuildError(Exception):
 
 
 class PatchBuilder:
-    def __init__(self, source=None, build_dir=None):
+    def __init__(self, source=None, build_dir=None, bb_dir=None):
         self.current_dir = Path.cwd()
 
+        # Load config first
+        config = load_config()
+
+        # Use provided values, fall back to config, then to defaults
         if build_dir is None:
-            build_dir = "./build"
+            build_dir = config["BUILD_DIR"]
+        if bb_dir is None:
+            bb_dir = config["BB_DIR"]
+
+        # Set default paths based on OS if still None
+        if bb_dir is None:
+            if platform.system() == "Windows":
+                bb_dir = r"c:\Steam\steamapps\common\Battle Brothers\data"
+            else:
+                bb_dir = os.path.expanduser(
+                    "~/.local/share/Steam/steamapps/common/Battle Brothers/data"
+                )
+
+        self.bb_dir = Path(bb_dir)
         self.build_dir = Path(build_dir)
 
         # Get latest tag for assets version
@@ -36,6 +77,7 @@ class PatchBuilder:
 
         print(f"Source: {self.source}")
         print(f"Build directory: {self.build_dir}")
+        print(f"Battle Brothers directory: {self.bb_dir}")
         print(f"Latest tag: {self.latest_tag}")
 
     def handle_exit(self, result, context=""):
@@ -194,6 +236,7 @@ class PatchBuilder:
         import zipfile
 
         zip_archive = self.artifact_name_mod()
+        zip_path = self.build_dir / zip_archive
 
         # Change to build directory
         original_cwd = os.getcwd()
@@ -208,9 +251,6 @@ class PatchBuilder:
                             for file in files:
                                 file_path = Path(root) / file
                                 zf.write(file_path, file_path)
-
-            # Move zip to build directory root
-            shutil.move(zip_archive, f"../{zip_archive}")
 
         finally:
             os.chdir(original_cwd)
@@ -308,7 +348,7 @@ class PatchBuilder:
                 shutil.rmtree(self.build_dir)
             self.build_dir.mkdir(parents=True)
 
-            # Build components
+            # Build script components (no brushes)
             self.build_helmets()
             self.build_armor()
             self.build_enemies()
@@ -319,19 +359,18 @@ class PatchBuilder:
             # Create initial zip
             zip_archive = self.create_initial_zip()
 
-            # Move zip to build directory and add scripts
+            # Move final zip to Battle Brothers data directory
             zip_path = self.build_dir / zip_archive
-            shutil.move(self.current_dir / zip_archive, zip_path)
-            self.add_scripts_to_zip(str(zip_path))
+            final_zip_path = self.bb_dir / zip_archive
 
-            # Move final zip back to current directory
-            final_zip_path = self.current_dir / zip_archive
+            # Ensure Battle Brothers directory exists
+            self.bb_dir.mkdir(parents=True, exist_ok=True)
             shutil.move(zip_path, final_zip_path)
 
             # Copy assets if modified
             self.copy_assets(str(final_zip_path))
 
-            print(f"Patch build completed successfully! Created: {zip_archive}")
+            print(f"Patch build completed successfully! Created: {final_zip_path}")
 
         except PatchBuildError as e:
             print(f"Patch build failed: {e}")
@@ -351,10 +390,14 @@ def main():
         default="./build",
         help="Build directory (default: ./build)",
     )
+    parser.add_argument(
+        "--bb-dir",
+        help="Battle Brothers data directory (default: from .build_config.py or auto-detect)",
+    )
 
     args = parser.parse_args()
 
-    builder = PatchBuilder(args.source, args.build_dir)
+    builder = PatchBuilder(args.source, args.build_dir, args.bb_dir)
     builder.build()
 
 
