@@ -262,7 +262,7 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 	::Const.EntityType.addNew("dawg_orientation", "Armored Dawg", "Armored Dawgs");
 ::Const.EntityType.LegendEnragedHyena <-
 	::Const.EntityType.addNew("enraged_hyena_orientation", "Enraged Hyena", "Enraged Hyenas", this.Const.FactionType.Beasts);
-::Const.EntityType.LegendGoblinEliteFighter <-
+::Const.EntityType.LegendGoblinHarrier <-
 	::Const.EntityType.addNew("goblin_03_orientation", "Goblin Harrier", "Goblin Harriers", this.Const.FactionType.Goblins);
 ::Const.EntityType.LegendGoblinBerserker <-
 	::Const.EntityType.addNew("goblin_01_orientation", "Goblin Berserker", "Goblin Berserkers", ::Const.FactionType.Goblins);
@@ -272,3 +272,7 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 	::Const.EntityType.addNew("goblin_05_orientation", "Direwolf Rider", "Direwolf Riders", this.Const.FactionType.Goblins);
 ::Const.EntityType.LegendGoblinWhiteDirewolfRider <-
 	::Const.EntityType.addNew("goblin_05_orientation", "White Direwolf Rider", "White Direwolf Riders", this.Const.FactionType.Goblins);
+::Const.EntityType.LegendGoblinWitchDoctor <-
+	::Const.EntityType.addNew("goblin_02_orientation", "Goblin Witchdoctor", "Goblin Witchdoctors", this.Const.FactionType.Goblins);
+::Const.EntityType.LegendGoblinPlunderer <-
+	::Const.EntityType.addNew("goblin_03_orientation", "Goblin Plunderer", "Goblin Plunderer", this.Const.FactionType.Goblins);

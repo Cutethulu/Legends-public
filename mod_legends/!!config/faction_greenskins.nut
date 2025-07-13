@@ -38,7 +38,28 @@
 	FatigueRecoveryRate = 30,
 	DamageTotalMult = 1.00
 };
-::Const.Tactical.Actor.LegendGoblinEliteFighter <- {
+// fighter medium
+::Const.Tactical.Actor.LegendGoblinPlunderer <- {
+	XP = 300,
+	ActionPoints = 10,
+	Hitpoints = 80,
+	Bravery = 65,
+	Stamina = 110,
+	MeleeSkill = 80,
+	RangedSkill = 65,
+	MeleeDefense = 25,
+	RangedDefense = 15,
+	Initiative = 140,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		40,
+		20
+	],
+	FatigueRecoveryRate = 20
+};
+// fighter high
+::Const.Tactical.Actor.LegendGoblinHarrier <- {
 	XP = 400,
 	ActionPoints = 10,
 	Hitpoints = 120,
@@ -57,6 +78,7 @@
 	],
 	FatigueRecoveryRate = 20
 };
+
 ::Const.Tactical.Actor.LegendGoblinBerserker <- {
 	XP = 600,
 	ActionPoints = 12,
@@ -76,6 +98,7 @@
 	],
 	FatigueRecoveryRate = 25
 };
+
 ::Const.Tactical.Actor.LegendGoblinTribeDefender <- {
 	XP = 400,
 	ActionPoints = 9,
@@ -95,6 +118,29 @@
 	],
 	FatigueRecoveryRate = 15
 };
+
+// fighter medium + direwolf rider
+::Const.Tactical.Actor.LegendGoblinDirewolfRider <- {
+	XP = 250,
+	ActionPoints = 13,
+	Hitpoints = 180,
+	Bravery = 100,
+	Stamina = 140,
+	MeleeSkill = 80,
+	RangedSkill = 50,
+	MeleeDefense = 30,
+	RangedDefense = 15,
+	Initiative = 150,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	FatigueRecoveryRate = 20,
+	Armor = [
+		60,
+		30
+	]
+};
+
+// fighter high + white warwolf
 ::Const.Tactical.Actor.LegendGoblinWhiteDirewolfRider <- {
 	XP = 500, // 400 + 600 / 2
 	ActionPoints = 15,
@@ -115,24 +161,24 @@
 	FatigueRecoveryRate = 20
 };
 
-::Const.Tactical.Actor.LegendGoblinDirewolfRider <- {
-	XP = 400,
-	ActionPoints = 13,
-	Hitpoints = 200,
-	Bravery = 110,
-	Stamina = 150,
-	MeleeSkill = 85,
-	RangedSkill = 50,
-	MeleeDefense = 30,
-	RangedDefense = 15,
-	Initiative = 150,
+::Const.Tactical.Actor.LegendGoblinWitchDoctor <- {
+	XP = 600,
+	ActionPoints = 9,
+	Hitpoints = 110,
+	Bravery = 90,
+	Stamina = 110,
+	MeleeSkill = 80,
+	RangedSkill = 60,
+	MeleeDefense = 15,
+	RangedDefense = 25,
+	Initiative = 130,
 	FatigueEffectMult = 1.0,
 	MoraleEffectMult = 1.0,
-	FatigueRecoveryRate = 20,
 	Armor = [
-		60,
-		30
-	]
+		40,
+		20
+	],
+	FatigueRecoveryRate = 15
 };
 // ::Const.Tactical.Actor.KoboldFighter <- {
 // 	XP = 150,

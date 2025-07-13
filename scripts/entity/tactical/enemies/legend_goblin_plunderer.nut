@@ -1,10 +1,10 @@
-this.legend_goblin_elite_fighter <- this.inherit("scripts/entity/tactical/enemies/goblin_fighter", {
+this.legend_goblin_plunderer <- this.inherit("scripts/entity/tactical/enemies/goblin_fighter", {
 	m = {},
 
 	function create()
 	{
-		this.m.Type = this.Const.EntityType.LegendGoblinEliteFighter;
-		this.m.XP = this.Const.Tactical.Actor.LegendGoblinEliteFighter.XP;
+		this.m.Type = this.Const.EntityType.LegendGoblinPlunderer;
+		this.m.XP = this.Const.Tactical.Actor.LegendGoblinPlunderer.XP;
 		this.goblin.create();
 		this.m.AIAgent = this.new("scripts/ai/tactical/agents/goblin_melee_agent");
 		this.m.AIAgent.setActor(this);
@@ -14,14 +14,13 @@ this.legend_goblin_elite_fighter <- this.inherit("scripts/entity/tactical/enemie
 	{
 		this.goblin_fighter.onInit();
 		local b = this.m.BaseProperties;
-		b.setValues(this.Const.Tactical.Actor.LegendGoblinEliteFighter);
+		b.setValues(this.Const.Tactical.Actor.LegendGoblinPlunderer);
 		::Legends.Perks.grant(this, ::Legends.Perk.Backstabber);
 		::Legends.Perks.grant(this, ::Legends.Perk.CripplingStrikes);
 		if(::Legends.isLegendaryDifficulty())
 		{
 			::Legends.Perks.grant(this, ::Legends.Perk.Nimble);
 			::Legends.Perks.grant(this, ::Legends.Perk.Dodge);
-			::Legends.Perks.grant(this, ::Legends.Perk.BattleForged);
 			::Legends.Perks.grant(this, ::Legends.Perk.CoupDeGrace);
 		}
 		this.m.Skills.update();
@@ -41,22 +40,25 @@ this.legend_goblin_elite_fighter <- this.inherit("scripts/entity/tactical/enemie
 			this.m.Items.equip(this.new("scripts/items/weapons/greenskins/goblin_falchion"));
 		}
 
-		if (this.Math.rand(1, 100) <= 25)
+		if (this.m.Items.getItemAtSlot(this.Const.ItemSlot.Body) == null)
 		{
-			this.m.Items.equip(this.new("scripts/items/armor/greenskins/goblin_medium_armor"));
-		}
-		else
-		{
-			this.m.Items.equip(this.new("scripts/items/armor/greenskins/goblin_heavy_armor"));
+			local item = this.Const.World.Common.pickArmor([
+				[2, ::Legends.Armor.Greenskin.goblin_medium_armor],
+				[1, ::Legends.Armor.Greenskin.goblin_light_helmet]
+			]);
+			this.m.Items.equip(item);
 		}
 
-		if (this.Math.rand(1, 100) <= 25)
+		if (this.m.Items.getItemAtSlot(this.Const.ItemSlot.Head) == null)
 		{
-			this.m.Items.equip(this.new("scripts/items/helmets/greenskins/goblin_light_helmet"));
-		}
-		else
-		{
-			this.m.Items.equip(this.new("scripts/items/helmets/greenskins/goblin_heavy_helmet"));
+			local item = this.Const.World.Common.pickHelmet([
+				[50, ::Legends.Helmet.Greenskin.goblin_light_helmet],
+				[50, ::Legends.Helmet.Greenskin.goblin_heavy_helmet]
+			]);
+			if (item != null)
+			{
+				this.m.Items.equip(item);
+			}
 		}
 	}
 
@@ -69,10 +71,12 @@ this.legend_goblin_elite_fighter <- this.inherit("scripts/entity/tactical/enemie
 
 		this.getSprite("miniboss").setBrush("bust_miniboss");
 		local weapons = [
-			"weapons/named/named_goblin_falchion",
-			"weapons/named/named_goblin_pike",
-			"weapons/named/named_goblin_spear",
-			"weapons/named/named_warbrand"
+			"weapons/greenskins/goblin_falchion",
+			"weapons/greenskins/goblin_spear",
+			"weapons/legend_chain",
+			"weapons/greenskins/goblin_notched_blade",
+			"weapons/greenskins/legend_goblin_infantry_axe",
+			"weapons/greenskins/goblin_pike",
 		];
 		this.m.Items.equip(this.new("scripts/items/" + weapons[this.Math.rand(0, weapons.len() - 1)]));
 		::Legends.Perks.grant(this, ::Legends.Perk.Nimble);
