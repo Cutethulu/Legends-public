@@ -848,7 +848,7 @@
 
 ::Const.World.Spawn.Troops.LegendGoblinBerserker <- {
 	ID = ::Const.EntityType.LegendGoblinBerserker,
-	Variant = 100,
+	Variant = 2,
 	Strength = 50,
 	Cost = 50,
 	Row = -1,
@@ -859,7 +859,7 @@
 
 ::Const.World.Spawn.Troops.LegendGoblinTribeDefender <- {
 	ID = ::Const.EntityType.LegendGoblinTribeDefender,
-	Variant = 100,
+	Variant = 1,
 	Strength = 40,
 	Cost = 40,
 	Row = 1,
