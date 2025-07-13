@@ -5,6 +5,7 @@ this.legend_named_goblin_axe_2h <- this.inherit("scripts/items/weapons/named/nam
 		this.named_weapon.create();
 		this.m.ID = "weapon.legend_named_goblin_axe_2h";
 		this.m.Name = "Manfeller";
+		this.m.PrefixList = this.Const.Strings.GoblinWeaponPrefix;
 		this.m.Description = "As some of the goblins grew to nearly human size, they took the time to recreate their greenskin cousin\'s huge axe, but with a well crafted slim edge. Suited for human hands, it can easily cut a man in two .";
 		this.m.Variants = [1];
 		this.m.Variant = this.m.Variants[this.Math.rand(0, this.m.Variants.len() -1)];
@@ -17,14 +18,14 @@ this.legend_named_goblin_axe_2h <- this.inherit("scripts/items/weapons/named/nam
 		this.m.AddGenericSkill = true;
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
-		this.m.Value = 4600;
+		this.m.Value = 5100;
 		this.m.ShieldDamage = 36;
-		this.m.Condition = 72.0;
-		this.m.ConditionMax = 72.0;
-		this.m.StaminaModifier = -16;
+		this.m.Condition = 66.0;
+		this.m.ConditionMax = 66.0;
+		this.m.StaminaModifier = -20;
 		this.m.RegularDamage = 85;
 		this.m.RegularDamageMax = 110;
-		this.m.ArmorDamageMult = 1.3;
+		this.m.ArmorDamageMult = 1.4;
 		this.m.DirectDamageMult = 0.4;
 		this.m.ChanceToHitHead = 0;
 		// this.m.FatigueOnSkillUse = 5;

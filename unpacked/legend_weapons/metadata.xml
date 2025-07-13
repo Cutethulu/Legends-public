@@ -141,14 +141,14 @@
   <sprite id="icon_goblin_crossbow_01_1" offsetY="35" ic="FF2C3137" width="140" height="142" img="icons\icon_goblin_crossbow_01_1.png" left="-18" right="70" top="-69" bottom="3" />
   <sprite id="icon_goblin_crossbow_01_2" offsetY="35" ic="FF2C3137" width="140" height="142" img="icons\icon_goblin_crossbow_01_2.png" left="-18" right="70" top="-69" bottom="3" />
   <sprite id="icon_goblin_crossbow_named_01" offsetY="35" ic="FF2C3137" width="140" height="142" img="icons\icon_goblin_crossbow_named_01.png" left="-25" right="64" top="-66" bottom="6" />
+  <sprite id="icon_named_goblin_notched_blade_01_bloodied" offsetY="35" ic="FF30323F" width="104" height="142" img="icons\icon_named_goblin_notched_blade_01_bloodied.png" left="-9" right="39" top="-60" bottom="8" />
+  <sprite id="icon_named_goblin_notched_blade_01" offsetY="35" ic="FF3B3D41" width="104" height="142" img="icons\icon_named_goblin_notched_blade_01.png" left="-9" right="39" top="-60" bottom="8" />
   <sprite id="icon_goblin_weapon_01_1_bloodied" offsetY="35" ic="FF30323F" width="104" height="142" img="icons\icon_goblin_weapon_01_1_bloodied.png" left="-9" right="39" top="-60" bottom="8" />
   <sprite id="icon_goblin_weapon_01_1" offsetY="35" ic="FF3B3D41" width="104" height="142" img="icons\icon_goblin_weapon_01_1.png" left="-9" right="39" top="-60" bottom="8" />
-  <sprite id="icon_goblin_weapon_01_2_bloodied" offsetY="35" ic="FF30323F" width="104" height="142" img="icons\icon_goblin_weapon_01_2_bloodied.png" left="-9" right="39" top="-60" bottom="8" />
-  <sprite id="icon_goblin_weapon_01_2" offsetY="35" ic="FF3B3D41" width="104" height="142" img="icons\icon_goblin_weapon_01_2.png" left="-9" right="39" top="-60" bottom="8" />
   <sprite id="icon_goblin_weapon_02_1_bloodied" offsetY="35" ic="FF3D3E4B" width="104" height="142" img="icons\icon_goblin_weapon_02_1_bloodied.png" left="-1" right="41" top="-65" bottom="5" />
   <sprite id="icon_goblin_weapon_02_1" offsetY="35" ic="FF484A50" width="104" height="142" img="icons\icon_goblin_weapon_02_1.png" left="-1" right="41" top="-65" bottom="5" />
-  <sprite id="icon_goblin_weapon_02_2_bloodied" offsetY="35" ic="FF3D3E4B" width="104" height="142" img="icons\icon_goblin_weapon_02_2_bloodied.png" left="-1" right="41" top="-65" bottom="5" />
-  <sprite id="icon_goblin_weapon_02_2" offsetY="35" ic="FF484A50" width="104" height="142" img="icons\icon_goblin_weapon_02_2.png" left="-1" right="41" top="-65" bottom="5" />
+  <sprite id="icon_goblin_gruesome_falchion_named_01_bloodied" offsetY="35" ic="FF3D3E4B" width="104" height="142" img="icons\icon_goblin_gruesome_falchion_named_01_bloodied.png" left="-1" right="41" top="-65" bottom="5" />
+  <sprite id="icon_goblin_gruesome_falchion_named_01" offsetY="35" ic="FF484A50" width="104" height="142" img="icons\icon_goblin_gruesome_falchion_named_01.png" left="-1" right="41" top="-65" bottom="5" />
   <sprite id="icon_goblin_weapon_03_1_bloodied" offsetY="35" f1="20" f2="-45" ic="FF373A44" width="104" height="142" img="icons\icon_goblin_weapon_03_1_bloodied.png" left="-11" right="51" top="-62" bottom="18" />
   <sprite id="icon_goblin_weapon_03_1" offsetY="35" f1="20" f2="-45" ic="FF3D3F45" width="104" height="142" img="icons\icon_goblin_weapon_03_1.png" left="-11" right="51" top="-62" bottom="18" />
   <sprite id="icon_goblin_weapon_03_2_bloodied" offsetY="35" f1="20" f2="-45" ic="FF373A44" width="104" height="142" img="icons\icon_goblin_weapon_03_2_bloodied.png" left="-11" right="51" top="-62" bottom="18" />
@@ -157,10 +157,16 @@
   <sprite id="icon_goblin_weapon_04_1" offsetY="35" ic="FF343439" width="144" height="142" img="icons\icon_goblin_weapon_04_1.png" left="-63" right="19" top="-64" bottom="62" />
   <sprite id="icon_goblin_weapon_04_2_bloodied" offsetY="35" ic="FF2D2D38" width="144" height="142" img="icons\icon_goblin_weapon_04_2_bloodied.png" left="-63" right="19" top="-64" bottom="62" />
   <sprite id="icon_goblin_weapon_04_2" offsetY="35" ic="FF343439" width="144" height="142" img="icons\icon_goblin_weapon_04_2.png" left="-63" right="19" top="-64" bottom="62" />
-  <sprite id="icon_goblin_weapon_06_1_bloodied" offsetY="35" ic="FF2D3547" width="104" height="142" img="icons\icon_goblin_weapon_06_1_bloodied.png" left="-43" right="-1" top="-53" bottom="29" />
-  <sprite id="icon_goblin_weapon_06_1" offsetY="35" ic="FF323B48" width="104" height="142" img="icons\icon_goblin_weapon_06_1.png" left="-43" right="-1" top="-53" bottom="29" />
-  <sprite id="icon_goblin_weapon_06_2_bloodied" offsetY="35" ic="FF2D3547" width="104" height="142" img="icons\icon_goblin_weapon_06_2_bloodied.png" left="-43" right="-1" top="-53" bottom="29" />
-  <sprite id="icon_goblin_weapon_06_2" offsetY="35" ic="FF323B48" width="104" height="142" img="icons\icon_goblin_weapon_06_2.png" left="-43" right="-1" top="-53" bottom="29" />
+  <!--
+  we're replacing vanilla gobbo staff brush icon_goblin_weapon_06 so we can make it a staff 
+  <! -->
+
+  <sprite id="icon_goblin_staff_01" offsetY="35" ic="FF323B48" width="130" height="142" img="icons\icon_goblin_vanilla_staff.png" left="-52" right="12" top="-64" bottom="54" />
+  <sprite id="icon_goblin_staff_01_bloodied" offsetY="35" ic="FF2D3547" width="130" height="142" img="icons\icon_goblin_vanilla_staff_bloodied.png" left="-52" right="12" top="-64" bottom="54" />
+  <sprite id="icon_named_goblin_staff_01_bloodied" offsetY="35" ic="FF2D3547" width="130" height="142" img="icons\icon_named_goblin_staff_01_bloodied.png" left="-52" right="12" top="-64" bottom="54" />
+  <sprite id="icon_named_goblin_staff_01" offsetY="35" ic="FF323B48" width="130" height="142" img="icons\icon_named_goblin_staff_01.png" left="-52" right="12" top="-64" bottom="54" />
+  <sprite id="icon_named_goblin_staff_02_bloodied" offsetY="35" ic="FF2D3547" width="130" height="142" img="icons\icon_named_goblin_staff_02_bloodied.png" left="-52" right="12" top="-64" bottom="54" />
+  <sprite id="icon_named_goblin_staff_02" offsetY="35" ic="FF323B48" width="130" height="142" img="icons\icon_named_goblin_staff_02.png" left="-52" right="12" top="-64" bottom="54" />
   <sprite id="icon_goblin_weapon_07_1" offsetY="35" ic="FF404C54" width="104" height="142" img="icons\icon_goblin_weapon_07_1.png" left="10" right="50" top="-60" bottom="-2" />
   <sprite id="icon_goblin_weapon_07_2" offsetY="35" ic="FF404C54" width="104" height="142" img="icons\icon_goblin_weapon_07_2.png" left="10" right="50" top="-60" bottom="-2" />
   <sprite id="icon_goedendag_01_1_bloodied" offsetY="35" ic="FF374862" width="130" height="142" img="icons\icon_goedendag_01_1_bloodied.png" left="-60" right="20" top="-56" bottom="50" />

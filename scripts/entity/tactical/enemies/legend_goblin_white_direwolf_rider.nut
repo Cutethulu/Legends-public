@@ -7,7 +7,7 @@ this.legend_goblin_white_direwolf_rider <- this.inherit("scripts/entity/tactical
 		AssignEntityType = this.Const.EntityType.LegendGoblinWhiteDirewolfRider,
 		AssignActor = this.Const.Tactical.Actor.LegendGoblinWhiteDirewolfRider,
 		WolfScript = "scripts/entity/tactical/enemies/legend_white_warwolf",
-		GoblinScript = "scripts/entity/tactical/enemies/legend_goblin_elite_fighter"
+		GoblinScript = "scripts/entity/tactical/enemies/legend_goblin_harrier"
 	},
 	function create()
 	{
@@ -157,7 +157,7 @@ this.legend_goblin_white_direwolf_rider <- this.inherit("scripts/entity/tactical
 
 		this.getSprite("miniboss").setBrush("bust_miniboss");
 		local weapons = [
-			"weapons/named/named_goblin_falchion",
+			"weapons/named/legend_named_goblin_gruesome_falchion",
 			"weapons/named/named_goblin_spear",
 			"weapons/named/named_warbrand"
 		];
