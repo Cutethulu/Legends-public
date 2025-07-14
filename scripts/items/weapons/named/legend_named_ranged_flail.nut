@@ -1,4 +1,4 @@
-this.legend_named_flail <- this.inherit("scripts/items/weapons/named/named_weapon", {
+this.legend_named_ranged_flail <- this.inherit("scripts/items/weapons/named/named_weapon", {
 	m = {
 		PossibleEffects = ["scripts/skills/effects/legend_named_flail_effect"],
 		EffectBounds = [ [100, 100] ]
@@ -29,8 +29,8 @@ this.legend_named_flail <- this.inherit("scripts/items/weapons/named/named_weapo
 		this.m.RangeMin = 1;
 		this.m.RangeMax = 2;
 		this.m.RangeIdeal = 2;
-		this.m.RegularDamage = 50;
-		this.m.RegularDamageMax = 80;
+		this.m.RegularDamage = 55;
+		this.m.RegularDamageMax = 85;
 		this.m.ArmorDamageMult = 1.0;
 		this.m.ChanceToHitHead = 10;
 		this.m.DirectDamageMult = 0.3;

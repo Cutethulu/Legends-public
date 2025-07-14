@@ -1,5 +1,12 @@
 ::mods_hookExactClass("skills/actives/censer_strike", function(o)
 {
+	local create = o.create;
+	o.create = function()
+	{
+		create();
+		this.m.FatigueCost = 13;
+	}
+
 	o.getTooltip = function()
 	{
 		local ret = this.getDefaultTooltip();
@@ -27,6 +34,13 @@
 			text = "Leaves a cloud of miasma on target tiles"
 		});
 		return ret;
+	}
+
+	local onAfterUpdate = o.onAfterUpdate;
+	o.onAfterUpdate = function ( _properties )
+	{
+		onAfterUpdate(_properties);
+		this.m.ActionPointCost = _properties.IsSpecializedInPolearms ? 4 : 5;
 	}
 
 	o.onAnySkillUsed = function ( _skill, _targetEntity, _properties )

@@ -459,7 +459,7 @@ this.legends_debug_scenario <- this.inherit("scripts/scenarios/world/starting_sc
 			"named/legend_named_longsword",
 			"named/legend_named_blacksmith_hammer",
 			"named/legend_named_estoc",
-			"named/legend_named_flail",
+			"named/legend_named_ranged_flail",
 			"named/legend_named_gladius",
 			"named/legend_named_glaive",
 			"named/legend_named_halberd",
