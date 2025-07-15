@@ -1,7 +1,7 @@
-this.legend_camp_unhold_bondage_action <- this.inherit("scripts/factions/faction_action", {
+this.legend_camp_smuggle_action <- this.inherit("scripts/factions/faction_action", {
 	m = {},
 	function create() {
-		this.m.ID = "legend_camp_unhold_bondage_action";
+		this.m.ID = "legend_camp_smuggle_action";
 		this.m.Cooldown = ::World.getTime().SecondsPerDay * 14;
 		this.m.IsStartingOnCooldown = false;
 		this.m.IsSettlementsRequired = false;
@@ -20,6 +20,9 @@ this.legend_camp_unhold_bondage_action <- this.inherit("scripts/factions/faction
 		if (::World.State.getRegions().len() == 0)
 			return;
 
+		if (this.World.Assets.getBusinessReputation() < 800)
+			return;
+
 		if (_faction.getType() != ::Const.FactionType.FreeCompany)
 			return;
 
@@ -35,7 +38,7 @@ this.legend_camp_unhold_bondage_action <- this.inherit("scripts/factions/faction
 	function onExecute(_faction) {
 		if (_faction.getType() != ::Const.FactionType.FreeCompany)
 			return;
-		local contract = ::new("scripts/contracts/contracts/legend_camp_unhold_bondage_contract");
+		local contract = ::new("scripts/contracts/contracts/legend_camp_smuggle_contract");
 		contract.setFaction(_faction.getID());
 		contract.setEmployerID(_faction.getRandomCharacter(contract.m.EmployerFaction).getID());
 		::World.Contracts.addContract(contract);

@@ -219,7 +219,7 @@ this.legend_camp_unhold_bondage_contract <- this.inherit("scripts/contracts/lege
 		this.m.Screens.push({
 			ID = "AfterBattle",
 			Title = "After the battle...",
-			Text = "[img]gfx/ui/events/event_113.png[/img]{The giant barelly breathing, laying on the ground, still weakened by the contraption. You order the men to load it to the cage.}",
+			Text = "[img]gfx/ui/events/event_113.png[/img]{The giant barely breathing, laying on the ground, still weakened by the contraption. You order the men to load it to the cage.}",
 			Image = "",
 			List = [],
 			Options = [
