@@ -14,11 +14,14 @@
 
 	o.updateVariant <- function() {
 		if (this.m.Variant == 0) {
-			return;
+			this.m.Icon = "weapons/melee/sword_two_hand_01_70x70.png";
+			this.m.IconLarge = "weapons/melee/sword_two_hand_01.png";
+			this.m.ArmamentIcon = "icon_sword_two_handed_01";
+		} else {
+			this.m.Icon = "weapons/melee/sword_two_hand_01_" + this.m.Variant + "_70x70.png";
+			this.m.IconLarge = "weapons/melee/sword_two_hand_01_" + this.m.Variant + ".png";
+			this.m.ArmamentIcon = "icon_sword_two_handed_01_" + this.m.Variant;
 		}
-		this.m.Icon = "weapons/melee/sword_two_hand_01_" + this.m.Variant + "_70x70.png";
-		this.m.IconLarge = "weapons/melee/sword_two_hand_01_" + this.m.Variant + ".png";
-		this.m.ArmamentIcon = "icon_sword_two_handed_01_" + this.m.Variant;
 	}
 
 });
