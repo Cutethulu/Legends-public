@@ -38,6 +38,18 @@
 		return this.buildTextFromTemplate(this.m.Description, vars);
 	}
 
+	local getFatigueCost = o.getFatigueCost;
+	o.getFatigueCost = function()
+	{
+		if (this.m.Container != null && this.m.IsWeaponSkill)
+		{
+			local containerProperties = this.m.Container.getActor().getCurrentProperties();
+			local item = this.getItem();
+			this.m.FatigueCostMult = ::Legends.S.isCharacterWeaponSpecialized(containerProperties, item) ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
+		}
+		return getFatigueCost();
+	}
+
 	o.getActionPointCost = function()
 	{
 		if (this.m.Container.getActor().getCurrentProperties().IsSkillUseFree)

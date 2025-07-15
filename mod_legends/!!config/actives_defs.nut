@@ -1470,14 +1470,6 @@ activesDefs.push({
 	Name = "Flail",
 });
 
-::Legends.Active.LegendScytheCleave <- null;
-activesDefs.push({
-	ID = "actives.legend_scythe_cleave",
-	Script = "scripts/skills/actives/legend_scythe_cleave_skill",
-	Const = "LegendScytheCleave",
-	Name = "Cleave",
-});
-
 ::Legends.Active.LegendHorseKick <- null;
 activesDefs.push({
 	ID = "actives.legend_horse_kick",
