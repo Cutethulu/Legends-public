@@ -161,16 +161,4 @@ this.legend_camp_contract <- ::inherit("scripts/contracts/contract", {
 			this.m.Screens.extend(::Legends.CampContracts.IntroNecromancers);
 		}
 	}
-
-	function getHome() {
-		local playerPosition = ::World.State.getPlayer().getTile();
-		return ::World.EntityManager.getSettlements()
-			.sort(@(_lhs, _rhs) _lhs.getDistanceTo(playerPosition) > _rhs.getDistanceTo(playerPosition))
-			.top();
-	}
-
-	function getOrigin() {
-		return this.getHome();
-	}
-
 });
