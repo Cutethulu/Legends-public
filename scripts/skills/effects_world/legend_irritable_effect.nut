@@ -7,7 +7,7 @@ this.legend_irritable_effect <- this.inherit("scripts/skills/injury/injury", {
 	{
 		this.injury.create();
 		::Legends.Effects.onCreate(this, ::Legends.Effect.LegendIrritable);
-		this.m.Description = "Repeated attempts to study have made this character more than irritable.";
+		this.m.Description = "Repeated attempts to study have made this character more than irritable. The negative effects will disappear by the next day, but this effect is not treatable and prevents the character from reading books and scrolls.";
 		this.m.Icon = "skills/status_effect_62.png";
 		this.m.Type = this.m.Type | this.Const.SkillType.StatusEffect | this.Const.SkillType.SemiInjury;
 		this.m.IsHealingMentioned = true;
@@ -33,7 +33,7 @@ this.legend_irritable_effect <- this.inherit("scripts/skills/injury/injury", {
 
 		if (!this.m.JustCooldown)
 		{
-			ret.extend(
+			ret.extend([
 				{
 					id = 13,
 					type = "text",
@@ -70,7 +70,7 @@ this.legend_irritable_effect <- this.inherit("scripts/skills/injury/injury", {
 					icon = "ui/icons/initiative.png",
 					text = "[color=" + this.Const.UI.Color.NegativeValue + "]-15%[/color] Initiative"
 				}
-			);
+			]);
 		}
 		this.addTooltipHint(ret);
 		return ret;
@@ -79,16 +79,16 @@ this.legend_irritable_effect <- this.inherit("scripts/skills/injury/injury", {
 	function addHealingTime( _days )
 	{
 		local days = _days;
-		if (::Legends.Traits.has(this, ::Legends.Traits.Dumb))
+		if (::Legends.Traits.has(this, ::Legends.Trait.Dumb))
 			days *= 2;
 		if (this.getContainer().hasSkill("injury.brain_damage"))
 			days *= 2;
-		if (::Legends.Perks.has(this, ::Legends.Perks.Student))
+		if (::Legends.Perks.has(this, ::Legends.Perk.Student))
 			this.Math.floor(days /= 1.5);
-		if (::Legends.Traits.has(this, ::Legends.Traits.Bright))
+		if (::Legends.Traits.has(this, ::Legends.Trait.Bright))
 			this.Math.floor(days /= 2);
-		this.m.HealingTimeMin = this.Math.max(1, this.m.HealingTimeMin + _days);
-		this.m.HealingTimeMax = this.Math.max(this.m.HealingTimeMin + 1, this.m.HealingTimeMax + _days);
+		this.m.HealingTimeMin = this.Math.max(1, this.m.HealingTimeMin + days);
+		this.m.HealingTimeMax = this.Math.max(this.m.HealingTimeMin + 1, this.m.HealingTimeMax + days);
 	}
 
 	function onNewDay()

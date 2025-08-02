@@ -3,6 +3,7 @@ this.legend_ancient_scroll_item <- ::inherit("scripts/items/misc/legend_skill_bo
 		PerkGroups = ::Const.Perks.MagicTrees.Tree,
 		Cooldown = 100,
 		HasToBeIdentified = true,
+		BookName = "Ancient Scroll:"
 	},
 	function create()
 	{
@@ -16,6 +17,28 @@ this.legend_ancient_scroll_item <- ::inherit("scripts/items/misc/legend_skill_bo
 		this.m.IsDroppedAsLoot = true;
 		this.m.IsUsable = true;
 		this.m.Value = 5000;
+		this.m.PerkGroupSelection = this.m.PerkGroups[this.Math.rand(0, this.m.PerkGroups.len() - 1)].Name;
+	}
+
+	function isAbleToUseScroll( _actor )
+	{
+		local effect = ::Legends.Effects.get(_actor, ::Legends.Effect.LegendIrritable);
+		if (effect != null)
+			return "Failed to use this item as the user will be recovering from the last reading for another [color=" + ::Const.UI.Color.NegativeValue + "]" + effect.m.HealingTimeMin + "-" + effect.m.HealingTimeMax +"[/color] days.";
+
+		if (_actor.getSkills().hasTrait(::Legends.Trait.Dumb))
+			return "Failed to use this item as the user has [color=" + ::Const.UI.Color.NegativeValue + "]Dumb[/color] trait.";
+
+		if (_actor.getSkills().hasSkill("injury.brain_damage"))
+			return "Failed to use this item as the user has [color=" + ::Const.UI.Color.NegativeValue + "]Brain Damage[/color] injury.";
+
+		if (_actor.getFlags().getAsInt("LegendsScrollCount") <= 0)
+			return true;
+
+		if (!_actor.getSkills().hasTrait(::Legends.Trait.Bright) || _actor.getFlags().getAsInt("LegendsScrollCount") >= 2)
+			return "This character has already reached their maximum item usage limit. Please use this item on a different character.";
+
+		return true;
 	}
 });
 

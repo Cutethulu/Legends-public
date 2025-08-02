@@ -1,7 +1,8 @@
 this.legend_weapon_skill_book_item <- ::inherit("scripts/items/misc/legend_skill_book", {
 	m = {
 		PerkGroups = ::Const.Perks.WeaponTrees.Tree,
-		Cooldown = 50
+		Cooldown = 50,
+		BookName = "Fencing Treatise:"
 	},
 	function create()
 	{
@@ -15,27 +16,11 @@ this.legend_weapon_skill_book_item <- ::inherit("scripts/items/misc/legend_skill
 		this.m.IsDroppedAsLoot = true;
 		this.m.IsUsable = true;
 		this.m.Value = 1500;
-	}
-
-	function getName()
-	{
-		return "Fencing Treatise: " + this.m.PerkGroupSelection.Name;
-	}
-
-	function isAbleToUseScroll( _actor )
-	{
-		if (_actor.getFlags().getAsInt("LegendsScrollCooldown") > 0)
-			return "Failed to use this item as the user will be recovering from the last reading for another [color=" + ::Const.UI.Color.NegativeValue + "]" + _actor.getFlags().getAsInt("LegendsScrollCooldown") +"[/color] days.";
-
-		if (_actor.getFlags().getAsInt("LegendsSkillBookCount") <= 1)
-			return true;
-
-		return true;
+		this.m.PerkGroupSelection = this.m.PerkGroups[this.Math.rand(0, this.m.PerkGroups.len() - 1)].Name;
 	}
 
 	function addScrollCounter( _actor )
 	{
-		_actor.getFlags().increment("LegendsScrollCooldown", this.m.Cooldown);
 		_actor.getFlags().set("LegendsSkillBookCount", 1);
 	}
 });
