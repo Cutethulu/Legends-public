@@ -48,6 +48,16 @@ this.legend_skill_book <- ::inherit("scripts/items/item", {
 				id = 3,
 				type = "image",
 				image = getIcon()
+			},
+			{
+				id = 65,
+				type = "text",
+				text = "Right-click to use on a character. Studying will lead to irritability. What mercenary wants to study?"
+			},
+			{
+				id = 67,
+				type = "text",
+				text = "Will apply a" + this.m.Cooldown + " day cooldown until you can read again."
 			}
 		];
 		if (this.m.HasToBeIdentified && ::World.Statistics.getFlags().get("HasScholar") || !this.m.HasToBeIdentified)
@@ -94,8 +104,11 @@ this.legend_skill_book <- ::inherit("scripts/items/item", {
 	function onUse( _actor, _item = null )
 	{
 		local result = isAbleToUseScroll(_actor);
-		if (!result)
-			return ::World.State.m.CharacterScreen.m.JSHandle.asyncCall("openPopupDialog", result);
+		if (typeof result == "string")
+		{
+			::World.State.m.CharacterScreen.m.JSHandle.asyncCall("openPopupDialog", result);
+			return false;
+		}
 
 		local tree = null;
 		foreach (perkGroup in this.m.PerkGroups)

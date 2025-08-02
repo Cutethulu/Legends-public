@@ -1,4 +1,4 @@
-this.legend_scroll_item <- ::inherit("scripts/items/misc/legend_ancient_scroll_item", {
+this.legend_scroll_item <- ::inherit("scripts/items/item", {
 	m = {
 		Selection = null
 	},
@@ -24,7 +24,7 @@ this.legend_scroll_item <- ::inherit("scripts/items/misc/legend_ancient_scroll_i
 
 	function getTooltip()
 	{
-		local result = [
+		return [
 			{
 				id = 1,
 				type = "title",
@@ -48,19 +48,19 @@ this.legend_scroll_item <- ::inherit("scripts/items/misc/legend_ancient_scroll_i
 			{
 				id = 65,
 				type = "text",
-				text = "Right-click to use on a character. Studying may lead to headaches and irritability. What mercenary wants to study?"
+				text = "Right-click to use on a character. Studying will lead to irritability. What mercenary wants to study?"
 			},
 			{
 				id = 67,
 				type = "text",
-				text = "Will apply a cooldown until you can read again."
+				text = "Will apply a 30 day cooldown until you can read again."
 			}
 		];
 	}
 
 	function isAbleToUseScroll( _actor )
 	{
-		local effect = ::Legends.Effects.get(targetEntity, ::Legends.Effect.LegendIrritable);
+		local effect = ::Legends.Effects.get(_actor, ::Legends.Effect.LegendIrritable);
 		if (effect != null)
 			return "Failed to use this item as the user will be recovering from the last reading for another [color=" + ::Const.UI.Color.NegativeValue + "]" + effect.m.HealingTimeMin + "-" + effect.m.HealingTimeMax +"[/color] days.";
 
@@ -69,9 +69,10 @@ this.legend_scroll_item <- ::inherit("scripts/items/misc/legend_ancient_scroll_i
 
 	function applySideEffect( _actor )
 	{
-		::Legends.Effects.grant(_actor, ::Legends.Effect.LegendIrritable, function(_effect) {
-			_effect.addHealingTime(30);
-		}.bindenv(this));
+		::Legends.Effects.grant(_actor, ::Legends.Effect.LegendIrritable);
+		local effect = ::Legends.Effects.get(_actor, ::Legends.Effect.LegendIrritable);
+		if (effect != null)
+			effect.addHealingTime(30);
 	}
 
 	function applyScrollEffect( _result = null, _actor = null )
@@ -86,6 +87,8 @@ this.legend_scroll_item <- ::inherit("scripts/items/misc/legend_ancient_scroll_i
 
 		case 2:
 			return gainTrainingEffect(_actor);
+		case 3:
+			return gainExperience(_actor);
 
 		// case 3:
 		// 	return addRandomPerk(_actor);
@@ -103,6 +106,11 @@ this.legend_scroll_item <- ::inherit("scripts/items/misc/legend_ancient_scroll_i
 		_actor.m.LevelUps += 1;
 		_actor.fillAttributeLevelUpValues(1, true);
 		return format("You gain free [color=%s]Gifted[/color] perk worth amount of level-up stats.", ::Const.UI.Color.NegativeValue);
+	}
+
+	function gainGiftedEffect( _actor )
+	{
+		_actor.addXP( this.Math.rand(100, 150));
 	}
 
 	function gainTrainingEffect( _actor )
@@ -161,12 +169,14 @@ this.legend_scroll_item <- ::inherit("scripts/items/misc/legend_ancient_scroll_i
 	{
 		switch(this.m.Selection)
 		{
-		case 0:
-			return "Scroll of .Nut\'in";
-		case 1:
-			return "Scroll of Natural Talent";
-		case 2:
-			return "Battle Scroll";
+			case 0:
+				return "Scroll of .Nut\'in";
+			case 1:
+				return "Scroll of Natural Talent";
+			case 2:
+				return "Battle Scroll";
+			case 3:
+				return "Scroll of Experience";
 		}
 	}
 
@@ -179,19 +189,21 @@ this.legend_scroll_item <- ::inherit("scripts/items/misc/legend_ancient_scroll_i
 			case 1:
 				return "Use the scroll to grant a character a max-stat roll similar to gifted.";
 			case 2:
-				return "Use the scroll on a character to increase experience gains by +50% for at least the next 3 battles. This will override any other current trained effects.";		
+				return "Use the scroll on a character to increase experience gains by +50% for at least the next 3 battles. This will override any other current trained effects.";
+			case 3:
+				return "Use the scroll on a character to gain 100-150 XP.";		
 		}
 	}
 
 	function onSerialize( _out )
 	{
-		this.legend_skill_book.onSerialize(_out);
+		this.item.onSerialize(_out);
 		_out.writeU8(this.m.Selection);
 	}
 
 	function onDeserialize( _in )
 	{
-		this.legend_skill_book.onDeserialize(_in);
+		this.item.onDeserialize(_in);
 		this.m.Selection = _in.readU8();
 	}
 
