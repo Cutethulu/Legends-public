@@ -777,17 +777,6 @@
 	<sprite id="beard_grey_legends_02" offsetY="35" ic="FF353638" width="104" height="142" img="entity\heads\beard_grey_18.png" left="-19" right="33" top="-46" bottom="36" />
 	<sprite id="beard_grey_legends_02_dead" offsetX="6" offsetY="10" f="64EE" f1="-15" f2="-15" ic="FF353638" width="131" height="125" img="entity\heads\beard_grey_18_dead.png" left="-34" right="28" top="-58" bottom="18" />
 
-	<sprite id="beard_blonde_19" offsetY="35" ic="FF365A74" width="96" height="102" img="entity\heads\beard_blonde_19.png" left="-12" right="36" top="-42" bottom="14" />
-	<sprite id="beard_brown_19"  offsetY="35" ic="FF365A74" width="96" height="102" img="entity\heads\beard_brown_19.png"  left="-12" right="36" top="-42" bottom="14" />
-	<sprite id="beard_red_19"    offsetY="35" ic="FF365A74" width="96" height="102" img="entity\heads\beard_red_19.png"    left="-12" right="36" top="-42" bottom="14" />
-	<sprite id="beard_black_19"  offsetY="35" ic="FF365A74" width="96" height="102" img="entity\heads\beard_black_19.png"  left="-12" right="36" top="-42" bottom="14" />
-	<sprite id="beard_grey_19"   offsetY="35" ic="FF365A74" width="96" height="102" img="entity\heads\beard_grey_19.png"   left="-12" right="36" top="-42" bottom="14" />
-	<sprite id="beard_blonde_19_dead" offsetX="6" offsetY="10" f="64F2" f1="-15" f2="-15" ic="FF375C75" width="168" height="152" img="entity\heads\beard_blonde_19_dead.png" left="-52" right="32" top="-75" bottom="1" />
-	<sprite id="beard_brown_19_dead" offsetX="6" offsetY="10" f="64F2" f1="-15" f2="-15" ic="FF375C75" width="168" height="152" img="entity\heads\beard_brown_19_dead.png" left="-52" right="32" top="-75" bottom="1" />
-	<sprite id="beard_red_19_dead" offsetX="6" offsetY="10" f="64F2" f1="-15" f2="-15" ic="FF375C75" width="168" height="152" img="entity\heads\beard_red_19_dead.png" left="-52" right="32" top="-75" bottom="1" />
-	<sprite id="beard_black_19_dead" offsetX="6" offsetY="10" f="64F2" f1="-15" f2="-15" ic="FF375C75" img="entity\heads\beard_black_19_dead.png" left="-52" right="32" top="-75" bottom="1" />
-	<sprite id="beard_grey_19_dead" offsetX="6" offsetY="10" f="64F2" f1="-15" f2="-15" ic="FF375C75" width="168" height="152" img="entity\heads\beard_grey_19_dead.png" left="-52" right="32" top="-75" bottom="1" />
-
 	<sprite id="bust_naked_body_04_dead_arrows" offsetX="6" offsetY="10" f="64FB" ic="FF242D47" width="131" height="114" img="entity\bodies\dead_arrows.png" left="0" right="28" top="-8" bottom="30" />
 	<sprite id="bust_naked_body_04_dead_javelin" offsetX="6" offsetY="10" f="64FB" ic="FF242D4E" width="131" height="134" img="entity\bodies\dead_javelin.png" left="-11" right="35" top="-5" bottom="67" />
 	<sprite id="scar_02_bust_naked_body_04" offsetY="35" f="64FE" ic="FF242D3B" width="104" height="142" img="entity\bodies\scar_female_02.png" left="-44" right="50" top="-53" bottom="13" />
