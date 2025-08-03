@@ -81,8 +81,7 @@
 	"legends_02"
 ]);
 ::Const.Tattoos.All.extend([
-	"tattoo_07",
-	"tattoo_08"
+
 ]);
 
 //this is a dummy for dlc
