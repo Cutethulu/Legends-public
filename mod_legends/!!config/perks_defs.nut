@@ -4413,4 +4413,15 @@ perkDefObjects.push({
 	Const = "LegendSleightOfHand"
 });
 
+::Legends.Perk.LegendPromisedPotential <- null;
+perkDefObjects.push({
+	ID = "perk.legend_promised_potential",
+	Script = "scripts/skills/perks/perk_legend_promised_potential",
+	Name = ::Const.Strings.PerkName.LegendPromisedPotential,
+	Tooltip = ::Const.Strings.PerkDescription.LegendPromisedPotential,
+	Icon = "ui/perks/promised_potential.png",
+	IconDisabled = "ui/perks/promised_potential_bw.png",
+	Const = "LegendPromisedPotential"
+});
+
 ::Const.Perks.addPerkDefObjects(perkDefObjects);

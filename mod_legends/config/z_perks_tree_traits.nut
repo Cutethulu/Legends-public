@@ -433,15 +433,14 @@ if (!("Perks" in ::Const))
 	},
 	Tree = [
 		[
-			::Legends.Perk.Student
-		],
-		[
-			::Legends.Perk.Gifted,
+			::Legends.Perk.Student,
+			::Legends.Perk.Gifted
 		],
 		[],
 		[],
+		[],
 		[
-			::Legends.Perk.LegendAdaptive
+			::Legends.Perk.LegendPromisedPotential,
 		],
 		[
 			::Legends.Perk.LegendMindOverBody
