@@ -486,9 +486,6 @@ enemies = r"""
 <sprite id="mummy_bandages_01" offsetY="35" ic="FF1A242E" width="104" height="142" img="entity\undead\armor\mummy_bandages_01.png" left="-42" right="44" top="-50" bottom="10" />
 <sprite id="mummy_bandages_01_damaged" offsetY="35" ic="FF19222C" width="104" height="142" img="entity\undead\armor\mummy_bandages_01_damaged.png" left="-42" right="44" top="-50" bottom="10" />
 <sprite id="mummy_bandages_01_dead" offsetX="6" offsetY="10" f="64FE" ic="FF1B252F" width="191" height="185" img="entity\undead\armor\mummy_bandages_01_dead.png" left="-41" right="43" top="-45" bottom="11" />
-<sprite id="mummy_bandages_02" offsetY="35" ic="FF1A222C" width="104" height="142" img="entity\undead\armor\mummy_bandages_02.png" left="-37" right="39" top="-50" bottom="8" />
-<sprite id="mummy_bandages_02_damaged" offsetY="35" ic="FF19222B" width="104" height="142" img="entity\undead\armor\mummy_bandages_02_damaged.png" left="-37" right="39" top="-50" bottom="8" />
-<sprite id="mummy_bandages_02_dead" offsetX="6" offsetY="10" f="64FE" ic="FF1B242E" width="191" height="185" img="entity\undead\armor\mummy_bandages_02_dead.png" left="-35" right="33" top="-44" bottom="16" />
 
 <sprite id="mummy_dress_01" offsetY="35" ic="FF1A242E" width="104" height="142" img="entity\undead\armor\mummy_dress_01.png" left="-42" right="44" top="-50" bottom="10" />
 <sprite id="mummy_dress_01_damaged" offsetY="35" ic="FF19222C" width="104" height="142" img="entity\undead\armor\mummy_dress_01_damaged.png" left="-42" right="44" top="-50" bottom="10" />
