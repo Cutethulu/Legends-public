@@ -191,7 +191,7 @@ this.legend_donkey_background <- this.inherit("scripts/skills/backgrounds/charac
 		return c;
 	}
 
-	function onUpdate()
+	function onUpdate(_properties)
 	{
 		if (::World.Statistics.getFlags().get("HasVeterinarian"))
 		{

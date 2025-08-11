@@ -10,7 +10,7 @@ this.perk_legend_wheel_maintenance <- this.inherit("scripts/skills/skill", {
 		this.m.IsHidden = false;
 	}
 
-	function onUpdate()
+	function onUpdate(_properties)
 	{
 		for( local i = 0; i < this.World.Assets.m.TerrainTypeSpeedMult.len(); i = ++i )
 		{
