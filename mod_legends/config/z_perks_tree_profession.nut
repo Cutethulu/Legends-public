@@ -132,8 +132,8 @@ if (!("Perks" in ::Const))
 	]
 };
 
-::Const.Perks.CaravaneerTree <- {
-	ID = "CaravaneerTree",
+::Const.Perks.CaravaneerProfessionTree <- {
+	ID = "CaravaneerProfessionTree",
 	Name = "Caraveneering",
 	Descriptions = [
 		"woodworking"
@@ -173,11 +173,30 @@ if (!("Perks" in ::Const))
 	]
 };
 
+::Const.Perks.FencingTeacherProfessionTree <- {
+	ID = "FencingTeacherProfessionTree",
+	Name = "Fencing",
+	Descriptions = [
+		"fencing"
+	],
+	Tree = [
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[::Legends.Perk.LegendMasterTrainer]
+	]
+};
+
 ::Const.Perks.ProfessionTrees <- {
 	Tree = [
 		::Const.Perks.BarterProfessionTree,
+		::Const.Perks.CaravaneerProfessionTree,
 		::Const.Perks.ChefProfessionTree,
 		::Const.Perks.DogBreederProfessionTree,
+		::Const.Perks.FencingTeacherProfessionTree,
 		::Const.Perks.HealerProfessionTree,
 		::Const.Perks.HerbalistProfessionTree,
 		::Const.Perks.MinerProfessionTree,
