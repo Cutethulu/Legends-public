@@ -106,28 +106,13 @@ this.legend_ranger_commander_background <- this.inherit("scripts/skills/backgrou
 				this.Const.Perks.ShortbowClassTree,
 				this.Const.Perks.JugglerClassTree
 			],
+			Profession = [],
 			Magic = [
 				this.Const.Perks.RangerHuntMagicTree,
 				this.Const.Perks.MasterArcherTree,
 				this.Const.Perks.ArcherCommandTree
 			]
 		};
-		this.m.CustomPerkTree = [
-			[],
-			[],
-			[],
-			[
-				::Legends.Perk.Nimble,		
-				::Legends.Perk.LegendLithe
-			],
-			[],
-			[],
-			[],
-			[],
-			[],
-			[],
-			[]
-		];
 	}
 
 	//Default Male

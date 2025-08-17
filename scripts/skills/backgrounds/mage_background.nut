@@ -76,7 +76,7 @@ this.mage_background <- this.inherit("scripts/skills/backgrounds/character_backg
 			Weapon = [
 				this.Const.Perks.HammerTree,
 				this.Const.Perks.MaceTree,
-				this.Const.Perks.StaffTree
+				this.Const.Perks.PolearmTree
 			],
 			Defense = [
 				this.Const.Perks.ClothArmorTree
@@ -89,7 +89,9 @@ this.mage_background <- this.inherit("scripts/skills/backgrounds/character_backg
 			],
 			Enemy = [],
 			Class = [],
-			Profession = [],
+			Profession = [
+				this.Const.Perks.StavesMagicTree
+			],
 			Magic = []
 		}
 	}

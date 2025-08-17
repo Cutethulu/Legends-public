@@ -48,7 +48,7 @@
 				this.Const.Perks.MaceTree,
 				this.Const.Perks.FlailTree,
 				this.Const.Perks.DaggerTree,
-				this.Const.Perks.StaffTree
+				this.Const.Perks.PolearmTree
 			],
 			Defense = [
 				this.Const.Perks.LightArmorTree

@@ -59,7 +59,7 @@ if (!("Perks" in ::Const))
 		],
 		[],
 		[
-			::Legends.Perk.Footwork
+			::Legends.Perk.LegendTacticalManeuvers 
 		],
 		[],
 		[
@@ -878,7 +878,7 @@ if (!("Perks" in ::Const))
 		],
 		[],
 		[
-			::Legends.Perk.Rotation
+			::Legends.Perk.LegendTacticalManeuvers
 		],
 		[],
 		[

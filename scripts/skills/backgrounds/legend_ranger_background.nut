@@ -7,8 +7,8 @@ this.legend_ranger_background <- this.inherit("scripts/skills/backgrounds/charac
 		this.m.Name = "Ranger";
 		this.m.Icon = "ui/backgrounds/ranger_01.png";
 		this.m.BackgroundDescription = "Rangers are expert trackers and marksman, used to hunting prey of any kind";
-		this.m.GoodEnding = "While the %companyname% continued on with great success, %name% the ranger eventually saw fit to leave it all behind. He returned to the forests and fields, hunting deer and small game. He rarely showed the grim reality of hunting humans, but you have to imagine he\'d just rather stop doing it. As far as you know, he\'s doing well for himself these days. He purchased a bit of land and helps guide nobles on pricy hunting trips.";
-		this.m.BadEnding = "With the decline of the %companyname% readily obvious, %name% the ranger departed from the company and returned to game hunting. Unfortunately, a hunting trip with a nobleman went awry when the lord was gored through both cheeks by a boar. The hunter, feeling he\'d be blamed, shot by the nobleman and his guard and fled through the forests on his own. He has not been seen since.";
+		this.m.GoodEnding = "While the %companyname% continued on with great success, %name% the ranger eventually saw fit to leave it all behind. %They% returned to the forests and fields, hunting deer and small game. %They% rarely showed the grim reality of hunting humans, but you have to imagine %they%\'d just rather stop doing it. As far as you know, %they%\'s doing well for %themselves% these days. %They% purchased a bit of land and helps guide nobles on pricy hunting trips.";
+		this.m.BadEnding = "With the decline of the %companyname% readily obvious, %name% the ranger departed from the company and returned to game hunting. Unfortunately, a hunting trip with a nobleman went awry when the lord was gored through both cheeks by a boar. The hunter, feeling %they%\'d be blamed, shot the nobleman and his guard and fled through the forests on %their% own. %They% has not been seen since.";
 		this.m.HiringCost = 2500;
 		this.m.DailyCost = 35;
 		this.m.Excluded = [
@@ -104,6 +104,7 @@ this.legend_ranger_background <- this.inherit("scripts/skills/backgrounds/charac
 			Class = [
 				this.Const.Perks.BeastClassTree
 			],
+			Profession = [],
 			Magic = [
 				this.Const.Perks.RangerHuntMagicTree,
 				this.Const.Perks.MasterArcherTree
@@ -124,8 +125,6 @@ this.legend_ranger_background <- this.inherit("scripts/skills/backgrounds/charac
 		this.m.BeardChance = 0;
 		this.m.Bodies = this.Const.Bodies.AllFemale;
 		this.addBackgroundType(this.Const.BackgroundType.Female);
-		this.m.GoodEnding = "While the %companyname% continued on with great success, %name% the ranger eventually saw fit to leave it all behind. She returned to the forests and fields, hunting deer and small game. She rarely showed the grim reality of hunting humans, but you have to imagine she\'d just rather stop doing it. As far as you know, she\'s doing well for herself these days. She purchased a bit of land and helps guide nobles on pricy hunting trips.";
-		this.m.BadEnding = "With the decline of the %companyname% readily obvious, %name% the ranger departed from the company and returned to game hunting. Unfortunately, a hunting trip with a nobleman went awry when the lord was gored through both cheeks by a boar. The hunter, feeling he\'d be blamed, shot by the nobleman and his guard and fled through the forests on her own. She has not been seen since.";
 
 	}
 

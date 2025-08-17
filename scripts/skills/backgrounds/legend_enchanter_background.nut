@@ -59,7 +59,7 @@ this.legend_enchanter_background <- this.inherit("scripts/skills/backgrounds/cha
 		this.m.PerkTreeDynamic = {
 			Weapon = [
 				this.Const.Perks.DaggerTree,
-				this.Const.Perks.StaffTree,
+				this.Const.Perks.PolearmTree,
 				this.Const.Perks.ThrowingTree,
 				this.Const.Perks.SpearTree
 			],
@@ -76,7 +76,8 @@ this.legend_enchanter_background <- this.inherit("scripts/skills/backgrounds/cha
 			Class = [],
 			Profession = [],
 			Magic = [
-				this.Const.Perks.ValaChantMagicTree
+				this.Const.Perks.ValaChantMagicTree,
+				this.Const.Perks.StavesMagicTree
 			]
 		}
 	}

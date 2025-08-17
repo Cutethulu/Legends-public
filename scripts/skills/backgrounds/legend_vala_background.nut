@@ -44,7 +44,7 @@ this.legend_vala_background <- this.inherit("scripts/skills/backgrounds/characte
 		this.m.Level = 2;
 		this.m.PerkTreeDynamic = {
 			Weapon = [
-				this.Const.Perks.StaffTree
+				this.Const.Perks.PolearmTree
 			],
 			Defense = [
 				this.Const.Perks.LightArmorTree,
@@ -69,7 +69,8 @@ this.legend_vala_background <- this.inherit("scripts/skills/backgrounds/characte
 			Magic = [
 				this.Const.Perks.ValaChantMagicTree,
 				this.Const.Perks.ValaTranceMagicTree,
-				this.Const.Perks.ValaSpiritMagicTree
+				this.Const.Perks.ValaSpiritMagicTree,
+				this.Const.Perks.StavesMagicTree
 			]
 		};
 		this.m.CustomPerkTree = [

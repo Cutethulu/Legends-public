@@ -70,7 +70,7 @@ this.legend_magister_background <- this.inherit("scripts/skills/backgrounds/char
 				this.Const.Perks.FlailTree,
 				this.Const.Perks.SlingTree,
 				this.Const.Perks.SwordTree,
-				this.Const.Perks.StaffTree
+				this.Const.Perks.PolearmTree
 			],
 			Defense = [
 				this.Const.Perks.ClothArmorTree

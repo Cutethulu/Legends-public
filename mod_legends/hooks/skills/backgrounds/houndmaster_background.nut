@@ -41,7 +41,6 @@
 		this.m.Modifiers.Training = this.Const.LegendMod.ResourceModifiers.Training[1];
 		this.m.PerkTreeDynamic = {
 			Weapon = [
-				this.Const.Perks.StaffTree,
 				this.Const.Perks.ThrowingTree,
 				this.Const.Perks.PolearmTree,
 				this.Const.Perks.SlingTree

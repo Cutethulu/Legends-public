@@ -23,6 +23,23 @@ if (!("Perks" in ::Const))
 	]
 };
 
+::Const.Perks.StavesMagicTree <- {
+	ID = "StavesMagicTree",
+	Name = "Staves",
+	Descriptions = [
+		"staves"
+	],
+	Tree = [
+		[::Legends.Perk.LegendSpecialistSelfdefense],
+		[],
+		[],
+		[::Legends.Perk.LegendMasteryStaves],
+		[],
+		[],
+		[]
+	]
+};
+
 ::Const.Perks.ImmortalMagicTree <- {
 	ID = "ImmortalMagicTree",
 	Name = "Immortal",
@@ -629,7 +646,8 @@ if (!("Perks" in ::Const))
 		// ::Const.Perks.TherianthropyMagicTree,
 		::Const.Perks.PhilosophyMagicTree,
 		::Const.Perks.AssassinMagicTree,
-		::Const.Perks.BardMagicTree
+		::Const.Perks.BardMagicTree,
+		::Const.Perks.StavesMagicTree
 
 	],
 	function getRandom(_exclude)

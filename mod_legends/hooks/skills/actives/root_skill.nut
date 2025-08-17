@@ -36,8 +36,8 @@
 
 	o.onAfterUpdate <- function ( _properties )
 	{
-		this.m.FatigueCostMult = _properties.IsSpecializedInStaves ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
-		this.m.ActionPointCost = _properties.IsSpecializedInStaves ? 5 : 6;
+		this.m.FatigueCostMult = _properties.IsSpecializedInPolearms ? this.Const.Combat.WeaponSpecFatigueMult : 1.0;
+		this.m.ActionPointCost = _properties.IsSpecializedInPolearms ? 5 : 6;
 
 		if (this.getContainer().hasEffect(::Legends.Effect.LegendRain))
 		{

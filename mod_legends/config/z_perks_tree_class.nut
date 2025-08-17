@@ -369,7 +369,7 @@ if (!("Perks" in ::Const))
 	Tree = [
 		[::Legends.Perk.LegendLeap],
 		[::Legends.Perk.LegendHairSplitter],
-		[::Legends.Perk.Rotation],
+		[::Legends.Perk.LegendTacticalManeuvers],
 		[::Legends.Perk.LegendTwirl],
 		[::Legends.Perk.Footwork],
 		[::Legends.Perk.LegendBackflip],

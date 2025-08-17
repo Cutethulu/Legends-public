@@ -1263,6 +1263,17 @@ perkDefObjects.push({
 	Const = "LegendMasteryStaves"
 });
 
+::Legends.Perk.LegendMasteryMusic <- null;
+perkDefObjects.push({
+	ID = "perk.legend_mastery_music",
+	Script = "scripts/skills/perks/perk_legend_mastery_music",
+	Name = ::Const.Strings.PerkName.LegendMasteryMusic,
+	Tooltip = ::Const.Strings.PerkDescription.LegendMasteryMusic,
+	Icon = "ui/perks/perk_music_mastery.png",
+	IconDisabled = "ui/perks/perk_music_mastery_bw.png",
+	Const = "LegendMasteryMusic"
+});
+
 ::Legends.Perk.LegendRelax <- null;
 perkDefObjects.push({
 	ID = "perk.legend_relax",
@@ -4441,7 +4452,7 @@ perkDefObjects.push({
 	Script = "scripts/skills/perks/perk_legend_master_trainer",
 	Name = ::Const.Strings.PerkName.LegendMasterTrainer,
 	Tooltip = ::Const.Strings.PerkDescription.LegendMasterTrainer,
-	Icon = "ui/perks/Quiltain_tilting_perk.png",
+	Icon = "ui/perks/perk_training_01.png",
 	IconDisabled = "ui/perks/Quiltain_tilting_perk_bw.png",
 	Const = "LegendMasterTrainer"
 });
@@ -4452,9 +4463,20 @@ perkDefObjects.push({
 	Script = "scripts/skills/perks/perk_legend_whip_them_in_shape",
 	Name = ::Const.Strings.PerkName.LegendWhipThemInShape,
 	Tooltip = ::Const.Strings.PerkDescription.LegendWhipThemInShape,
-	Icon = "ui/perks/Quiltain_tilting_perk.png",
+	Icon = "ui/perks/perk_training_02.png",
 	IconDisabled = "ui/perks/Quiltain_tilting_perk_bw.png",
 	Const = "LegendWhipThemInShape"
+});
+
+::Legends.Perk.LegendTacticalManeuvers <- null;
+perkDefObjects.push({
+	ID = "perk.legend_tactical_maneuvers",
+	Script = "scripts/skills/perks/perk_legend_tactical_maneuvers",
+	Name = ::Const.Strings.PerkName.LegendTacticalManeuvers,
+	Tooltip = ::Const.Strings.PerkDescription.LegendTacticalManeuvers,
+	Icon = "ui/perks/perk_11.png",
+	IconDisabled = "ui/perks/perk_11_bw.png",
+	Const = "LegendTacticalManeuvers"
 });
 
 ::Const.Perks.addPerkDefObjects(perkDefObjects);
