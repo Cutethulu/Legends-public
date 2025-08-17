@@ -15,6 +15,7 @@ this.legend_camp_smuggle_contract <- ::inherit("scripts/contracts/legend_camp_co
 		this.m.DescriptionTemplates = [
 			"Bandits want to procure an item, but as outlaws they cannot enter town.",
 			"Local criminal is in dire need of new equipment. You can help them smuggle goods.",
+			"Mysterious cargo, back alley handovers- honest pay for dishonest work."
 		];
 	}
 
@@ -289,6 +290,7 @@ this.legend_camp_smuggle_contract <- ::inherit("scripts/contracts/legend_camp_co
 			Text = ::format("[img]gfx/ui/events/event_112.png[/img]{%s | %s}",
 				"A smuggler meets you behind the tavern, tossing a chest into your hands. %SPEECH_ON%Road's clear - for now. And if it starts squeaking, you didn’t get it from me.%SPEECH_OFF%",
 				"A nervous clerk meets you by the well, handing off a small chest. %SPEECH_ON%Here! Just take it and go. I never saw you, understood?%SPEECH_OFF%"
+				"As you near the market, a passing drunk addresses you with a slurred greeting, then produces a small box from under their ragged cloak. %SPEECH_ON%Took you long enough, take it and be quick, the boss is waiting.%SPEECH_OFF%They push the box into your chest and slink past, quickly resuming their act with a hiccup and some surprisingly good singing."
 			),
 			Image = "",
 			List = [],
@@ -320,6 +322,7 @@ this.legend_camp_smuggle_contract <- ::inherit("scripts/contracts/legend_camp_co
 			Text = ::format("[img]gfx/ui/events/event_05.png[/img]{%s | %s}",
 				"You arrive at the camp, package in hand — but you're not alone. Steel flashes from the treeline as enemies pour in. %SPEECH_ON%You bastards, lay down your arms and surrender the contraband!%SPEECH_OFF%",
 				"As you hand the package to %employer%'s hands, a rustling sounds come from nearby bushes. %SPEECH_ON%Thought you could smuggle goods into outlaw hands under our noses and get away with it? Get them all!%SPEECH_OFF%"
+				"As you near the camp, several figures approach with steel at the ready. (BROTHER NAME) reaches for their weapon, but stops as one of the bandits speak. %SPEECH_ON%You have it?%SPEECH_OFF% A nod and gesture to the package in your arms disarms any tension. They produce a purse, tossing it your way. You catch it as you set the package on the floor. %SPEECH_ON%As agreed, its (CONTRACT PAYMENT) crowns. Now, if you don’t mind.%SPEECH_OFF% They look away from the camp, then back to you. %SPEECH_ON%Piss off.%SPEECH_OFF%"
 			),
 			Image = "",
 			Characters = [],
