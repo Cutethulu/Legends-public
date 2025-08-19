@@ -141,7 +141,7 @@
 			Types = [
 				{
 					Type = this.Const.World.Spawn.Troops.LegendStollwurm,
-					Cost = 500,
+					Cost = 400,
 					MinR = 1200
 				}
 			]
@@ -196,7 +196,7 @@
 			Types = [
 				{
 					Type = this.Const.World.Spawn.Troops.LegendRockUnhold,
-					Cost = 200
+					Cost = 240
 				}
 			]
 		}
@@ -323,7 +323,7 @@
 			Types = [
 				{
 					Type = this.Const.World.Spawn.Troops.LegendGreenwoodSchrat,
-					Cost = 350,
+					Cost = 280,
 					MinR = 1000
 				}
 			]
