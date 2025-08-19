@@ -213,19 +213,6 @@
 	"bust_head_female_10"
 ];
 
-::Const.Faces.SouthernFemale <- [
-	"bust_head_southern_female_01",
-	"bust_head_southern_female_02",
-	"bust_head_southern_female_03",
-	"bust_head_southern_female_04",
-	"bust_head_southern_female_05",
-	"bust_head_southern_female_06",
-	"bust_head_southern_female_07",
-	"bust_head_southern_female_08",
-	"bust_head_southern_female_09",
-	"bust_head_southern_female_10"
-];
-
 ::Const.Faces.NecromancerMale <- [
 	"bust_head_necro_01",
 	"bust_head_necro_02"
