@@ -222,5 +222,13 @@
 	<sprite id="mummy_queen_orientation" ic="FF22200A" img="orientation\mummy_medium_orientation.png" />
 	<sprite id="basilisk_drone_orientation" ic="FF22200A" img="orientation\basilisk_drone_orientation.png" />
 	<sprite id="dawg_orientation" ic="FF22200A" img="orientation\dawg_orientation.png" />
+	<sprite id="barbarian_pillager_orientation" ic="FF22200A" img="orientation\barbarian_pillager_orientation.png" />
+	<sprite id="barbarian_marauder_orientation" ic="FF22200A" img="orientation\barbarian_marauder_orientation.png" />
+	<sprite id="goblin_harrier_orientation" ic="FF22200A" img="orientation\goblin_harrier_orientation.png" />
+	<sprite id="goblin_plunderer_orientation" ic="FF22200A" img="orientation\goblin_plunderer_orientation.png" />
+	<sprite id="goblin_witchdoctor_orientation" ic="FF22200A" img="orientation\goblin_witchdoctor_orientation.png" />
+	<sprite id="goblin_tribe_defender_orientation" ic="FF22200A" img="orientation\goblin_tribe_defender_orientation.png" />
+	<sprite id="goblin_direwolf_rider" ic="FF22200A" img="orientation\goblin_direwolf_rider_orientation.png" />
+	<sprite id="goblin_whitedirewolf_rider" ic="FF22200A" img="orientation\goblin_whitedirewolf_rider_orientation.png" />
 	<sprite id="enraged_hyena_orientation" ic="FF22200A" img="orientation\enraged_hyena_orientation.png" />
 </brush>
