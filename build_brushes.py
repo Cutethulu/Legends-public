@@ -223,9 +223,8 @@ class BrushBuilder:
             "world_tiles",
             "legend_horses",
             "legend_detail",
-            "terrain",
+            "legend_terrain",
             "legend_ui",
-            "orientation",
             "legend_objects",
         ]
 
