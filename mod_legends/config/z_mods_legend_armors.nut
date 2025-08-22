@@ -1738,7 +1738,7 @@ if (!("ArmorObjs" in ::Const.LegendMod))
 		],
 		Cloak = [
 			[1, ""],
-			[1, "cloak/legend_dark_wooly_cloak", 13],
+			[1, "cloak/legend_dark_wooly_cloak"],
 			[1, "cloak/legend_southern_scarf", 7],
 			[1, "cloak/legend_southern_scarf", 6],
 			[1, "cloak/legend_southern_scarf", 13],
