@@ -240,6 +240,10 @@ this.legend_camp_smuggle_contract <- ::inherit("scripts/contracts/legend_camp_co
 				this.Contract.m.BulletpointsObjectives = [
 					"Wait for your employer to contact you"
 				];
+				if (this.Contract.m.Camp != null && !this.Contract.m.Camp.isNull()) {
+					this.Contract.m.Camp.getSprite("selection").Visible = false;
+					this.Contract.m.Camp.setOnCombatWithPlayerCallback(null);
+				}
 				if (this.Contract.m.PursuitParty == null)
 					this.Contract.m.PursuitParty = ::WeakTableRef(this.Contract.spawnRevengeParty());
 				this.Contract.m.PursuitParty.setOnCombatWithPlayerCallback(this.onRevengeCombat.bindenv(this));
