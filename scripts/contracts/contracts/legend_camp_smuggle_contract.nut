@@ -553,7 +553,6 @@ this.legend_camp_smuggle_contract <- ::inherit("scripts/contracts/legend_camp_co
 			this.m.Camp.setOnCombatWithPlayerCallback(null);
 		}
 		if (this.m.PursuitParty != null && !this.m.PursuitParty.isNull() && this.m.PursuitParty.isAlive()) {
-			::logInfo("pursuit party faction " + this.m.PursuitParty.getFaction());
 			if (this.m.PursuitParty.getFaction() != ::Const.Faction.Bandits)
 				this.m.PursuitParty.die();
 		}
