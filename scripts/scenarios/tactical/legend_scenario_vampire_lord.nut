@@ -257,21 +257,6 @@ this.legend_scenario_vampire_lord <- this.inherit("scripts/scenarios/tactical/sc
 		entity = this.spawnEntity("scripts/entity/tactical/enemies/legend_vampire_lord", 19, 19, 13, 13);
 		entity.setFaction(this.Const.Faction.Undead);
 		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/legend_vampire_lord", 19, 19, 13, 14);
-		entity.setFaction(this.Const.Faction.Undead);
-		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/legend_vampire_lord", 19, 19, 13, 15);
-		entity.setFaction(this.Const.Faction.Undead);
-		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/legend_vampire_lord", 19, 19, 13, 16);
-		entity.setFaction(this.Const.Faction.Undead);
-		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/legend_vampire_lord", 19, 19, 13, 17);
-		entity.setFaction(this.Const.Faction.Undead);
-		entity.assignRandomEquipment();
-		entity = this.spawnEntity("scripts/entity/tactical/enemies/legend_vampire_lord", 19, 19, 13, 18);
-		entity.setFaction(this.Const.Faction.Undead);
-		entity.assignRandomEquipment();
 	}
 
 	function spawnEntity( _script, _minX = 10, _maxX = 28, _minY = 3, _maxY = 28 )
