@@ -1,0 +1,42 @@
+Monk admires dervish.
+
+Conditions:
+- Must be at least 6 tiles away from a settlement.
+- Must have at least 1x Monk bro
+- Must have at least 1x Dervish bro
+- Event has not happened in the past 30 days.
+
+Outcome:
+- Dervish bro receives +1-3 Health, receives a positive mood.
+- Monk bro receives +1-3 Resolve, receives a positive mood.
+
+
+this.legend_monk_admires_dervish <- this.inherit("scripts/events/event", {
+  m = {
+    Monk = null,
+    Dervish = null
+  }
+  function create()
+  {
+    this.m.ID = "event.legend_monk_admires_dervish";
+    this.m.Title = "While in camp...";
+    this.m.cooldown = 30
+    this.m.Screens.push({
+      ID = "A",
+      Text = "As you move through camp, you notice the resident holy man and the southern ascetic sat together away from the rest of the company, their legs crossed and open palms resting on their laps. The northern monk is studying the dervish\’s posture and expression as though it was one of his many holy tomes, scribbling mental notes whilst trying to emulate %their_monk% peer\’s technique. \n “I don’t know how he does it, captain.”, %monk% whispers. “I\’ve been watching this ritual of theirs for a while now, and it\’s completely unlike anything from my monastery’s archives.” %monk% squirms uncomfortably, as though they’re sat on an ant hill or thorn bush. Across from %them_monk%, the statue of a man sits stoic yet firm, eyes and ears gently sealed against the increasing disturbance across from him, while a fist sized spider creeps its way up his leg. \n With a grimace, %monk% stumbles to %their_monk% feet and backs away, dusting their legs down of loose earth and twigs, but no spindly stowaways, much to their apparent relief. %they_monk% approach you, clearly impressed by the dervish\’s resolve. “Every day, captain. Every day he does this, for hours at a time. I\’ve seen him do it in rain and snow, in blistering heat and, uh, blistering cold. If he can withstand such torments in the name of his Gilder, then surely I can suffer what the Gods have deigned necessary for me to endure.” You nod, though suspect there’s something much more personal at play you could never truly understand. With a faint smile and hopeful strut, the company monk returns to camp, their day a little brighter. \n As you glance back at the dervish deep in trance, the spider clambers across his face, then crawls out of view onto his back. 
+      Image = "Camp",
+      List = [],
+      Characters = [],
+      Options = [
+        {
+          Text = "A stronger man than I, that\'s for sure."
+
+				_event.m.Monk.improveMood(2.0, "Was inspired by the dervish\'s iron will!");
+				_event.m.Dervish.improveMood(2.0, "Is pleased to be a paragon for others!");
+
+
+
+
+// Positive mood modifier for Monk bro – “Was inspired by the dervish’s iron will!”
+// Positive mood modifier for Dervish bro – “Is pleased to be a paragon for others!”
+// I have attempted to write in some pseudocode, but don't know if this has worked lol. DM me on Discord as to whether you want me to continue uploading events in this format with the code, or moreso just as text documents. :) 
