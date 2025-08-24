@@ -37,3 +37,23 @@
 	],
 	FatigueRecoveryRate = 30
 };
+
+::Const.Tactical.Actor.BarbarianChosen <- {
+	XP = 800,
+	ActionPoints = 10,
+	Hitpoints = 250,
+	Bravery = 130,
+	Stamina = 200,
+	MeleeSkill = 90,
+	RangedSkill = 70,
+	MeleeDefense = 25,
+	RangedDefense = 15,
+	Initiative = 115,
+	FatigueEffectMult = 1.0,
+	MoraleEffectMult = 1.0,
+	Armor = [
+		100,
+		70
+	],
+	FatigueRecoveryRate = 30
+};

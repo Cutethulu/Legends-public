@@ -277,6 +277,8 @@ for (local i = -1; i < ::Const.EntityIcon.len(); i++) {
 ::Const.EntityType.LegendGoblinPlunderer <-
 	::Const.EntityType.addNew("goblin_plunderer_orientation", "Goblin Plunderer", "Goblin Plunderers", this.Const.FactionType.Goblins);
 ::Const.EntityType.LegendBarbarianPillager <-
-	::Const.EntityType.addNew("goblin_pillager_orientation", "Barbarian Pillager", "Barbarian Pillagers", this.Const.FactionType.Barbarians);
+	::Const.EntityType.addNew("barbarian_pillager_orientation", "Barbarian Pillager", "Barbarian Pillagers", this.Const.FactionType.Barbarians);
 ::Const.EntityType.LegendBarbarianMarauder <-
-	::Const.EntityType.addNew("goblin_marauder_orientation", "Barbarian Marauder", "Barbarian Marauders", this.Const.FactionType.Barbarians);
+	::Const.EntityType.addNew("barbarian_marauder_orientation", "Barbarian Marauder", "Barbarian Marauders", this.Const.FactionType.Barbarians);
+::Const.EntityType.LegendBarbarianRunechosen <-
+	::Const.EntityType.addNew("barbarian_marauder_orientation", "Barbarian Runechosen", "Barbarian Runechosen", this.Const.FactionType.Barbarians);

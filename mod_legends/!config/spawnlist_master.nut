@@ -59,7 +59,9 @@
 	Strength = 80,
 	Cost = 75,
 	Row = 1,
-	Script = "scripts/entity/tactical/enemies/legend_goblin_direwolf_rider"
+	Script = "scripts/entity/tactical/enemies/legend_goblin_direwolf_rider",
+	NameList = this.Const.Strings.GoblinNames,
+	TitleList = this.Const.Strings.GoblinTitles
 };
 
 ::Const.World.Spawn.Troops.LegendGoblinWhiteDirewolfRider <- {
@@ -68,7 +70,9 @@
 	Strength = 85,
 	Cost = 90,
 	Row = 1,
-	Script = "scripts/entity/tactical/enemies/legend_white_goblin_direwolf_rider"
+	Script = "scripts/entity/tactical/enemies/legend_white_goblin_direwolf_rider",
+	NameList = this.Const.Strings.GoblinNames,
+	TitleList = this.Const.Strings.GoblinTitles
 };
 
 ::Const.World.Spawn.Troops.LegendBarbarianPillager <- {
@@ -87,6 +91,17 @@
 	Cost = 35,
 	Row = 1,
 	Script = "scripts/entity/tactical/humans/legend_barbarian_marauder"
+};
+
+::Const.World.Spawn.Troops.LegendBarbarianRunechosen <- {
+	ID = this.Const.EntityType.LegendBarbarianRunechosen,
+	Variant = 1,
+	Strength = 60,
+	Cost = 60,
+	Row = 1,
+	Script = "scripts/entity/tactical/humans/legend_barbarian_runechosen",
+	NameList = this.Const.Strings.BarbarianNames,
+	TitleList = this.Const.Strings.BarbarianTitles
 };
 
 ::Const.World.Spawn.Troops.Wolf <- {
