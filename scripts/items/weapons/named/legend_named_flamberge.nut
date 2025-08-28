@@ -1,5 +1,7 @@
 this.legend_named_flamberge <- this.inherit("scripts/items/weapons/named/named_weapon", {
-	m = {},
+	m = {
+		StunChance = 0
+	},
 
 	function create() {
 		this.named_weapon.create();
