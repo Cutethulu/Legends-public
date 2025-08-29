@@ -1,9 +1,20 @@
 this.legend_named_flamberge <- this.inherit("scripts/items/weapons/named/named_weapon", {
 	m = {
-		StunChance = 0
+		StunChance = 0,
+		SoundsA = [
+			"sounds/combat/cleave_hit_hitpoints_01.wav",
+			"sounds/combat/cleave_hit_hitpoints_02.wav",
+			"sounds/combat/cleave_hit_hitpoints_03.wav"
+		],
+		SoundsB = [
+			"sounds/combat/chop_hit_01.wav",
+			"sounds/combat/chop_hit_02.wav",
+			"sounds/combat/chop_hit_03.wav"
+		]
 	},
 
-	function create() {
+	function create()
+	{
 		this.named_weapon.create();
 		this.m.ID = "weapon.legend_named_flamberge";
 		this.m.NameList = this.Const.Strings.GreatswordNames;
@@ -20,17 +31,65 @@ this.legend_named_flamberge <- this.inherit("scripts/items/weapons/named/named_w
 		this.m.ShowQuiver = false;
 		this.m.ShowArmamentIcon = true;
 		this.m.ArmamentIcon = "icon_named_flamberge_01";
-		this.m.Value = 2100;
-		this.m.ShieldDamage = 12;
-		this.m.Condition = 60.0;
-		this.m.ConditionMax = 60.0;
-		this.m.StaminaModifier = -8;
-		this.m.RegularDamage = 65;
-		this.m.RegularDamageMax = 85;
+		this.m.Value = 5200;
+		this.m.ShieldDamage = 16;
+		this.m.Condition = 76.0;
+		this.m.ConditionMax = 76.0;
+		this.m.StaminaModifier = -12;
+		this.m.RegularDamage = 90;
+		this.m.RegularDamageMax = 105;
 		this.m.ArmorDamageMult = 1.0;
 		this.m.DirectDamageMult = 0.25;
-		this.m.ChanceToHitHead = 10;
+		this.m.ChanceToHitHead = 5;
 		this.randomizeValues();
+	}
+
+	function getTooltip()
+	{
+		local result = this.weapon.getTooltip();
+		result.push({
+			id = 8,
+			type = "text",
+			icon = "ui/icons/special.png",
+			text = "Inflicts additional stacking [color=" + this.Const.UI.Color.DamageValue + "]2[/color] bleeding damage per turn, for 2 turns"
+		});
+		return result;
+	}
+
+	function onDamageDealt( _target, _skill, _hitInfo )
+	{
+		local actor = this.getContainer().getActor();
+		if (!_target.isAlive() || _target.isDying())
+			return;
+
+		this.spawnAttackEffect(_target.getTile(), this.Const.Tactical.AttackEffectChop);
+		if (!actor.isAlive() || actor.isDying())
+			return;
+
+		if (!_target.isAlive() || _target.isDying())
+		{
+			if (_target.getFlags().has("tail") || !_target.getCurrentProperties().IsImmuneToBleeding)
+			{
+				this.Sound.play(this.m.SoundsA[this.Math.rand(0, this.m.SoundsA.len() - 1)], this.Const.Sound.Volume.Skill, actor.getPos());
+			}
+			else
+			{
+				this.Sound.play(this.m.SoundsB[this.Math.rand(0, this.m.SoundsB.len() - 1)], this.Const.Sound.Volume.Skill, actor.getPos());
+			}
+		}
+		else if (!_target.getCurrentProperties().IsImmuneToBleeding && hp - _target.getHitpoints() >= this.Const.Combat.MinDamageToApplyBleeding )
+		{
+			::Legends.Effects.grant(_target, ::Legends.Effect.Bleeding, function(_effect) {
+				if (actor.getFaction() == this.Const.Faction.Player )
+					_effect.setActor(this.getContainer().getActor());
+				_effect.setDamage(2);
+			}.bindenv(this));
+			this.Sound.play(this.m.SoundsA[this.Math.rand(0, this.m.SoundsA.len() - 1)], this.Const.Sound.Volume.Skill, actor.getPos());
+		}
+		else
+		{
+			this.Sound.play(this.m.SoundsB[this.Math.rand(0, this.m.SoundsB.len() - 1)], this.Const.Sound.Volume.Skill, actor.getPos());
+		}
 	}
 
 	function onEquip() {
