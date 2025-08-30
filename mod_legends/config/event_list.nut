@@ -37,7 +37,7 @@
 	return ::Legends.EventList.changeStat(_bro.getName(), _value, "ui/icons/ranged_skill.png", "Ranged Skill");
 }
 
-::Legends.EventList.changeMeleeDefense <- function (_bro, _value) {
+::Legends.EventList.changeRangedDefense <- function (_bro, _value) {
 	return ::Legends.EventList.changeStat(_bro.getName(), _value, "ui/icons/ranged_defense.png", "Ranged Defense");
 }
 

@@ -86,6 +86,8 @@ this.legend_cannibal_eats_part_of_brother <- this.inherit("scripts/events/event"
 					_event.m.Cannibal.improveMood(1.0, "Enjoyed a good meal");
 					_event.m.Dinner.worsenMood(3.0, "Got partially eaten by " + _event.m.Cannibal.m.Name);
 				}
+				this.List.push(::Legends.EventList.changeMood(_event.m.Cannibal));
+				this.List.push(::Legends.EventList.changeMood(_event.m.Dinner));
 
 				this.Characters.push(_event.m.Dinner.getImagePath());
 			}

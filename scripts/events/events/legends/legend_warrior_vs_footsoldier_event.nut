@@ -38,28 +38,13 @@ this.legend_warrior_vs_footsoldier_event <- this.inherit("scripts/events/event",
 
 					//1 hander
 				_event.m.noble1h.improveMood(1.0, "Bonded with " + _event.m.noble2h.getName());
-				this.List.push({
-					id = 10,
-					icon = this.Const.MoodStateIcon[_event.m.noble1h.getMoodState()],
-					text = _event.m.noble1h.getName() + this.Const.MoodStateEvent[_event.m.noble1h.getMoodState()]
-				});
-				this.List.push({
-					id = 16,
-					icon = "ui/icons/melee_skill.png",
-					text = _event.m.noble1h.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeSkill + "[/color] Melee Skill"
-				});
+				this.List.push(::Legends.EventList.changeMood(_event.m.noble1h));
+				this.List.push(::Legends.EventList.changeMeleeSkill(_event.m.noble1h, meleeSkill));
+
 					//2 hander
 				_event.m.noble2h.improveMood(1.0, "Bonded with " + _event.m.noble1h.getName());
-				this.List.push({
-					id = 10,
-					icon = this.Const.MoodStateIcon[_event.m.noble2h.getMoodState()],
-					text = _event.m.noble2h.getName() + this.Const.MoodStateEvent[_event.m.noble2h.getMoodState()]
-				});
-				this.List.push({
-					id = 16,
-					icon = "ui/icons/melee_defense.png",
-					text = _event.m.noble2h.getName() + " gains [color=" + this.Const.UI.Color.PositiveEventValue + "]+" + meleeDefense + "[/color] Melee Defense"
-				});
+				this.List.push(::Legends.EventList.changeMood(_event.m.noble2h));
+				this.List.push(::Legends.EventList.changeMeleeDefense(_event.m.noble2h, meleeDefense));
 			}
 
 		});

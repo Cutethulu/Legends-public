@@ -62,11 +62,7 @@ this.legend_blacksmith_fix_equipment <- this.inherit("scripts/events/event", {
 			function start( _event )
 			{
 				_event.m.Blacksmith.worsenMood(0.5, "Stayed up all night working");
-				this.List.push({
-					id = 10,
-					icon = this.Const.MoodStateIcon[_event.m.Blacksmith.getMoodState()],
-					text = _event.m.Blacksmith.getName() + this.Const.MoodStateEvent[_event.m.Blacksmith.getMoodState()]
-				});
+				this.List.push(::Legends.EventList.changeMood(_event.m.Blacksmith));
 				this.Characters.push(_event.m.Blacksmith.getImagePath());
 				local stash = this.World.Assets.getStash().getItems();
 				local items = 0;
@@ -112,11 +108,7 @@ this.legend_blacksmith_fix_equipment <- this.inherit("scripts/events/event", {
 			{
 				this.Characters.push(_event.m.Blacksmith.getImagePath());
 				_event.m.Blacksmith.worsenMood(1.0, "Accidentally injured himself");
-				this.List.push({
-					id = 10,
-					icon = this.Const.MoodStateIcon[_event.m.Blacksmith.getMoodState()],
-					text = _event.m.Blacksmith.getName() + this.Const.MoodStateEvent[_event.m.Blacksmith.getMoodState()]
-				});
+				this.List.push(::Legends.EventList.changeMood(_event.m.Blacksmith));
 				local injury = _event.m.Blacksmith.addInjury(this.Const.Injury.Helping);
 				this.List.push({
 					id = 10,

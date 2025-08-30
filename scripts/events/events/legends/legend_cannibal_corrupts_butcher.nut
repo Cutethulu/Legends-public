@@ -35,7 +35,9 @@ this.legend_cannibal_corrupts_butcher <- this.inherit("scripts/events/event", {
 					});
 				}.bindenv(this));
 				_event.m.Cannibal.improveMood(2.0, "Spread the joys of cannibalism");
+				this.List.push(::Legends.EventList.changeMood(_event.m.Cannibal));
 				_event.m.Butcher.improveMood(2.0, "Started appreciating forbidden meat");
+				this.List.push(::Legends.EventList.changeMood(_event.m.Butcher));
 			}
 
 		});

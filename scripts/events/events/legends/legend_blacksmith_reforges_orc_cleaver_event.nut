@@ -83,11 +83,7 @@ this.legend_blacksmith_reforges_orc_cleaver_event <- this.inherit("scripts/event
 				});
 
 				_event.m.Blacksmith.improveMood(1.5, "Reforged a primitive weapon");
-				this.List.push({
-					id = 10,
-					icon = this.Const.MoodStateIcon[_event.m.Blacksmith.getMoodState()],
-					text = _event.m.Blacksmith.getName() + this.Const.MoodStateEvent[_event.m.Blacksmith.getMoodState()]
-				});
+				this.List.push(::Legends.EventList.changeMood(_event.m.Blacksmith));
 
 			}
 
@@ -126,11 +122,7 @@ this.legend_blacksmith_reforges_orc_cleaver_event <- this.inherit("scripts/event
 					text = "You lose " + this.Const.Strings.getArticle(item.getName()) + item.getName()
 				});
 				_event.m.Blacksmith.worsenMood(1.0, "Failed to reforge a weapon");
-				this.List.push({
-					id = 10,
-					icon = this.Const.MoodStateIcon[_event.m.Blacksmith.getMoodState()],
-					text = _event.m.Blacksmith.getName() + this.Const.MoodStateEvent[_event.m.Blacksmith.getMoodState()]
-				});
+				this.List.push(::Legends.EventList.changeMood(_event.m.Blacksmith));
 			}
 		});
 	}

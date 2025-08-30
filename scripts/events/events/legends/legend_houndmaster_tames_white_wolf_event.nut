@@ -55,11 +55,7 @@ this.legend_houndmaster_tames_white_wolf_event <- this.inherit("scripts/events/e
 					text = "You gain " + item.getName()
 				});
 				_event.m.Houndmaster.improveMood(2.0, "Managed to tame a white wolf");
-				this.List.push({
-					id = 10,
-					icon = this.Const.MoodStateIcon[_event.m.Houndmaster.getMoodState()],
-					text = _event.m.Houndmaster.getName() + this.Const.MoodStateEvent[_event.m.Houndmaster.getMoodState()]
-				});
+				this.List.push(::Legends.EventList.changeMood(_event.m.Houndmaster));
 			}
 		});
 		this.m.Screens.push({
@@ -82,13 +78,8 @@ this.legend_houndmaster_tames_white_wolf_event <- this.inherit("scripts/events/e
 			{
 				this.Characters.push(_event.m.Houndmaster.getImagePath());
 				_event.m.Houndmaster.worsenMood(1.0, "Failed to tame the white wolf");
-				if (_event.m.Houndmaster.getMoodState() <= this.Const.MoodState.Neutral)
-				{
-					this.List.push({
-						id = 10,
-						icon = this.Const.MoodStateIcon[_event.m.Houndmaster.getMoodState()],
-						text = _event.m.Houndmaster.getName() + this.Const.MoodStateEvent[_event.m.Houndmaster.getMoodState()]
-					});
+				if (_event.m.Houndmaster.getMoodState() <= this.Const.MoodState.Neutral) {
+					this.List.push(::Legends.EventList.changeMood(_event.m.Houndmaster));
 				}
 			}
 

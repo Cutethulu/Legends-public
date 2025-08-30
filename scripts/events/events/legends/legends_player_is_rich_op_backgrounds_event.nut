@@ -56,12 +56,7 @@ this.legends_player_is_rich_op_backgrounds_event <- this.inherit("scripts/events
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
 						bro.worsenMood(2.0, "Rivalry!");
-
-						this.List.push({
-							id = 10,
-							icon = this.Const.MoodStateIcon[bro.getMoodState()],
-							text = bro.getName() + this.Const.MoodStateEvent[bro.getMoodState()]
-						});
+						this.List.push(::Legends.EventList.changeMood(bro));
 					}
 				}
 			}
@@ -102,11 +97,7 @@ this.legends_player_is_rich_op_backgrounds_event <- this.inherit("scripts/events
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
-						this.List.push({
-							id = 10,
-							icon = this.Const.MoodStateIcon[bro.getMoodState()],
-							text = bro.getName() + this.Const.MoodStateEvent[bro.getMoodState()]
-						});
+						this.List.push(::Legends.EventList.changeMood(bro));
 					}
 				}
 
@@ -117,11 +108,7 @@ this.legends_player_is_rich_op_backgrounds_event <- this.inherit("scripts/events
 
 					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
 					{
-						this.List.push({
-							id = 10,
-							icon = this.Const.MoodStateIcon[bro.getMoodState()],
-							text = bro.getName() + this.Const.MoodStateEvent[bro.getMoodState()]
-						});
+						this.List.push(::Legends.EventList.changeMood(bro));
 					}
 				}
 			}
@@ -162,11 +149,7 @@ this.legends_player_is_rich_op_backgrounds_event <- this.inherit("scripts/events
 
 						if (bro.getMoodState() < this.Const.MoodState.Neutral)
 						{
-							this.List.push({
-								id = 10,
-								icon = this.Const.MoodStateIcon[bro.getMoodState()],
-								text = bro.getName() + this.Const.MoodStateEvent[bro.getMoodState()]
-							});
+							this.List.push(::Legends.EventList.changeMood(bro));
 						}
 					}
 					else if (!bro.getBackground().isExcluded(::Legends.Traits.getID(::Legends.Trait.Greedy)))
@@ -184,14 +167,8 @@ this.legends_player_is_rich_op_backgrounds_event <- this.inherit("scripts/events
 						else
 						{
 							bro.worsenMood(1.0, "Was denied a pay raise");
-
-							if (bro.getMoodState() < this.Const.MoodState.Neutral)
-							{
-								this.List.push({
-									id = 10,
-									icon = this.Const.MoodStateIcon[bro.getMoodState()],
-									text = bro.getName() + this.Const.MoodStateEvent[bro.getMoodState()]
-								});
+							if (bro.getMoodState() < this.Const.MoodState.Neutral) {
+								this.List.push(::Legends.EventList.changeMood(bro));
 							}
 						}
 					}
@@ -232,13 +209,8 @@ this.legends_player_is_rich_op_backgrounds_event <- this.inherit("scripts/events
 					bro.getBaseProperties().DailyWage += 8;
 					bro.improveMood(2.0, "Got a pay raise");
 
-					if (bro.getMoodState() >= this.Const.MoodState.Neutral)
-					{
-						this.List.push({
-							id = 10,
-							icon = this.Const.MoodStateIcon[bro.getMoodState()],
-							text = bro.getName() + this.Const.MoodStateEvent[bro.getMoodState()]
-						});
+					if (bro.getMoodState() >= this.Const.MoodState.Neutral) {
+						this.List.push(::Legends.EventList.changeMood(bro));
 					}
 				}
 			}
