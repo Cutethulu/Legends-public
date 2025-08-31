@@ -59,7 +59,6 @@ this.legend_monk_admires_dervish_event <- ::inherit("scripts/events/event", {
 		this.m.Monk = candidates_monk[::Math.rand(0, candidates_monk.len() - 1)];
 
 		this.m.Score = 5.0;
-		this.m.Score = 99999.0;
 	}
 
 	function onPrepareVariables(_vars) {
