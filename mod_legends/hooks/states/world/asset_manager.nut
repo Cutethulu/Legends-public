@@ -587,6 +587,8 @@
 			 		if (item.getRepair() < item.getRepairMax())
 			 		{
 						local d = this.Math.ceil(this.Math.minf(this.Const.World.Assets.ArmorPerHour * this.Const.Difficulty.RepairMult[this.World.Assets.getEconomicDifficulty()] * this.m.RepairSpeedMult, item.getRepairMax() - item.getRepair())); //rounding is crucial because otherwise it repairs nothing but eats tools if below 1, and in any case repair value has to be a round value
+						if (::World.Retinue.hasFollower("follower.blacksmith"))
+							d *= 1.33 // should be taken into account (blacksmith influence)
 						item.onRepair(item.getRepair() + d);
 						this.m.ArmorParts = this.Math.maxf(0, this.m.ArmorParts - d * this.m.ArmorPartsPerArmor * perkMod); // * this.Const.Difficulty.RepairMult[this.World.Assets.getEconomicDifficulty()] - doesn't make sense here, it was already used when calculating d
 						updateBro = true;
@@ -616,6 +618,8 @@
 
 			 local items = this.m.Stash.getItems();
 			 local stashmaxrepairpotential = this.Math.ceil(roster.len() * this.Const.Difficulty.RepairMult[this.World.Assets.getEconomicDifficulty()] * this.m.RepairSpeedMult * this.Const.World.Assets.ArmorPerHour); //otherwise fixed version will be too good
+			 if (::World.Retinue.hasFollower("follower.blacksmith"))
+				stashmaxrepairpotential *= 1.33 // should be taken into account (blacksmith influence)
 			 foreach( item in items )
 			 {
 				if (this.isCamping()) //disable in camp, otherwise mess
