@@ -6,8 +6,9 @@
 		local original = ::World.Assets.m.HiringCostMult;
 		if (::World.Retinue.hasFollower("follower.recruiter"))
 			::World.Assets.m.HiringCostMult *= 0.9;
-		onHireRosterEntry(_entityID);
+		local ret = onHireRosterEntry(_entityID);
 		::World.Assets.m.HiringCostMult = original;
+		return ret;
 	}
 
 	o.onDismissRosterEntry <- function ( _entityID )
