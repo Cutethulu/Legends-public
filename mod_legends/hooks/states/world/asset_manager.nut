@@ -44,6 +44,16 @@
 		return meds;
 	}
 
+	local addBusinessReputation = o.addBusinessReputation;
+	o.addBusinessReputation = function( _f )
+	{
+		local original = this.m.BusinessReputationRate;
+		if (::World.Retinue.hasFollower("follower.minstrel"))
+			this.m.BusinessReputationRate *= 1.25 // should be taken into account (blacksmith influence)
+		addBusinessReputation(_f)
+		this.m.BusinessReputationRate = original;
+	}
+
 	o.getBusinessReputationMax <- function()
 	{
 		return this.m.BusinessReputationMax;
