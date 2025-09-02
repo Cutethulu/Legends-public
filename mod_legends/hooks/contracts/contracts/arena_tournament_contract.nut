@@ -393,7 +393,6 @@
 				this.m.WasInReserves.push(bro);
 				bro.setInReserves(false);
 			}
-			ret.push(bro);
 		}
 		return ret;
 	}
