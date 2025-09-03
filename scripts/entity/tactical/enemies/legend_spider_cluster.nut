@@ -171,6 +171,7 @@ this.legend_spider_cluster <- this.inherit("scripts/entity/tactical/actor", {
 		b.IsAffectedByNight = false;
 		b.IsImmuneToPoison = true;
 		b.IsImmuneToDisarm = true;
+		b.IsAffectedByFreshInjuries = false;
 
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 25) //review
 		{
@@ -211,22 +212,27 @@ this.legend_spider_cluster <- this.inherit("scripts/entity/tactical/actor", {
 
 		local injury = this.addSprite("injury");
 		injury.Visible = false;
-		injury.setBrush("bust_spider_cluster_body_01_wounds");
+		injury.setBrush("bust_spider_cluster_body_01_wounded");
 		this.addDefaultStatusSprites();
 		this.getSprite("status_rooted").Scale = 0.65;
 		this.setSpriteOffset("status_rooted", this.createVec(7, 10));
 		this.setSpriteOffset("status_stunned", this.createVec(0, -20));
 		this.setSpriteOffset("arrow", this.createVec(0, -20));
 		this.setSize(this.Math.rand(70, 90) * 0.01);
-		this.m.Skills.add(this.new("scripts/skills/actives/spider_bite_skill"));
-		// this.m.Skills.add(this.new("scripts/skills/actives/web_skill"));
-		// this.m.Skills.add(this.new("scripts/skills/actives/footwork"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_backstabber"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_overwhelm"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_dodge"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_legend_muscularity"));
-		this.m.Skills.add(this.new("scripts/skills/racial/spider_racial"));
+		::Legends.Actives.grant(this, ::Legends.Active.SpiderBite);
+		::Legends.Perks.grant(this, ::Legends.Perk.Recover);
+		::Legends.Perks.grant(this, ::Legends.Perk.Pathfinder);
+		::Legends.Perks.grant(this, ::Legends.Perk.LegendStrengthInNumbers);
+		::Legends.Perks.grant(this, ::Legends.Perk.Underdog);
+		::Legends.Perks.grant(this, ::Legends.Perk.Overwhelm);
+		::Legends.Perks.grant(this, ::Legends.Perk.LegendPoisonImmunity);
+		::Legends.Traits.grant(this, ::Legends.Trait.RacialLegendClusterSpider);
+		if(::Legends.isLegendaryDifficulty())
+		{
+			::Legends.Perks.grant(this, ::Legends.Perk.Dodge);
+			::Legends.Perks.grant(this, ::Legends.Perk.LegendMuscularity);
+			::Legends.Perks.grant(this, ::Legends.Perk.CripplingStrikes);
+		}
 	}
 
 	function setSize( _s )
