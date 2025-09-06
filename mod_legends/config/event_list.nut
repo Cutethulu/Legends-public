@@ -85,3 +85,31 @@
 		text = ::format(::Legends.EventList.LightWound, _bro.getName())
 	};
 }
+
+::Legends.EventList.addItems <- function (_itemList, _stash = null,  _prefix = "You gain ") {
+	if (_stash != null)
+		_stash.makeEmptySlots(_itemList.len());
+	local grouped = {};
+	foreach (item in _itemList) {
+		if (_stash != null)
+			_stash.add(item);
+		if (item.getID() in grouped) {
+			grouped[item.getID()].count++;
+			continue;
+		}
+		grouped[item.getID()] <- {
+			item = item,
+			count = 1
+		};
+	}
+
+	local list = [];
+	foreach (entry in grouped) {
+		list.push({
+			id = 1,
+			icon = "ui/items/" + entry.item.getIcon(),
+			text = _prefix + (entry.count > 1 ? ::format("%dx ", entry.count) : "") + entry.item.getName()
+		});
+	}
+	return list;
+}
