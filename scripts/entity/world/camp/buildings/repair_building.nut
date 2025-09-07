@@ -268,7 +268,17 @@ this.repair_building <- this.inherit("scripts/entity/world/camp/camp_building", 
 			points += r.Item.getRepairMax() - r.Item.getRepair()
 		}
 		local modifiers = this.getModifiers();
-		return this.Math.ceil(points * modifiers.Consumption);
+		return this.Math.ceil(points * modifiers.Consumption * this.getToolEfficiency());
+	}
+
+	function getToolEfficiency() {
+		// Sum combined tool efficiency modifier (eg +4 from Tool Drawers) from all brothers
+		local toolEfficiencyModifier = 0;
+		foreach (bro in roster) {
+			toolEfficiencyModifier += bro.getToolEfficiencyModifier();
+		}
+		// Cap efficiency at 50%
+		return this.Math.maxf(0.5, (100.0 - toolEfficiencyModifier) / 100.0);
 	}
 
 	function getRequiredTime()
@@ -346,25 +356,7 @@ this.repair_building <- this.inherit("scripts/entity/world/camp/camp_building", 
 		local modifiers = this.getModifiers();
 		modifiers.Craft = this.Math.round(modifiers.Craft); //important
 
-		local roster = this.World.getPlayerRoster().getAll(); // so that repair perks have effect while camping too
-		local perkMod = 1.0;
-
-		foreach( bro in roster )
-		{
-			local items = bro.getItems().getAllItems();
-			local skills = [
-				::Legends.Perk.LegendToolsSpares,
-				::Legends.Perk.LegendToolsDrawers
-			];
-			foreach( s in skills )
-			{
-				local skill = ::Legends.Perks.get(bro, s);
-				if (skill != null)
-				{
-					perkMod = this.Math.maxf(perkMod - skill.getModifier() * 0.003, 0.5);
-				}
-			}
-		}
+		local toolEfficiency = this.getToolEfficiency();
 		foreach (i, r in this.m.Repairs)
 		{
 			if (r == null)
@@ -382,11 +374,11 @@ this.repair_building <- this.inherit("scripts/entity/world/camp/camp_building", 
 			this.m.PointsRepaired += needed;
 			modifiers.Craft -= needed;
 
-			if (this.World.Assets.isConsumingAssets())
-			{
-				local consumed = needed * modifiers.Consumption;
-				this.m.ToolsUsed += consumed * perkMod;
-				this.World.Assets.addArmorPartsF(consumed * perkMod * -1.0);
+			if (this.World.Assets.isConsumingAssets()) {
+				// Round to 3 decimal places for better determinism
+				local toolsUsed = this.Math.round(needed * modifiers.Consumption * toolEfficiency * 1000.0) / 1000.0;
+				this.m.ToolsUsed += toolsUsed;
+				this.World.Assets.addArmorPartsF(toolsUsed * -1.0);
 			}
 
 			if (r.Item.getRepair() >= r.Item.getRepairMax())

@@ -15,7 +15,7 @@
 	o.m.CompanyID <- 0;
 
 	o.getTryoutCost = function ()
-	{	
+	{
 		local cost = this.Math.ceil(this.Math.max(10, this.Math.min(this.m.HiringCost - 25, 25 + this.m.HiringCost * this.Const.Tryouts.CostMult) * this.World.Assets.m.TryoutPriceMult));
 		if (::World.Retinue.hasFollower("follower.recruiter"))
 			cost *= 0.5;
@@ -1594,20 +1594,23 @@
 		return mod;
 	}
 
-	o.getArmorPartsModifier <- function ()
-	{
-		local mod = this.getBackground().getModifiers().ArmorParts;
+	// Means repair speed, most backgrounds have 5 or 8
+	o.getArmorPartsModifier <- function () {
+		return this.getBackground().getModifiers().ArmorParts;
+	}
+
+	// Means repair efficiency
+	o.getToolEfficiencyModifier <- function () {
+		local mod = 0;
 		local skills = [
 			::Legends.Perk.LegendToolsSpares,
 			::Legends.Perk.LegendToolsDrawers
 		];
 
-		foreach( s in skills )
-		{
+		foreach (s in skills) {
 			local skill = ::Legends.Perks.get(this, s);
-			if (skill != null)
-			{
-				mod += skill.getModifier();
+			if (skill != null) {
+				mod += skill.getToolEfficiencyModifier();
 			}
 		}
 
