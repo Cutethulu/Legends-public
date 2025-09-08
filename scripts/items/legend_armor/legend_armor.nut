@@ -437,7 +437,7 @@ this.legend_armor <- this.inherit("scripts/items/armor/armor", {
 		if (this.m.Upgrades[_upgrade.getType()] != null)
 		{
 			oldItem = this.removeUpgrade(_upgrade.getType());
-			if(oldItem==null) return false
+			if (oldItem == null) return false;
 		}
 		this.m.Upgrades[_upgrade.getType()] = _upgrade;
 		_upgrade.setArmor(this);
@@ -962,5 +962,6 @@ this.legend_armor <- this.inherit("scripts/items/armor/armor", {
 		}
 	}
 });
+
 
 
