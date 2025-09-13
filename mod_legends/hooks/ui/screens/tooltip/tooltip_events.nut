@@ -1172,7 +1172,7 @@
 						id = 3,
 						type = "hint",
 						icon = "ui/icons/asset_supplies.png",
-						text = "[color=" + this.Const.UI.Color.PositiveValue + "]+ " + broToolEfficiencyModifier + "%[/color] " + bro.getName()
+						text = "[color=" + this.Const.UI.Color.PositiveValue + "]+" + broToolEfficiencyModifier + "%[/color] " + bro.getName()
 					});
 				}
 			}
