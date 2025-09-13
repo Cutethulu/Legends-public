@@ -4479,4 +4479,15 @@ perkDefObjects.push({
 	Const = "LegendTacticalManeuvers"
 });
 
+::Legends.Perk.LegendVersatile <- null;
+perkDefObjects.push({
+	ID = "perk.legend_versatile",
+	Script = "scripts/skills/perks/perk_legend_versatile",
+	Name = ::Const.Strings.PerkName.LegendVersatile,
+	Tooltip = ::Const.Strings.PerkDescription.LegendVersatile,
+	Icon = "ui/perks/jack_of_all_trades.png",
+	IconDisabled = "ui/perks/jack_of_all_trades_bw.png",
+	Const = "LegendVersatile"
+});
+
 ::Const.Perks.addPerkDefObjects(perkDefObjects);

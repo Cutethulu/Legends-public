@@ -353,8 +353,8 @@ if (!("Perks" in ::Const))
 	},
 	Tree = [
 		[],
-		[], //[::Legends.Perk.Versatility],
-		[],
+		[], 
+		[::Legends.Perk.LegendVersatile],
 		[],
 		[::Legends.Perk.LegendPushTheAdvantage],
 		[], //::Legends.Perk.Duelist
