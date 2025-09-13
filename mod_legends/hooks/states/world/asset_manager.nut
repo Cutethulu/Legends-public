@@ -563,22 +563,19 @@
 
 			 }
 
-			 //local perkMod = 1;
-
-			 foreach (bro in roster) {
-				if (this.m.ArmorParts == 0)
-				{
+			local toolEfficiency = ::Legends.S.getToolEfficiency();
+			foreach (bro in roster) {
+				if (this.m.ArmorParts == 0) {
 					break;
 				}
-				if (this.isCamping()) //disable in camp, otherwise mess
-			 	{
+
+				// Camp repair is handled in `repair_building.nut`
+				if (this.isCamping()) {
 			 		break;
 			 	}
-			 	local items = bro.getItems().getAllItems();
-			 	local updateBro = false;
 
-				local toolEfficiencyModifier = bro.getToolEfficiencyModifier();
-				local toolEfficiency = this.Math.maxf(0.5, (100.0 - toolEfficiencyModifier) / 100.0);
+			 	local items = bro.getItems().getAllItems();
+				local updateBro = false;
 
 				foreach (item in items) {
 					if (item.getRepair() < item.getRepairMax()) {
@@ -594,26 +591,23 @@
 						updateBro = true;
 			 		}
 
-			 		if (item.getRepair() >= item.getRepairMax())
-			 		{
+			 		if (item.getRepair() >= item.getRepairMax()) {
 			 			item.setToBeRepaired(false, 0);
 			 		}
 
-			 		if (this.m.ArmorParts == 0)
-			 		{
+			 		if (this.m.ArmorParts == 0) {
 			 			break;
 			 		}
 
-					if (updateBro)
-					{
-						break; //so each bro only repairs 1 item at a time, otherwise too good, makes camp redundant
+					// Can only repair as many items at the same time as there are bros in the roster
+					if (updateBro) {
+						break;
 					}
-			 	}
+				}
 
-			 	if (updateBro)
-			 	{
-			 		bro.getSkills().update();
-			 	}
+				if (updateBro) {
+					bro.getSkills().update();
+				}
 			 }
 
 			 local items = this.m.Stash.getItems();
@@ -646,7 +640,7 @@
 						local d = this.Math.ceil(this.Math.minf(stashmaxrepairpotential, item.getRepairMax() - item.getRepair()));
 						item.onRepair(item.getRepair() + d);
 						// Round to 3 decimal places for better determinism
-						local toolsUsed = this.Math.round(d * this.m.ArmorPartsPerArmor * 1000.0) / 1000.0;
+						local toolsUsed = this.Math.round(d * this.m.ArmorPartsPerArmor * toolEfficiency * 1000.0) / 1000.0;
 						this.m.ArmorParts = this.Math.maxf(0, this.m.ArmorParts - toolsUsed);
 						stashmaxrepairpotential = stashmaxrepairpotential - d;
 			 		}
