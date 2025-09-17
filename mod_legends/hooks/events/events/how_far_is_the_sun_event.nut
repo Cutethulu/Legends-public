@@ -218,7 +218,7 @@
 				"background.manhunter",
 				"background.qiyan",
 				"background.gladiator",
-				"background.muladi",
+				"background.legend_muladi",
 				"background.belly_dancer",
 				"background.hashashin",
 				"background.conscript"
