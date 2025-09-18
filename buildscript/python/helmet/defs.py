@@ -1138,5 +1138,27 @@ class Defs:
 {"name" : "goblin_tail"                     , "layer" : "vanity", "lowervanity" : True, "min" : 1, "max" : 1, "value" : 20, "con" : 3, "stam" : 0, "vis" : 0, "hair" : "false", "beard" : "false",
  "title" :  "Goblin Tail",
  "desc" :  "A knotted tail of hair used as decoration by an goblin."
- }
+ },
+
+{"name" : "diviner_wraps"                  , "layer" : "hood", "min" : 1, "max" : 5, "base" : True, "value" : 100, "con" : 50, "stam" : 0, "vis" : 0, "hair" : "true", "beard" : "true",
+  "title" :  "Diviner Wraps",
+  "desc" :  "A headwear of a diviner."
+},
+{"name" : "diviner_top"                  , "layer" : "vanity", "min" : 1, "max" : 2, "value" : 100, "con" : 15, "stam" : 0, "vis" : 0, "hair" : "true", "beard" : "false",
+  "title" :  "Diviner Crown",
+  "desc" :  "A crown of a diviner."
+},
+{"name" : "fleshcultist_book"                  , "layer" : "vanity", "min" : 1, "max" : 1, "value" : 100, "con" : 15, "stam" : 0, "vis" : 0, "hair" : "true", "beard" : "false",
+  "title" :  "Fleshcultist Book",
+  "desc" :  "A fleshcultist book."
+},
+{"name" : "fleshcultist_mask"                  , "layer" : "vanity", "min" : 1, "max" : 2, "value" : 100, "con" : 15, "stam" : 0, "vis" : 0, "hair" : "true", "beard" : "true",
+  "title" :  "Fleshcultist Mask",
+  "desc" :  "A fleshcultist mask."
+},
+{"name" : "fleshcultist_straps"                  , "layer" : "vanity", "min" : 1, "max" : 2, "value" : 100, "con" : 15, "stam" : 0, "vis" : 0, "hair" : "true", "beard" : "false",
+  "title" :  "Fleshcultist Straps",
+  "desc" :  "A fleshcultist straps."
+},
+
 ]
