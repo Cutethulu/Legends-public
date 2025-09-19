@@ -21,7 +21,7 @@ this.perk_legend_pummel_into_submission <- this.inherit("scripts/skills/skill", 
 		local fatDamage = this.Const.Combat.FatigueReceivedPerHit * _properties.FatigueDealtPerHitMult + _targetEntity.getFatigueMax() * _properties.FatigueDealtAsPercentOfMaxFatigue;
 		local p = _targetEntity.getCurrentProperties();
 		fatDamage *= p.FatigueEffectMult;
-		local overflow = this.Math.round(_targetEntity.getFatigue() + fatDamage * p.FatigueReceivedPerHitMult * _targetEntity.FatigueLossOnAnyAttackMult) - _targetEntity.getFatigueMax();
+		local overflow = this.Math.round(_targetEntity.getFatigue() + fatDamage * p.FatigueReceivedPerHitMult * _properties.FatigueLossOnAnyAttackMult) - _targetEntity.getFatigueMax();
 		if (overflow > 0)
 		{
 			_properties.DamageRegularMin += overflow;
