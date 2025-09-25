@@ -106,14 +106,14 @@ this.legend_prepare_knockback_skill <- this.inherit("scripts/skills/skill", {
 	{
 		local canUse = ::Legends.Effects.get(this, ::Legends.Effect.LegendKnockbackPrepared);
 		local item = this.getContainer().getActor().getItems().getItemAtSlot(this.Const.ItemSlot.Mainhand);
-		local hasMelee = item == null || item.isItemType(this.Const.Items.ItemType.MeleeWeapon) || (item.isWeaponType(this.Const.Items.WeaponType.Sling) && item.isItemType(this.Const.Items.ItemType.OneHanded);
+		local hasMelee = item == null || item.isItemType(this.Const.Items.ItemType.MeleeWeapon) || (item.isWeaponType(this.Const.Items.WeaponType.Sling) && item.isItemType(this.Const.Items.ItemType.OneHanded));
 		return !((!this.Tactical.isActive() || canUse == null) && hasMelee);
 	}
 
 	function onUse( _user, _targetTile )
 	{
 		if (this.m.Item != null && !this.m.Item.isNull() && this.m.Item.getID() == "weapon.legend_sling")
-		{	
+		{
 			::Legends.Effects.grant(this, ::Legends.Effect.LegendPrepareBullet);
 		}
 		else
