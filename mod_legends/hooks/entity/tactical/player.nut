@@ -622,6 +622,11 @@
 	o.onDeath = function ( _killer, _skill, _tile, _fatalityType )
 	{
 		local bro = this;
+		if (::Tactical.State.isScenarioMode()) {
+			onDeath(_killer, _skill, _tile, _fatalityType);
+			return; // scenario mode has no obituary and crashes with our changes
+		}
+
 		local originalAddFallen = ::World.Statistics.addFallen;
 		::World.Statistics.addFallen = function (_fallen) {
 			originalAddFallen(bro.finalizeFallen(_fallen));
