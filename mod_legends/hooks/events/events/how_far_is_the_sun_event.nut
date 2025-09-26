@@ -235,13 +235,13 @@
 			return;
 
 		local options = 0;
-		options += candidate_historian.len() != 0;
-		options += candidate_monk.len() != 0;
-		options += candidate_cultist.len() != 0;
-		options += candidate_archer.len() != 0;
-		options += candidate_southerner.len() != 0;
-		options += candidate_dervish.len() != 0;
-		options += candidate_historian.len() != 0;
+		options += ::Math.min(1, candidate_historian.len());
+		options += ::Math.min(1, candidate_monk.len());
+		options += ::Math.min(1, candidate_cultist.len());
+		options += ::Math.min(1, candidate_archer.len());
+		options += ::Math.min(1, candidate_southerner.len());
+		options += ::Math.min(1, candidate_dervish.len());
+		options += ::Math.min(1, candidate_historian.len());
 
 		if (options < 2)
 			return;
