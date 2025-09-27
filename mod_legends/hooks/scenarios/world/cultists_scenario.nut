@@ -153,7 +153,7 @@
 	o.onGenerateBro <- function (bro)
 	{
 		//Can't really recruit converted cultists but its here anyway for posterity
-		if (bro.getBackground().getID() == "background.cultist" || bro.getBackground().getID() == "background.converted_cultist" || bro.getBackground().getID() == "background.legend_lurker" || bro.getBackground().getID() == "background.legend_darksoul" || bro.getBackground().getID() == "background.legend_magister")
+		if (bro.getBackground().getID() == "background.cultist" || bro.getBackground().getID() == "background.converted_cultist" || bro.getBackground().getID() == "background.legend_lurker" || bro.getBackground().getID() == "background.legend_husk" || bro.getBackground().getID() == "background.legend_magister")
 		{
 			bro.m.HiringCost = this.Math.floor(bro.m.HiringCost * 0.75); //1.0 = default
 			bro.getBaseProperties().DailyWageMult *= 0.75; //1.0 = default

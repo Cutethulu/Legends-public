@@ -9,7 +9,7 @@
 					local brothers = this.World.getPlayerRoster().getAll();
 
 					foreach( bro in brothers ) {
-						if (bro.getID() == _event.m.Historian.getID() || bro.getBackground().getID() == "background.historian"  || bro.getBackground().getID() == "background.legend_inventor" || bro.getBackground().getID() == "background.legend_witch" || bro.getBackground().getID() == "background.legend_witch_commander"|| bro.getSkills().hasTrait(::Legends.Trait.Bright))
+						if (bro.getID() == _event.m.Historian.getID() || bro.getBackground().getID() == "background.historian"  || bro.getBackground().getID() == "background.legend_inventor" || bro.getBackground().getID() == "background.legend_witch" || bro.getBackground().getID() == "background.legend_commander_witch"|| bro.getSkills().hasTrait(::Legends.Trait.Bright))
 							continue;
 
 						if (this.Math.rand(1, 100) <= 33) {
@@ -31,7 +31,7 @@
 					local brothers = this.World.getPlayerRoster().getAll();
 
 					foreach( bro in brothers ) {
-						if (bro.getEthnicity() == 1 || bro.getID() == _event.m.Monk.getID() || bro.getBackground().isBackgroundType(this.Const.BackgroundType.ConvertedCultist) || bro.getBackground().isBackgroundType(this.Const.BackgroundType.Cultist) || bro.getBackground().getID() == "background.historian" || bro.getBackground().getID() == "background.historian" || bro.getBackground().getID() == "background.legend_inventor" || bro.getBackground().getID() == "background.legend_witch" || bro.getBackground().getID() == "background.legend_witch_commander" || bro.getBackground().getID() == "background.legend_necro" || bro.getBackground().getID() == "background.legend_necro_commander")
+						if (bro.getEthnicity() == 1 || bro.getID() == _event.m.Monk.getID() || bro.getBackground().isBackgroundType(this.Const.BackgroundType.ConvertedCultist) || bro.getBackground().isBackgroundType(this.Const.BackgroundType.Cultist) || bro.getBackground().getID() == "background.historian" || bro.getBackground().getID() == "background.historian" || bro.getBackground().getID() == "background.legend_inventor" || bro.getBackground().getID() == "background.legend_witch" || bro.getBackground().getID() == "background.legend_commander_witch" || bro.getBackground().getID() == "background.legend_necro" || bro.getBackground().getID() == "background.legend_commander_necro")
 							continue;
 
 						if (this.Math.rand(1, 100) <= 33) {
@@ -119,13 +119,13 @@
 		local candidate_other = [];
 
 		foreach( bro in brothers ) {
-			if (bro.getBackground().getID() == "background.historian" || bro.getBackground().getID() == "background.legend_inventor" || bro.getBackground().getID() == "background.legend_seer"  || bro.getBackground().getID() == "background.legend_seer_commander" || bro.getSkills().hasPerk(::Legends.Perk.LegendScholar))
+			if (bro.getBackground().getID() == "background.historian" || bro.getBackground().getID() == "background.legend_inventor" || bro.getBackground().getID() == "background.legend_witch"  || bro.getBackground().getID() == "background.legend_commander_witch" || bro.getSkills().hasPerk(::Legends.Perk.LegendScholar))
 				candidate_historian.push(bro);
 			else if (bro.getBackground().getID() == "background.monk")
 				candidate_monk.push(bro);
 			else if (bro.getBackground().isBackgroundType(this.Const.BackgroundType.ConvertedCultist) || bro.getBackground().isBackgroundType(this.Const.BackgroundType.Cultist))
 				candidate_cultist.push(bro);
-			else if (bro.getBackground().getID() == "background.hunter" || bro.getBackground().getID() == "background.poacher" || bro.getBackground().getID() == "background.sellsword" || bro.getBackground().getID() == "background.legend_ranger" || bro.getBackground().getID() == "background.legend_ranger_commander" || bro.getBackground().getID() == "background.legend_noble_ranged")
+			else if (bro.getBackground().getID() == "background.hunter" || bro.getBackground().getID() == "background.poacher" || bro.getBackground().getID() == "background.sellsword" || bro.getBackground().getID() == "background.legend_ranger" || bro.getBackground().getID() == "background.legend_commander_ranger" || bro.getBackground().getID() == "background.legend_noble_ranged")
 				candidate_archer.push(bro);
 			else if (bro.getEthnicity() != 1 && bro.getBackground().getID() != "background.slave")
 				candidate_other.push(bro);
