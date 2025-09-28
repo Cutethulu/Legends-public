@@ -34,7 +34,7 @@
 				id = 6,
 				type = "text",
 				icon = "ui/icons/direct_damage.png",
-				text = "Up to [color=" + this.Const.UI.Color.PositiveValue + "]+25%[/color] of any damage ignores armor depending on the distance to the target, with the highest bonus in melee and lowest at maximum range"
+				text = "Up to [color=" + this.Const.UI.Color.PositiveValue + "]+30%[/color] of any damage ignores armor depending on the distance to the target, with the highest bonus in melee and lowest at maximum range"
 			});
 		}
 
@@ -86,7 +86,7 @@
 		if (_skill == this && this.getContainer().hasPerk(::Legends.Perk.LegendBallistics))
 		{
 			local distance = this.getContainer().getActor().getTile().getDistanceTo(_targetEntity.getTile());
-			_properties.DamageDirectAdd += 0.30 - (distance * 0.05)
+			_properties.DamageDirectAdd += 0.35 - (distance * 0.05)
 		}
 	}
 
