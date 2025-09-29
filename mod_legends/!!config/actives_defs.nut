@@ -2838,12 +2838,12 @@ activesDefs.push({
 	Name = "Summon Medium Xbow Zombie",
 });
 
-::Legends.Active.LegendSprint <- null;
+::Legends.Active.LegendStrafingRun <- null;
 activesDefs.push({
 	ID = "actives.legend_sprint",
-	Script = "scripts/skills/actives/legend_sprint_skill",
-	Const = "LegendSprint",
-	Name = "Sprint",
+	Script = "scripts/skills/actives/legend_strafing_run_skill",
+	Const = "LegendStrafingRun",
+	Name = "Strafing Run",
 });
 
 ::Legends.Active.LegendStaffwall <- null;

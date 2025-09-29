@@ -1,9 +1,9 @@
-this.legend_sprint_skill_3 <- this.inherit("scripts/skills/skill", {
+this.legend_strafing_run_skill <- this.inherit("scripts/skills/skill", {
 	m = {},
 	function create()
 	{
-		::Legends.Actives.onCreate(this, ::Legends.Active.LegendSprint);
-		this.m.Description = "Quickly sprint over a short distance in a straight line.";
+		::Legends.Actives.onCreate(this, ::Legends.Active.LegendStrafingRun);
+		this.m.Description = "Quickly reposition and fire if your crossbow is loaded. Can only fire at a target that is at most 4 tiles away from the reposition location";
 		this.m.Icon = "skills/active_52.png";
 		this.m.IconDisabled = "skills/active_52_sw.png";
 		this.m.Overlay = "active_52";
@@ -19,7 +19,7 @@ this.legend_sprint_skill_3 <- this.inherit("scripts/skills/skill", {
 		this.m.IsAttack = false;
 		this.m.IsIgnoredAsAOO = true;
 		this.m.IsUsingActorPitch = true;
-		this.m.ActionPointCost = 5;
+		this.m.ActionPointCost = 6;
 		this.m.FatigueCost = 30;
 		this.m.MinRange = 2;
 		this.m.MaxRange = 3;
@@ -57,7 +57,27 @@ this.legend_sprint_skill_3 <- this.inherit("scripts/skills/skill", {
 			});
 		}
 
+		if (!this.getItem().isLoaded())
+		{
+			tooltip.push({
+				id = 9,
+				type = "text",
+				icon = "ui/tooltips/warning.png",
+				text = "[color=" + this.Const.UI.Color.NegativeValue + "]Must be reloaded else an attack won\'t be executed[/color]"
+			});
+		}
+
 		return ret;
+	}
+
+	function onAfterUpdate(_properties)
+	{		
+		this.m.FatigueCostMult = 1.0;
+		if (_properties.IsSpecializedInCrossbows)
+		{
+			this.m.FatigueCostMult = Const.Combat.WeaponSpecFatigueMult;
+			this.m.ActionPointCost -= 1;
+		}
 	}
 
 	function isUsable()
@@ -277,6 +297,48 @@ this.legend_sprint_skill_3 <- this.inherit("scripts/skills/skill", {
 		{
 			this.Tactical.EventLog.log(this.Const.UI.getColorizedEntityName(_entity) + " sprints");
 		}
+
+		if (!this.getItem().isLoaded())
+			return;
+
+		myTile = _entity.getTile();
+		local actors = this.Tactical.Entities.getAllInstancesAsArray(); //Take all actors instead of ones belonging to the user's faction
+		local skill = ::Legends.Actives.get(this, ::Legends.Active.ShootStake);
+		if (skill == null)
+			skill = ::Legends.Actives.get(this, ::Legends.Active.ShootBolt);
+		potentialVictims = [];
+		foreach( a in actors )
+		{
+			if (a.getFaction() == _entity.getFaction())
+				continue;
+
+			if (a.getFaction() == ::Const.Faction.PlayerAnimals) && a.getFaction() == ::Const.Faction.Player)
+				continue;
+
+			if (myTile.getDistanceTo(a.getTile()) > 4)
+				continue;
+
+			potentialVictims.push(a);
+		}
+
+		if (potentialVictims.len() == 0)
+			return;
+		
+		local closest = null;
+		foreach (victim in potentialVictims)
+		{
+			if (closest == null)
+			{
+				closest = victim;
+			}
+			else if (myTile.getDistanceTo(victim.getTile()) < myTile.getDistanceTo(closest.getTile()))
+			{
+				closest = victim;
+			}
+		}
+
+		if (closest != null)
+			return skill.attackEntity(_entity, closest);
 	}
 
 });
